@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D02FAED81635DDC0008D42D9"
+               BlueprintIdentifier = "D02FAF8E1635DFD8008D42D9"
                BuildableName = "libArchimedes.a"
-               BlueprintName = "Archimedes Mac"
+               BlueprintName = "Archimedes iOS"
                ReferencedContainer = "container:Archimedes.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,9 +28,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D02FAEEC1635DDC0008D42D9"
-               BuildableName = "Archimedes Mac Tests.octest"
-               BlueprintName = "Archimedes Mac Tests"
+               BlueprintIdentifier = "D02FAF9C1635DFD9008D42D9"
+               BuildableName = "ArchimedesTests.octest"
+               BlueprintName = "Archimedes iOS Tests"
                ReferencedContainer = "container:Archimedes.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,9 +46,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D02FAEEC1635DDC0008D42D9"
-               BuildableName = "Archimedes Mac Tests.octest"
-               BlueprintName = "Archimedes Mac Tests"
+               BlueprintIdentifier = "D02FAF9C1635DFD9008D42D9"
+               BuildableName = "ArchimedesTests.octest"
+               BlueprintName = "Archimedes iOS Tests"
                ReferencedContainer = "container:Archimedes.xcodeproj">
             </BuildableReference>
          </TestableReference>

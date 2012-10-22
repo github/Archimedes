@@ -17,6 +17,13 @@
 		D02FAF771635DEE5008D42D9 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FAF761635DEE5008D42D9 /* ApplicationServices.framework */; };
 		D02FAF781635DEF5008D42D9 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FAF761635DEE5008D42D9 /* ApplicationServices.framework */; };
 		D02FAF791635DEF5008D42D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FAEE11635DDC0008D42D9 /* Foundation.framework */; };
+		D02FAF901635DFD8008D42D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FAEE11635DDC0008D42D9 /* Foundation.framework */; };
+		D02FAF9E1635DFD9008D42D9 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FAEEE1635DDC0008D42D9 /* SenTestingKit.framework */; };
+		D02FAFA11635DFD9008D42D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FAEE11635DDC0008D42D9 /* Foundation.framework */; };
+		D02FAFA41635DFD9008D42D9 /* libArchimedes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FAF8F1635DFD8008D42D9 /* libArchimedes.a */; };
+		D02FAFCA1635E07E008D42D9 /* libExpecta-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FAF6B1635DED6008D42D9 /* libExpecta-iOS.a */; };
+		D02FAFCB1635E07E008D42D9 /* libSpecta-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FAF4E1635DE74008D42D9 /* libSpecta-iOS.a */; };
+		D02FAFCD1635E082008D42D9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FAFCC1635E082008D42D9 /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,7 +104,40 @@
 			remoteGlobalIDString = E9ACDF0B13B2DD520010F4D7;
 			remoteInfo = Expecta;
 		};
+		D02FAFA21635DFD9008D42D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D02FAED01635DDC0008D42D9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D02FAF8E1635DFD8008D42D9;
+			remoteInfo = Archimedes;
+		};
+		D02FAFC61635E079008D42D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D02FAF211635DE6F008D42D9 /* Specta.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E9B777A314BA294B00D8DC76;
+			remoteInfo = "Specta-iOS";
+		};
+		D02FAFC81635E079008D42D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D02FAF1E1635DE6F008D42D9 /* Expecta.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E93067CD13B2E6D100EA26FF;
+			remoteInfo = "Expecta-iOS";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D02FAF8D1635DFD8008D42D9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D02FAED91635DDC0008D42D9 /* libArchimedes.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libArchimedes.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +170,9 @@
 		D02FAF211635DE6F008D42D9 /* Specta.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Specta.xcodeproj; path = ArchimedesTests/specta/Specta.xcodeproj; sourceTree = "<group>"; };
 		D02FAF761635DEE5008D42D9 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/ApplicationServices.framework; sourceTree = DEVELOPER_DIR; };
 		D02FAF8A1635DF89008D42D9 /* ArchimedesTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ArchimedesTests-Prefix.pch"; sourceTree = "<group>"; };
+		D02FAF8F1635DFD8008D42D9 /* libArchimedes.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libArchimedes.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D02FAF9D1635DFD9008D42D9 /* Archimedes iOS Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Archimedes iOS Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D02FAFCC1635E082008D42D9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +197,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D02FAF8C1635DFD8008D42D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D02FAF901635DFD8008D42D9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D02FAF991635DFD9008D42D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D02FAFCD1635E082008D42D9 /* CoreGraphics.framework in Frameworks */,
+				D02FAFCA1635E07E008D42D9 /* libExpecta-iOS.a in Frameworks */,
+				D02FAFCB1635E07E008D42D9 /* libSpecta-iOS.a in Frameworks */,
+				D02FAF9E1635DFD9008D42D9 /* SenTestingKit.framework in Frameworks */,
+				D02FAFA11635DFD9008D42D9 /* Foundation.framework in Frameworks */,
+				D02FAFA41635DFD9008D42D9 /* libArchimedes.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -173,6 +237,8 @@
 			children = (
 				D02FAED91635DDC0008D42D9 /* libArchimedes.a */,
 				D02FAEED1635DDC0008D42D9 /* Archimedes Mac Tests.octest */,
+				D02FAF8F1635DFD8008D42D9 /* libArchimedes.a */,
+				D02FAF9D1635DFD9008D42D9 /* Archimedes iOS Tests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -185,6 +251,7 @@
 				D02FAEEE1635DDC0008D42D9 /* SenTestingKit.framework */,
 				D02FAF761635DEE5008D42D9 /* ApplicationServices.framework */,
 				D02FAEE11635DDC0008D42D9 /* Foundation.framework */,
+				D02FAFCC1635E082008D42D9 /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -362,6 +429,44 @@
 			productReference = D02FAEED1635DDC0008D42D9 /* Archimedes Mac Tests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
+		D02FAF8E1635DFD8008D42D9 /* Archimedes iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D02FAFAE1635DFD9008D42D9 /* Build configuration list for PBXNativeTarget "Archimedes iOS" */;
+			buildPhases = (
+				D02FAF8B1635DFD8008D42D9 /* Sources */,
+				D02FAF8C1635DFD8008D42D9 /* Frameworks */,
+				D02FAF8D1635DFD8008D42D9 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Archimedes iOS";
+			productName = Archimedes;
+			productReference = D02FAF8F1635DFD8008D42D9 /* libArchimedes.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D02FAF9C1635DFD9008D42D9 /* Archimedes iOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D02FAFB11635DFD9008D42D9 /* Build configuration list for PBXNativeTarget "Archimedes iOS Tests" */;
+			buildPhases = (
+				D02FAF981635DFD9008D42D9 /* Sources */,
+				D02FAF991635DFD9008D42D9 /* Frameworks */,
+				D02FAF9A1635DFD9008D42D9 /* Resources */,
+				D02FAF9B1635DFD9008D42D9 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D02FAFC71635E079008D42D9 /* PBXTargetDependency */,
+				D02FAFC91635E079008D42D9 /* PBXTargetDependency */,
+				D02FAFA31635DFD9008D42D9 /* PBXTargetDependency */,
+			);
+			name = "Archimedes iOS Tests";
+			productName = ArchimedesTests;
+			productReference = D02FAF9D1635DFD9008D42D9 /* Archimedes iOS Tests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -395,6 +500,8 @@
 			targets = (
 				D02FAED81635DDC0008D42D9 /* Archimedes Mac */,
 				D02FAEEC1635DDC0008D42D9 /* Archimedes Mac Tests */,
+				D02FAF8E1635DFD8008D42D9 /* Archimedes iOS */,
+				D02FAF9C1635DFD9008D42D9 /* Archimedes iOS Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -467,10 +574,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D02FAF9A1635DFD9008D42D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		D02FAEEB1635DDC0008D42D9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		D02FAF9B1635DFD9008D42D9 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -502,6 +629,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D02FAF8B1635DFD8008D42D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D02FAF981635DFD9008D42D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -519,6 +660,21 @@
 			isa = PBXTargetDependency;
 			name = Expecta;
 			targetProxy = D02FAF721635DEDC008D42D9 /* PBXContainerItemProxy */;
+		};
+		D02FAFA31635DFD9008D42D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D02FAF8E1635DFD8008D42D9 /* Archimedes iOS */;
+			targetProxy = D02FAFA21635DFD9008D42D9 /* PBXContainerItemProxy */;
+		};
+		D02FAFC71635E079008D42D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Specta-iOS";
+			targetProxy = D02FAFC61635E079008D42D9 /* PBXContainerItemProxy */;
+		};
+		D02FAFC91635E079008D42D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Expecta-iOS";
+			targetProxy = D02FAFC81635E079008D42D9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -539,7 +695,9 @@
 			baseConfigurationReference = D02FAF0C1635DE46008D42D9 /* Debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = Archimedes;
 			};
 			name = Debug;
@@ -549,7 +707,9 @@
 			baseConfigurationReference = D02FAF0E1635DE46008D42D9 /* Release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = Archimedes;
 			};
 			name = Release;
@@ -594,6 +754,54 @@
 			};
 			name = Release;
 		};
+		D02FAFAF1635DFD9008D42D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D02FAF151635DE46008D42D9 /* iOS-StaticLibrary.xcconfig */;
+			buildSettings = {
+				DSTROOT = /tmp/Archimedes.dst;
+				GCC_PREFIX_HEADER = "Archimedes/Archimedes-Prefix.pch";
+			};
+			name = Debug;
+		};
+		D02FAFB01635DFD9008D42D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D02FAF151635DE46008D42D9 /* iOS-StaticLibrary.xcconfig */;
+			buildSettings = {
+				DSTROOT = /tmp/Archimedes.dst;
+				GCC_PREFIX_HEADER = "Archimedes/Archimedes-Prefix.pch";
+			};
+			name = Release;
+		};
+		D02FAFB21635DFD9008D42D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D02FAF131635DE46008D42D9 /* iOS-Application.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PREFIX_HEADER = "ArchimedesTests/ArchimedesTests-Prefix.pch";
+				INFOPLIST_FILE = "ArchimedesTests/ArchimedesTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		D02FAFB31635DFD9008D42D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D02FAF131635DE46008D42D9 /* iOS-Application.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PREFIX_HEADER = "ArchimedesTests/ArchimedesTests-Prefix.pch";
+				INFOPLIST_FILE = "ArchimedesTests/ArchimedesTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -620,6 +828,24 @@
 			buildConfigurations = (
 				D02FAF031635DDC1008D42D9 /* Debug */,
 				D02FAF041635DDC1008D42D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D02FAFAE1635DFD9008D42D9 /* Build configuration list for PBXNativeTarget "Archimedes iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D02FAFAF1635DFD9008D42D9 /* Debug */,
+				D02FAFB01635DFD9008D42D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D02FAFB11635DFD9008D42D9 /* Build configuration list for PBXNativeTarget "Archimedes iOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D02FAFB21635DFD9008D42D9 /* Debug */,
+				D02FAFB31635DFD9008D42D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
