@@ -29,7 +29,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D02FAF9C1635DFD9008D42D9"
-               BuildableName = "ArchimedesTests.octest"
+               BuildableName = "Archimedes iOS Tests.octest"
                BlueprintName = "Archimedes iOS Tests"
                ReferencedContainer = "container:Archimedes.xcodeproj">
             </BuildableReference>
@@ -47,7 +47,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D02FAF9C1635DFD9008D42D9"
-               BuildableName = "ArchimedesTests.octest"
+               BuildableName = "Archimedes iOS Tests.octest"
                BlueprintName = "Archimedes iOS Tests"
                ReferencedContainer = "container:Archimedes.xcodeproj">
             </BuildableReference>

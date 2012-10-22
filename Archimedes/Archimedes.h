@@ -6,8 +6,4 @@
 //  Copyright (c) 2012 GitHub. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
-@interface Archimedes : NSObject
-
-@end
+#import "CGGeometry+MEDConvenienceAdditions.h"

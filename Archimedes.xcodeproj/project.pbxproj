@@ -7,11 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D02FAEE71635DDC0008D42D9 /* Archimedes.m in Sources */ = {isa = PBXBuildFile; fileRef = D02FAEE61635DDC0008D42D9 /* Archimedes.m */; };
 		D02FAEEF1635DDC0008D42D9 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FAEEE1635DDC0008D42D9 /* SenTestingKit.framework */; };
 		D02FAEF31635DDC0008D42D9 /* libArchimedes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FAED91635DDC0008D42D9 /* libArchimedes.a */; };
 		D02FAEF91635DDC0008D42D9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D02FAEF71635DDC0008D42D9 /* InfoPlist.strings */; };
-		D02FAEFC1635DDC1008D42D9 /* ArchimedesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D02FAEFB1635DDC1008D42D9 /* ArchimedesTests.m */; };
 		D02FAF741635DEE1008D42D9 /* libExpecta.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FAF691635DED6008D42D9 /* libExpecta.a */; };
 		D02FAF751635DEE1008D42D9 /* libSpecta.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FAF4C1635DE74008D42D9 /* libSpecta.a */; };
 		D02FAF771635DEE5008D42D9 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FAF761635DEE5008D42D9 /* ApplicationServices.framework */; };
@@ -24,6 +22,13 @@
 		D02FAFCA1635E07E008D42D9 /* libExpecta-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FAF6B1635DED6008D42D9 /* libExpecta-iOS.a */; };
 		D02FAFCB1635E07E008D42D9 /* libSpecta-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FAF4E1635DE74008D42D9 /* libSpecta-iOS.a */; };
 		D02FAFCD1635E082008D42D9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FAFCC1635E082008D42D9 /* CoreGraphics.framework */; };
+		D02FAFD41635E1A8008D42D9 /* MEDCGGeometryAdditionsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D02FAFD31635E1A8008D42D9 /* MEDCGGeometryAdditionsSpec.m */; };
+		D02FAFD51635E1A8008D42D9 /* MEDCGGeometryAdditionsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D02FAFD31635E1A8008D42D9 /* MEDCGGeometryAdditionsSpec.m */; };
+		D02FAFD91635E1BF008D42D9 /* MEDGeometryTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D02FAFD81635E1BF008D42D9 /* MEDGeometryTestObject.m */; };
+		D02FAFDA1635E1BF008D42D9 /* MEDGeometryTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D02FAFD81635E1BF008D42D9 /* MEDGeometryTestObject.m */; };
+		D02FAFDE1635E1E9008D42D9 /* CGGeometry+MEDConvenienceAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D02FAFDC1635E1E9008D42D9 /* CGGeometry+MEDConvenienceAdditions.h */; };
+		D02FAFDF1635E1E9008D42D9 /* CGGeometry+MEDConvenienceAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D02FAFDD1635E1E9008D42D9 /* CGGeometry+MEDConvenienceAdditions.m */; };
+		D02FAFE01635E1EA008D42D9 /* CGGeometry+MEDConvenienceAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D02FAFDD1635E1E9008D42D9 /* CGGeometry+MEDConvenienceAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,13 +149,10 @@
 		D02FAEE11635DDC0008D42D9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D02FAEE41635DDC0008D42D9 /* Archimedes-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Archimedes-Prefix.pch"; sourceTree = "<group>"; };
 		D02FAEE51635DDC0008D42D9 /* Archimedes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Archimedes.h; sourceTree = "<group>"; };
-		D02FAEE61635DDC0008D42D9 /* Archimedes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Archimedes.m; sourceTree = "<group>"; };
 		D02FAEED1635DDC0008D42D9 /* Archimedes Mac Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Archimedes Mac Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D02FAEEE1635DDC0008D42D9 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		D02FAEF61635DDC0008D42D9 /* ArchimedesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ArchimedesTests-Info.plist"; sourceTree = "<group>"; };
 		D02FAEF81635DDC0008D42D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D02FAEFA1635DDC0008D42D9 /* ArchimedesTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArchimedesTests.h; sourceTree = "<group>"; };
-		D02FAEFB1635DDC1008D42D9 /* ArchimedesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArchimedesTests.m; sourceTree = "<group>"; };
 		D02FAF0A1635DE46008D42D9 /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
 		D02FAF0C1635DE46008D42D9 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		D02FAF0D1635DE46008D42D9 /* Profile.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Profile.xcconfig; sourceTree = "<group>"; };
@@ -173,6 +175,11 @@
 		D02FAF8F1635DFD8008D42D9 /* libArchimedes.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libArchimedes.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D02FAF9D1635DFD9008D42D9 /* Archimedes iOS Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Archimedes iOS Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D02FAFCC1635E082008D42D9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D02FAFD31635E1A8008D42D9 /* MEDCGGeometryAdditionsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDCGGeometryAdditionsSpec.m; sourceTree = "<group>"; };
+		D02FAFD71635E1BF008D42D9 /* MEDGeometryTestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDGeometryTestObject.h; sourceTree = "<group>"; };
+		D02FAFD81635E1BF008D42D9 /* MEDGeometryTestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDGeometryTestObject.m; sourceTree = "<group>"; };
+		D02FAFDC1635E1E9008D42D9 /* CGGeometry+MEDConvenienceAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CGGeometry+MEDConvenienceAdditions.h"; sourceTree = "<group>"; };
+		D02FAFDD1635E1E9008D42D9 /* CGGeometry+MEDConvenienceAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CGGeometry+MEDConvenienceAdditions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,7 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				D02FAEE51635DDC0008D42D9 /* Archimedes.h */,
-				D02FAEE61635DDC0008D42D9 /* Archimedes.m */,
+				D02FAFDB1635E1CD008D42D9 /* Extensions */,
 				D02FAEE31635DDC0008D42D9 /* Supporting Files */,
 			);
 			path = Archimedes;
@@ -277,8 +284,7 @@
 		D02FAEF41635DDC0008D42D9 /* ArchimedesTests */ = {
 			isa = PBXGroup;
 			children = (
-				D02FAEFA1635DDC0008D42D9 /* ArchimedesTests.h */,
-				D02FAEFB1635DDC1008D42D9 /* ArchimedesTests.m */,
+				D02FAFD61635E1AB008D42D9 /* Specs */,
 				D02FAEF51635DDC0008D42D9 /* Supporting Files */,
 			);
 			path = ArchimedesTests;
@@ -287,6 +293,8 @@
 		D02FAEF51635DDC0008D42D9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D02FAFD71635E1BF008D42D9 /* MEDGeometryTestObject.h */,
+				D02FAFD81635E1BF008D42D9 /* MEDGeometryTestObject.m */,
 				D02FAF8A1635DF89008D42D9 /* ArchimedesTests-Prefix.pch */,
 				D02FAEF61635DDC0008D42D9 /* ArchimedesTests-Info.plist */,
 				D02FAEF71635DDC0008D42D9 /* InfoPlist.strings */,
@@ -378,6 +386,23 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		D02FAFD61635E1AB008D42D9 /* Specs */ = {
+			isa = PBXGroup;
+			children = (
+				D02FAFD31635E1A8008D42D9 /* MEDCGGeometryAdditionsSpec.m */,
+			);
+			name = Specs;
+			sourceTree = "<group>";
+		};
+		D02FAFDB1635E1CD008D42D9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D02FAFDC1635E1E9008D42D9 /* CGGeometry+MEDConvenienceAdditions.h */,
+				D02FAFDD1635E1E9008D42D9 /* CGGeometry+MEDConvenienceAdditions.m */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -385,6 +410,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D02FAFDE1635E1E9008D42D9 /* CGGeometry+MEDConvenienceAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,7 +643,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D02FAEE71635DDC0008D42D9 /* Archimedes.m in Sources */,
+				D02FAFDF1635E1E9008D42D9 /* CGGeometry+MEDConvenienceAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -625,7 +651,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D02FAEFC1635DDC1008D42D9 /* ArchimedesTests.m in Sources */,
+				D02FAFD41635E1A8008D42D9 /* MEDCGGeometryAdditionsSpec.m in Sources */,
+				D02FAFD91635E1BF008D42D9 /* MEDGeometryTestObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -633,6 +660,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D02FAFE01635E1EA008D42D9 /* CGGeometry+MEDConvenienceAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -640,6 +668,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D02FAFD51635E1A8008D42D9 /* MEDCGGeometryAdditionsSpec.m in Sources */,
+				D02FAFDA1635E1BF008D42D9 /* MEDGeometryTestObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -736,6 +766,10 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
 				GCC_PREFIX_HEADER = "ArchimedesTests/ArchimedesTests-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"ArchimedesTests/expecta/src/**",
+					ArchimedesTests/specta/src,
+				);
 				INFOPLIST_FILE = "ArchimedesTests/ArchimedesTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
@@ -748,6 +782,10 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
 				GCC_PREFIX_HEADER = "ArchimedesTests/ArchimedesTests-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"ArchimedesTests/expecta/src/**",
+					ArchimedesTests/specta/src,
+				);
 				INFOPLIST_FILE = "ArchimedesTests/ArchimedesTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
@@ -781,6 +819,10 @@
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PREFIX_HEADER = "ArchimedesTests/ArchimedesTests-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"ArchimedesTests/expecta/src/**",
+					ArchimedesTests/specta/src,
+				);
 				INFOPLIST_FILE = "ArchimedesTests/ArchimedesTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
@@ -796,6 +838,10 @@
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PREFIX_HEADER = "ArchimedesTests/ArchimedesTests-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"ArchimedesTests/expecta/src/**",
+					ArchimedesTests/specta/src,
+				);
 				INFOPLIST_FILE = "ArchimedesTests/ArchimedesTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
@@ -828,6 +874,10 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
 				GCC_PREFIX_HEADER = "ArchimedesTests/ArchimedesTests-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"ArchimedesTests/expecta/src/**",
+					ArchimedesTests/specta/src,
+				);
 				INFOPLIST_FILE = "ArchimedesTests/ArchimedesTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
@@ -852,6 +902,10 @@
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PREFIX_HEADER = "ArchimedesTests/ArchimedesTests-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"ArchimedesTests/expecta/src/**",
+					ArchimedesTests/specta/src,
+				);
 				INFOPLIST_FILE = "ArchimedesTests/ArchimedesTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
