@@ -1,0 +1,9 @@
+[submodule "Configuration"]
+	path = Configuration
+	url = https://github.com/jspahrsummers/xcconfigs.git
+[submodule "ArchimedesTests/expecta"]
+	path = ArchimedesTests/expecta
+	url = https://github.com/github/expecta.git
+[submodule "ArchimedesTests/specta"]
+	path = ArchimedesTests/specta
+	url = https://github.com/github/specta.git
