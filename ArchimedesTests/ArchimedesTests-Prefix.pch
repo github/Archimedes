@@ -1,0 +1,13 @@
+//
+// Prefix header for all source files of the 'ArchimedesTests' target in the 'Archimedes' project
+//
+
+#ifdef __OBJC__
+	#import <Foundation/Foundation.h>
+    #import "Archimedes.h"
+
+    #import "Specta.h"
+
+    #define EXP_SHORTHAND
+    #import "Expecta.h"
+#endif
