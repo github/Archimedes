@@ -802,6 +802,62 @@
 			};
 			name = Release;
 		};
+		D02FAFCE1635E0C3008D42D9 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D02FAF0D1635DE46008D42D9 /* Profile.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = "-all_load";
+				PRODUCT_NAME = Archimedes;
+			};
+			name = Profile;
+		};
+		D02FAFCF1635E0C3008D42D9 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D02FAF1B1635DE46008D42D9 /* Mac-StaticLibrary.xcconfig */;
+			buildSettings = {
+				GCC_PREFIX_HEADER = "Archimedes/Archimedes-Prefix.pch";
+			};
+			name = Profile;
+		};
+		D02FAFD01635E0C3008D42D9 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D02FAF171635DE46008D42D9 /* Mac-Application.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PREFIX_HEADER = "ArchimedesTests/ArchimedesTests-Prefix.pch";
+				INFOPLIST_FILE = "ArchimedesTests/ArchimedesTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Profile;
+		};
+		D02FAFD11635E0C3008D42D9 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D02FAF151635DE46008D42D9 /* iOS-StaticLibrary.xcconfig */;
+			buildSettings = {
+				DSTROOT = /tmp/Archimedes.dst;
+				GCC_PREFIX_HEADER = "Archimedes/Archimedes-Prefix.pch";
+			};
+			name = Profile;
+		};
+		D02FAFD21635E0C3008D42D9 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D02FAF131635DE46008D42D9 /* iOS-Application.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PREFIX_HEADER = "ArchimedesTests/ArchimedesTests-Prefix.pch";
+				INFOPLIST_FILE = "ArchimedesTests/ArchimedesTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Profile;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -810,6 +866,7 @@
 			buildConfigurations = (
 				D02FAEFD1635DDC1008D42D9 /* Debug */,
 				D02FAEFE1635DDC1008D42D9 /* Release */,
+				D02FAFCE1635E0C3008D42D9 /* Profile */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -819,6 +876,7 @@
 			buildConfigurations = (
 				D02FAF001635DDC1008D42D9 /* Debug */,
 				D02FAF011635DDC1008D42D9 /* Release */,
+				D02FAFCF1635E0C3008D42D9 /* Profile */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -828,6 +886,7 @@
 			buildConfigurations = (
 				D02FAF031635DDC1008D42D9 /* Debug */,
 				D02FAF041635DDC1008D42D9 /* Release */,
+				D02FAFD01635E0C3008D42D9 /* Profile */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -837,6 +896,7 @@
 			buildConfigurations = (
 				D02FAFAF1635DFD9008D42D9 /* Debug */,
 				D02FAFB01635DFD9008D42D9 /* Release */,
+				D02FAFD11635E0C3008D42D9 /* Profile */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -846,6 +906,7 @@
 			buildConfigurations = (
 				D02FAFB21635DFD9008D42D9 /* Debug */,
 				D02FAFB31635DFD9008D42D9 /* Release */,
+				D02FAFD21635E0C3008D42D9 /* Profile */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
