@@ -727,7 +727,7 @@
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				OTHER_LDFLAGS = "-all_load";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Archimedes;
 			};
 			name = Debug;
@@ -739,7 +739,7 @@
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				OTHER_LDFLAGS = "-all_load";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Archimedes;
 			};
 			name = Release;
@@ -855,7 +855,7 @@
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				OTHER_LDFLAGS = "-all_load";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Archimedes;
 			};
 			name = Profile;
