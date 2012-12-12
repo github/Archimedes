@@ -12,8 +12,6 @@
 		D02FAEF91635DDC0008D42D9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D02FAEF71635DDC0008D42D9 /* InfoPlist.strings */; };
 		D02FAF741635DEE1008D42D9 /* libExpecta.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FAF691635DED6008D42D9 /* libExpecta.a */; };
 		D02FAF751635DEE1008D42D9 /* libSpecta.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FAF4C1635DE74008D42D9 /* libSpecta.a */; };
-		D02FAF771635DEE5008D42D9 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FAF761635DEE5008D42D9 /* ApplicationServices.framework */; };
-		D02FAF781635DEF5008D42D9 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FAF761635DEE5008D42D9 /* ApplicationServices.framework */; };
 		D02FAF791635DEF5008D42D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FAEE11635DDC0008D42D9 /* Foundation.framework */; };
 		D02FAF901635DFD8008D42D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FAEE11635DDC0008D42D9 /* Foundation.framework */; };
 		D02FAF9E1635DFD9008D42D9 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FAEEE1635DDC0008D42D9 /* SenTestingKit.framework */; };
@@ -21,14 +19,20 @@
 		D02FAFA41635DFD9008D42D9 /* libArchimedes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FAF8F1635DFD8008D42D9 /* libArchimedes.a */; };
 		D02FAFCA1635E07E008D42D9 /* libExpecta-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FAF6B1635DED6008D42D9 /* libExpecta-iOS.a */; };
 		D02FAFCB1635E07E008D42D9 /* libSpecta-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FAF4E1635DE74008D42D9 /* libSpecta-iOS.a */; };
-		D02FAFCD1635E082008D42D9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FAFCC1635E082008D42D9 /* CoreGraphics.framework */; };
 		D02FAFD41635E1A8008D42D9 /* MEDCGGeometryAdditionsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D02FAFD31635E1A8008D42D9 /* MEDCGGeometryAdditionsSpec.m */; };
 		D02FAFD51635E1A8008D42D9 /* MEDCGGeometryAdditionsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D02FAFD31635E1A8008D42D9 /* MEDCGGeometryAdditionsSpec.m */; };
 		D02FAFD91635E1BF008D42D9 /* MEDGeometryTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D02FAFD81635E1BF008D42D9 /* MEDGeometryTestObject.m */; };
 		D02FAFDA1635E1BF008D42D9 /* MEDGeometryTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D02FAFD81635E1BF008D42D9 /* MEDGeometryTestObject.m */; };
-		D02FAFDE1635E1E9008D42D9 /* CGGeometry+MEDConvenienceAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D02FAFDC1635E1E9008D42D9 /* CGGeometry+MEDConvenienceAdditions.h */; };
 		D02FAFDF1635E1E9008D42D9 /* CGGeometry+MEDConvenienceAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D02FAFDD1635E1E9008D42D9 /* CGGeometry+MEDConvenienceAdditions.m */; };
 		D02FAFE01635E1EA008D42D9 /* CGGeometry+MEDConvenienceAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D02FAFDD1635E1E9008D42D9 /* CGGeometry+MEDConvenienceAdditions.m */; };
+		D0626A9E1679506E00E951A5 /* NSValue+MEDGeometryAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D0626A9C1679506E00E951A5 /* NSValue+MEDGeometryAdditions.m */; };
+		D0626A9F1679506E00E951A5 /* NSValue+MEDGeometryAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D0626A9C1679506E00E951A5 /* NSValue+MEDGeometryAdditions.m */; };
+		D0626AA1167950D200E951A5 /* MEDNSValueAdditionsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D0626AA0167950D200E951A5 /* MEDNSValueAdditionsSpec.m */; };
+		D0626AA2167950D200E951A5 /* MEDNSValueAdditionsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D0626AA0167950D200E951A5 /* MEDNSValueAdditionsSpec.m */; };
+		D0626AA41679519600E951A5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0626AA31679519600E951A5 /* UIKit.framework */; };
+		D0626AA7167951AF00E951A5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0626AA31679519600E951A5 /* UIKit.framework */; };
+		D0626AAA167951DC00E951A5 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0626AA5167951A000E951A5 /* AppKit.framework */; };
+		D0626AAB167951DF00E951A5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0626AA8167951BB00E951A5 /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -170,16 +174,20 @@
 		D02FAF1C1635DE46008D42D9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		D02FAF1E1635DE6F008D42D9 /* Expecta.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Expecta.xcodeproj; path = ArchimedesTests/expecta/Expecta.xcodeproj; sourceTree = "<group>"; };
 		D02FAF211635DE6F008D42D9 /* Specta.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Specta.xcodeproj; path = ArchimedesTests/specta/Specta.xcodeproj; sourceTree = "<group>"; };
-		D02FAF761635DEE5008D42D9 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/ApplicationServices.framework; sourceTree = DEVELOPER_DIR; };
 		D02FAF8A1635DF89008D42D9 /* ArchimedesTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ArchimedesTests-Prefix.pch"; sourceTree = "<group>"; };
 		D02FAF8F1635DFD8008D42D9 /* libArchimedes.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libArchimedes.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D02FAF9D1635DFD9008D42D9 /* Archimedes iOS Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Archimedes iOS Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D02FAFCC1635E082008D42D9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D02FAFD31635E1A8008D42D9 /* MEDCGGeometryAdditionsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDCGGeometryAdditionsSpec.m; sourceTree = "<group>"; };
 		D02FAFD71635E1BF008D42D9 /* MEDGeometryTestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDGeometryTestObject.h; sourceTree = "<group>"; };
 		D02FAFD81635E1BF008D42D9 /* MEDGeometryTestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDGeometryTestObject.m; sourceTree = "<group>"; };
 		D02FAFDC1635E1E9008D42D9 /* CGGeometry+MEDConvenienceAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CGGeometry+MEDConvenienceAdditions.h"; sourceTree = "<group>"; };
 		D02FAFDD1635E1E9008D42D9 /* CGGeometry+MEDConvenienceAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CGGeometry+MEDConvenienceAdditions.m"; sourceTree = "<group>"; };
+		D0626A9B1679506E00E951A5 /* NSValue+MEDGeometryAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+MEDGeometryAdditions.h"; sourceTree = "<group>"; };
+		D0626A9C1679506E00E951A5 /* NSValue+MEDGeometryAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValue+MEDGeometryAdditions.m"; sourceTree = "<group>"; };
+		D0626AA0167950D200E951A5 /* MEDNSValueAdditionsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDNSValueAdditionsSpec.m; sourceTree = "<group>"; };
+		D0626AA31679519600E951A5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		D0626AA5167951A000E951A5 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/AppKit.framework; sourceTree = DEVELOPER_DIR; };
+		D0626AA8167951BB00E951A5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,7 +195,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D02FAF781635DEF5008D42D9 /* ApplicationServices.framework in Frameworks */,
 				D02FAF791635DEF5008D42D9 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -196,11 +203,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D02FAF771635DEE5008D42D9 /* ApplicationServices.framework in Frameworks */,
 				D02FAF741635DEE1008D42D9 /* libExpecta.a in Frameworks */,
 				D02FAF751635DEE1008D42D9 /* libSpecta.a in Frameworks */,
 				D02FAEEF1635DDC0008D42D9 /* SenTestingKit.framework in Frameworks */,
 				D02FAEF31635DDC0008D42D9 /* libArchimedes.a in Frameworks */,
+				D0626AAA167951DC00E951A5 /* AppKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D02FAF901635DFD8008D42D9 /* Foundation.framework in Frameworks */,
+				D0626AA7167951AF00E951A5 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,12 +224,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D02FAFCD1635E082008D42D9 /* CoreGraphics.framework in Frameworks */,
+				D0626AA41679519600E951A5 /* UIKit.framework in Frameworks */,
 				D02FAFCA1635E07E008D42D9 /* libExpecta-iOS.a in Frameworks */,
 				D02FAFCB1635E07E008D42D9 /* libSpecta-iOS.a in Frameworks */,
 				D02FAF9E1635DFD9008D42D9 /* SenTestingKit.framework in Frameworks */,
 				D02FAFA11635DFD9008D42D9 /* Foundation.framework in Frameworks */,
 				D02FAFA41635DFD9008D42D9 /* libArchimedes.a in Frameworks */,
+				D0626AAB167951DF00E951A5 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,9 +265,10 @@
 				D02FAF1E1635DE6F008D42D9 /* Expecta.xcodeproj */,
 				D02FAF211635DE6F008D42D9 /* Specta.xcodeproj */,
 				D02FAEEE1635DDC0008D42D9 /* SenTestingKit.framework */,
-				D02FAF761635DEE5008D42D9 /* ApplicationServices.framework */,
 				D02FAEE11635DDC0008D42D9 /* Foundation.framework */,
-				D02FAFCC1635E082008D42D9 /* CoreGraphics.framework */,
+				D0626AA5167951A000E951A5 /* AppKit.framework */,
+				D0626AA31679519600E951A5 /* UIKit.framework */,
+				D0626AA8167951BB00E951A5 /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -390,6 +400,7 @@
 			isa = PBXGroup;
 			children = (
 				D02FAFD31635E1A8008D42D9 /* MEDCGGeometryAdditionsSpec.m */,
+				D0626AA0167950D200E951A5 /* MEDNSValueAdditionsSpec.m */,
 			);
 			name = Specs;
 			sourceTree = "<group>";
@@ -399,6 +410,8 @@
 			children = (
 				D02FAFDC1635E1E9008D42D9 /* CGGeometry+MEDConvenienceAdditions.h */,
 				D02FAFDD1635E1E9008D42D9 /* CGGeometry+MEDConvenienceAdditions.m */,
+				D0626A9B1679506E00E951A5 /* NSValue+MEDGeometryAdditions.h */,
+				D0626A9C1679506E00E951A5 /* NSValue+MEDGeometryAdditions.m */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -410,7 +423,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D02FAFDE1635E1E9008D42D9 /* CGGeometry+MEDConvenienceAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -644,6 +656,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D02FAFDF1635E1E9008D42D9 /* CGGeometry+MEDConvenienceAdditions.m in Sources */,
+				D0626A9E1679506E00E951A5 /* NSValue+MEDGeometryAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -653,6 +666,7 @@
 			files = (
 				D02FAFD41635E1A8008D42D9 /* MEDCGGeometryAdditionsSpec.m in Sources */,
 				D02FAFD91635E1BF008D42D9 /* MEDGeometryTestObject.m in Sources */,
+				D0626AA1167950D200E951A5 /* MEDNSValueAdditionsSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -661,6 +675,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D02FAFE01635E1EA008D42D9 /* CGGeometry+MEDConvenienceAdditions.m in Sources */,
+				D0626A9F1679506E00E951A5 /* NSValue+MEDGeometryAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -670,6 +685,7 @@
 			files = (
 				D02FAFD51635E1A8008D42D9 /* MEDCGGeometryAdditionsSpec.m in Sources */,
 				D02FAFDA1635E1BF008D42D9 /* MEDGeometryTestObject.m in Sources */,
+				D0626AA2167950D200E951A5 /* MEDNSValueAdditionsSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
