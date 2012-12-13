@@ -30,4 +30,21 @@ it(@"should wrap a CGPoint", ^{
 	expect(CGPointEqualToPoint(value.med_pointValue, point)).to.beTruthy();
 });
 
+describe(@"MEDBox", ^{
+	it(@"should wrap a CGRect", ^{
+		NSValue *value = MEDBox(rect);
+		expect(value).to.equal([NSValue med_valueWithRect:rect]);
+	});
+
+	it(@"should wrap a CGSize", ^{
+		NSValue *value = MEDBox(size);
+		expect(value).to.equal([NSValue med_valueWithSize:size]);
+	});
+
+	it(@"should wrap a CGPoint", ^{
+		NSValue *value = MEDBox(point);
+		expect(value).to.equal([NSValue med_valueWithPoint:point]);
+	});
+});
+
 SpecEnd
