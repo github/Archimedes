@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D02FAEEF1635DDC0008D42D9 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FAEEE1635DDC0008D42D9 /* SenTestingKit.framework */; };
-		D02FAEF31635DDC0008D42D9 /* libArchimedes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FAED91635DDC0008D42D9 /* libArchimedes.a */; };
+		D02FAEF31635DDC0008D42D9 /* libArchimedes-Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FAED91635DDC0008D42D9 /* libArchimedes-Mac.a */; };
 		D02FAEF91635DDC0008D42D9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D02FAEF71635DDC0008D42D9 /* InfoPlist.strings */; };
 		D02FAF741635DEE1008D42D9 /* libExpecta.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FAF691635DED6008D42D9 /* libExpecta.a */; };
 		D02FAF751635DEE1008D42D9 /* libSpecta.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FAF4C1635DE74008D42D9 /* libSpecta.a */; };
@@ -16,7 +16,7 @@
 		D02FAF901635DFD8008D42D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FAEE11635DDC0008D42D9 /* Foundation.framework */; };
 		D02FAF9E1635DFD9008D42D9 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FAEEE1635DDC0008D42D9 /* SenTestingKit.framework */; };
 		D02FAFA11635DFD9008D42D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FAEE11635DDC0008D42D9 /* Foundation.framework */; };
-		D02FAFA41635DFD9008D42D9 /* libArchimedes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FAF8F1635DFD8008D42D9 /* libArchimedes.a */; };
+		D02FAFA41635DFD9008D42D9 /* libArchimedes-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FAF8F1635DFD8008D42D9 /* libArchimedes-iOS.a */; };
 		D02FAFCA1635E07E008D42D9 /* libExpecta-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FAF6B1635DED6008D42D9 /* libExpecta-iOS.a */; };
 		D02FAFCB1635E07E008D42D9 /* libSpecta-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FAF4E1635DE74008D42D9 /* libSpecta-iOS.a */; };
 		D02FAFD41635E1A8008D42D9 /* MEDCGGeometryAdditionsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D02FAFD31635E1A8008D42D9 /* MEDCGGeometryAdditionsSpec.m */; };
@@ -149,7 +149,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		D02FAED91635DDC0008D42D9 /* libArchimedes.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libArchimedes.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D02FAED91635DDC0008D42D9 /* libArchimedes-Mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libArchimedes-Mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D02FAEE11635DDC0008D42D9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D02FAEE41635DDC0008D42D9 /* Archimedes-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Archimedes-Prefix.pch"; sourceTree = "<group>"; };
 		D02FAEE51635DDC0008D42D9 /* Archimedes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Archimedes.h; sourceTree = "<group>"; };
@@ -175,7 +175,7 @@
 		D02FAF1E1635DE6F008D42D9 /* Expecta.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Expecta.xcodeproj; path = ArchimedesTests/expecta/Expecta.xcodeproj; sourceTree = "<group>"; };
 		D02FAF211635DE6F008D42D9 /* Specta.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Specta.xcodeproj; path = ArchimedesTests/specta/Specta.xcodeproj; sourceTree = "<group>"; };
 		D02FAF8A1635DF89008D42D9 /* ArchimedesTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ArchimedesTests-Prefix.pch"; sourceTree = "<group>"; };
-		D02FAF8F1635DFD8008D42D9 /* libArchimedes.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libArchimedes.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D02FAF8F1635DFD8008D42D9 /* libArchimedes-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libArchimedes-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D02FAF9D1635DFD9008D42D9 /* Archimedes iOS Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Archimedes iOS Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D02FAFD31635E1A8008D42D9 /* MEDCGGeometryAdditionsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDCGGeometryAdditionsSpec.m; sourceTree = "<group>"; };
 		D02FAFD71635E1BF008D42D9 /* MEDGeometryTestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDGeometryTestObject.h; sourceTree = "<group>"; };
@@ -206,8 +206,8 @@
 				D02FAF741635DEE1008D42D9 /* libExpecta.a in Frameworks */,
 				D02FAF751635DEE1008D42D9 /* libSpecta.a in Frameworks */,
 				D02FAEEF1635DDC0008D42D9 /* SenTestingKit.framework in Frameworks */,
-				D02FAEF31635DDC0008D42D9 /* libArchimedes.a in Frameworks */,
 				D0626AAA167951DC00E951A5 /* AppKit.framework in Frameworks */,
+				D02FAEF31635DDC0008D42D9 /* libArchimedes-Mac.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,8 +229,8 @@
 				D02FAFCB1635E07E008D42D9 /* libSpecta-iOS.a in Frameworks */,
 				D02FAF9E1635DFD9008D42D9 /* SenTestingKit.framework in Frameworks */,
 				D02FAFA11635DFD9008D42D9 /* Foundation.framework in Frameworks */,
-				D02FAFA41635DFD9008D42D9 /* libArchimedes.a in Frameworks */,
 				D0626AAB167951DF00E951A5 /* CoreGraphics.framework in Frameworks */,
+				D02FAFA41635DFD9008D42D9 /* libArchimedes-iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,9 +251,9 @@
 		D02FAEDA1635DDC0008D42D9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D02FAED91635DDC0008D42D9 /* libArchimedes.a */,
+				D02FAED91635DDC0008D42D9 /* libArchimedes-Mac.a */,
 				D02FAEED1635DDC0008D42D9 /* Archimedes Mac Tests.octest */,
-				D02FAF8F1635DFD8008D42D9 /* libArchimedes.a */,
+				D02FAF8F1635DFD8008D42D9 /* libArchimedes-iOS.a */,
 				D02FAF9D1635DFD9008D42D9 /* Archimedes iOS Tests.octest */,
 			);
 			name = Products;
@@ -443,7 +443,7 @@
 			);
 			name = "Archimedes Mac";
 			productName = Archimedes;
-			productReference = D02FAED91635DDC0008D42D9 /* libArchimedes.a */;
+			productReference = D02FAED91635DDC0008D42D9 /* libArchimedes-Mac.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		D02FAEEC1635DDC0008D42D9 /* Archimedes Mac Tests */ = {
@@ -481,7 +481,7 @@
 			);
 			name = "Archimedes iOS";
 			productName = Archimedes;
-			productReference = D02FAF8F1635DFD8008D42D9 /* libArchimedes.a */;
+			productReference = D02FAF8F1635DFD8008D42D9 /* libArchimedes-iOS.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		D02FAF9C1635DFD9008D42D9 /* Archimedes iOS Tests */ = {
@@ -744,7 +744,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = Archimedes;
 			};
 			name = Debug;
 		};
@@ -756,7 +755,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = Archimedes;
 			};
 			name = Release;
 		};
@@ -765,6 +763,7 @@
 			baseConfigurationReference = D02FAF1B1635DE46008D42D9 /* Mac-StaticLibrary.xcconfig */;
 			buildSettings = {
 				GCC_PREFIX_HEADER = "Archimedes/Archimedes-Prefix.pch";
+				PRODUCT_NAME = "Archimedes-Mac";
 			};
 			name = Debug;
 		};
@@ -773,6 +772,7 @@
 			baseConfigurationReference = D02FAF1B1635DE46008D42D9 /* Mac-StaticLibrary.xcconfig */;
 			buildSettings = {
 				GCC_PREFIX_HEADER = "Archimedes/Archimedes-Prefix.pch";
+				PRODUCT_NAME = "Archimedes-Mac";
 			};
 			name = Release;
 		};
@@ -814,6 +814,7 @@
 			buildSettings = {
 				DSTROOT = /tmp/Archimedes.dst;
 				GCC_PREFIX_HEADER = "Archimedes/Archimedes-Prefix.pch";
+				PRODUCT_NAME = "Archimedes-iOS";
 			};
 			name = Debug;
 		};
@@ -823,6 +824,7 @@
 			buildSettings = {
 				DSTROOT = /tmp/Archimedes.dst;
 				GCC_PREFIX_HEADER = "Archimedes/Archimedes-Prefix.pch";
+				PRODUCT_NAME = "Archimedes-iOS";
 			};
 			name = Release;
 		};
@@ -872,7 +874,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = Archimedes;
 			};
 			name = Profile;
 		};
@@ -881,6 +882,7 @@
 			baseConfigurationReference = D02FAF1B1635DE46008D42D9 /* Mac-StaticLibrary.xcconfig */;
 			buildSettings = {
 				GCC_PREFIX_HEADER = "Archimedes/Archimedes-Prefix.pch";
+				PRODUCT_NAME = "Archimedes-Mac";
 			};
 			name = Profile;
 		};
@@ -906,6 +908,7 @@
 			buildSettings = {
 				DSTROOT = /tmp/Archimedes.dst;
 				GCC_PREFIX_HEADER = "Archimedes/Archimedes-Prefix.pch";
+				PRODUCT_NAME = "Archimedes-iOS";
 			};
 			name = Profile;
 		};
