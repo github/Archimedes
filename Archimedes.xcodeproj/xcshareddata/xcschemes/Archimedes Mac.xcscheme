@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D02FAED81635DDC0008D42D9"
-               BuildableName = "libArchimedes.a"
+               BuildableName = "libArchimedes-Mac.a"
                BlueprintName = "Archimedes Mac"
                ReferencedContainer = "container:Archimedes.xcodeproj">
             </BuildableReference>
