@@ -7,3 +7,4 @@
 //
 
 #import "CGGeometry+MEDConvenienceAdditions.h"
+#import "NSValue+MEDGeometryAdditions.h"
