@@ -23,6 +23,19 @@
         ); \
     })
 
+// Indicates the type of geometry structure that an NSValue contains.
+//
+// MEDGeometryStructTypeUnknown - The NSValue contains a value of unknown type.
+// MEDGeometryStructTypeRect    - The NSValue contains a CGRect.
+// MEDGeometryStructTypePoint   - The NSValue contains a CGPoint.
+// MEDGeometryStructTypeSize    - The NSValue contains a CGSize.
+typedef enum : NSUInteger {
+    MEDGeometryStructTypeUnknown,
+    MEDGeometryStructTypeRect,
+    MEDGeometryStructTypePoint,
+    MEDGeometryStructTypeSize
+} MEDGeometryStructType;
+
 // Implements a cross-platform interface for manipulating geometry structures
 // stored in an NSValue.
 @interface NSValue (MEDGeometryAdditions)
@@ -35,6 +48,10 @@
 
 // Returns an NSValue wrapping the given size.
 + (NSValue *)med_valueWithSize:(CGSize)size;
+
+// Returns the type of geometry structure stored in the receiver, or
+// MEDGeometryStructTypeUnknown if the type can't be identified.
+@property (nonatomic, assign, readonly) MEDGeometryStructType med_geometryStructType;
 
 // Returns the CGRect value in the receiver.
 @property (nonatomic, assign, readonly) CGRect med_rectValue;
