@@ -12,38 +12,66 @@ CGRect rect = CGRectMake(10, 20, 30, 40);
 CGPoint point = CGPointMake(100, 200);
 CGSize size = CGSizeMake(300, 400);
 
-it(@"should wrap a CGRect", ^{
-	NSValue *value = [NSValue med_valueWithRect:rect];
-	expect(value).notTo.beNil();
-	expect(CGRectEqualToRect(value.med_rectValue, rect)).to.beTruthy();
+__block NSValue *rectValue;
+__block NSValue *pointValue;
+__block NSValue *sizeValue;
+
+beforeEach(^{
+	rectValue = [NSValue med_valueWithRect:rect];
+	expect(rectValue).notTo.beNil();
+
+	pointValue = [NSValue med_valueWithPoint:point];
+	expect(pointValue).notTo.beNil();
+
+	sizeValue = [NSValue med_valueWithSize:size];
+	expect(sizeValue).notTo.beNil();
 });
 
-it(@"should wrap a CGSize", ^{
-	NSValue *value = [NSValue med_valueWithSize:size];
-	expect(value).notTo.beNil();
-	expect(CGSizeEqualToSize(value.med_sizeValue, size)).to.beTruthy();
+it(@"should wrap a CGRect", ^{
+	expect(CGRectEqualToRect(rectValue.med_rectValue, rect)).to.beTruthy();
 });
 
 it(@"should wrap a CGPoint", ^{
-	NSValue *value = [NSValue med_valueWithPoint:point];
-	expect(value).notTo.beNil();
-	expect(CGPointEqualToPoint(value.med_pointValue, point)).to.beTruthy();
+	expect(CGPointEqualToPoint(pointValue.med_pointValue, point)).to.beTruthy();
+});
+
+it(@"should wrap a CGSize", ^{
+	expect(CGSizeEqualToSize(sizeValue.med_sizeValue, size)).to.beTruthy();
 });
 
 describe(@"MEDBox", ^{
 	it(@"should wrap a CGRect", ^{
 		NSValue *value = MEDBox(rect);
-		expect(value).to.equal([NSValue med_valueWithRect:rect]);
-	});
-
-	it(@"should wrap a CGSize", ^{
-		NSValue *value = MEDBox(size);
-		expect(value).to.equal([NSValue med_valueWithSize:size]);
+		expect(value).to.equal(rectValue);
 	});
 
 	it(@"should wrap a CGPoint", ^{
 		NSValue *value = MEDBox(point);
-		expect(value).to.equal([NSValue med_valueWithPoint:point]);
+		expect(value).to.equal(pointValue);
+	});
+
+	it(@"should wrap a CGSize", ^{
+		NSValue *value = MEDBox(size);
+		expect(value).to.equal(sizeValue);
+	});
+});
+
+describe(@"med_geometryStructType", ^{
+	it(@"should identify a CGRect", ^{
+		expect(rectValue.med_geometryStructType).to.equal(MEDGeometryStructTypeRect);
+	});
+
+	it(@"should identify a CGPoint", ^{
+		expect(pointValue.med_geometryStructType).to.equal(MEDGeometryStructTypePoint);
+	});
+
+	it(@"should identify a CGSize", ^{
+		expect(sizeValue.med_geometryStructType).to.equal(MEDGeometryStructTypeSize);
+	});
+
+	it(@"should return MEDGeometryStructTypeUnknown for unknown types", ^{
+		NSNumber *num = @5;
+		expect(num.med_geometryStructType).to.equal(MEDGeometryStructTypeUnknown);
 	});
 });
 
