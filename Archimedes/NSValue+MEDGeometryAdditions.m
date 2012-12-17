@@ -70,4 +70,18 @@
 
 #endif
 
+- (MEDGeometryStructType)med_geometryStructType {
+	const char *type = self.objCType;
+
+	if (strcmp(type, @encode(CGRect)) == 0) {
+		return MEDGeometryStructTypeRect;
+	} else if (strcmp(type, @encode(CGPoint)) == 0) {
+		return MEDGeometryStructTypePoint;
+	} else if (strcmp(type, @encode(CGSize)) == 0) {
+		return MEDGeometryStructTypeSize;
+	} else {
+		return MEDGeometryStructTypeUnknown;
+	}
+}
+
 @end
