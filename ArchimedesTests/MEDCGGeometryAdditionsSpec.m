@@ -177,13 +177,23 @@ describe(@"CGRectFloor", ^{
 		expect(result).to.equal(rect);
 	});
 
-	it(@"rounds down, except in Y.", ^{
-		CGRect rect = CGRectMake(10.1f, 1.1f, -3.4f, -4.7f);
+	#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
+		it(@"rounds down", ^{
+			CGRect rect = CGRectMake(10.1f, 1.1f, -3.4f, -4.7f);
 
-		CGRect result = CGRectFloor(rect);
-		CGRect expectedResult = CGRectMake(10, 2, -4, -5);
-		expect(result).to.equal(expectedResult);
-	});
+			CGRect result = CGRectFloor(rect);
+			CGRect expectedResult = CGRectMake(10, 1, -4, -5);
+			expect(result).to.equal(expectedResult);
+		});
+	#elif TARGET_OS_MAC
+		it(@"rounds down, except in Y", ^{
+			CGRect rect = CGRectMake(10.1, 1.1, -3.4, -4.7);
+
+			CGRect result = CGRectFloor(rect);
+			CGRect expectedResult = CGRectMake(10, 2, -4, -5);
+			expect(result).to.equal(expectedResult);
+		});
+	#endif
 
 	it(@"leaves CGRectNull untouched", ^{
 		CGRect rect = CGRectNull;

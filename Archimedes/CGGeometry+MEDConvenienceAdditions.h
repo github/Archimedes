@@ -97,10 +97,15 @@ void CGRectDivideWithPadding(CGRect rect, CGRect *slice, CGRect *remainder, CGFl
 		_MEDAssignToRectByReference(REMAINDER, _remainder); \
 	} while (0)
 
-// Round down fractional X origins (moving leftward on screen), round
-// up fractional Y origins (moving upward on screen), and round down fractional
-// sizes, such that the size of the rectangle will never increase just
-// from use of this method.
+// On OS X, this function will round down fractional X origins (moving leftward
+// on screen) and round up fractional Y origins (moving upward on screen).
+//
+// On iOS, this function will round down fractional X origins (moving leftward
+// on screen) and round down fractional Y origins (moving upward on screen).
+//
+// On both platforms, this function will round down fractional sizes, such that
+// the size of the rectangle will never increase just from use of this method.
+// Among other things, this avoids stretching images that need a precise size.
 //
 // This function differs from CGRectIntegral() in that the resultant rectangle
 // may not completely encompass `rect`. CGRectIntegral() will ensure that its
