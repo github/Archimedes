@@ -244,12 +244,21 @@ describe(@"CGRectWithSize", ^{
 });
 
 describe(@"CGPointFloor", ^{
-	it(@"rounds components up and left", ^{
-		CGPoint point = CGPointMake(0.5f, 0.49f);
-		CGPoint point2 = CGPointMake(-0.5f, -0.49f);
-		expect(CGPointEqualToPoint(CGPointFloor(point), CGPointMake(0, 1))).to.beTruthy();
-		expect(CGPointEqualToPoint(CGPointFloor(point2), CGPointMake(-1, 0))).to.beTruthy();
-	});
+	#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
+		it(@"rounds components up and left", ^{
+			CGPoint point = CGPointMake(0.5f, 0.49f);
+			CGPoint point2 = CGPointMake(-0.5f, -0.49f);
+			expect(CGPointEqualToPoint(CGPointFloor(point), CGPointMake(0, 0))).to.beTruthy();
+			expect(CGPointEqualToPoint(CGPointFloor(point2), CGPointMake(-1, -1))).to.beTruthy();
+		});
+	#elif TARGET_OS_MAC
+		it(@"rounds components up and left", ^{
+			CGPoint point = CGPointMake(0.5, 0.49);
+			CGPoint point2 = CGPointMake(-0.5, -0.49);
+			expect(CGPointEqualToPoint(CGPointFloor(point), CGPointMake(0, 1))).to.beTruthy();
+			expect(CGPointEqualToPoint(CGPointFloor(point2), CGPointMake(-1, 0))).to.beTruthy();
+		});
+	#endif
 });
 
 describe(@"equality with accuracy", ^{

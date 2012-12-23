@@ -114,7 +114,11 @@ CGSize CGSizeScale(CGSize size, CGFloat scale) {
 }
 
 CGPoint CGPointFloor(CGPoint point) {
-	return CGPointMake(floor(point.x), ceil(point.y));
+	#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
+		return CGPointMake(floor(point.x), floor(point.y));
+	#elif TARGET_OS_MAC
+		return CGPointMake(floor(point.x), ceil(point.y));
+	#endif
 }
 
 BOOL CGPointEqualToPointWithAccuracy(CGPoint p, CGPoint q, CGFloat epsilon) {
