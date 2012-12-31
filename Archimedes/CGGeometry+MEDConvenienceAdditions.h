@@ -99,8 +99,8 @@ void CGRectDivideWithPadding(CGRect rect, CGRect *slice, CGRect *remainder, CGFl
 
 // Round a rectangle to integral numbers.
 //
-// The rect will always be moved up and left, in view coordinates. To accomplish
-// this:
+// The rect will be moved up and left in native view coordinates (not accounting
+// for flippedness or transformed coordinate systems). To accomplish this:
 //
 //  - On OS X, this function will round down fractional X origins and round up
 //    fractional Y origins.
@@ -152,7 +152,8 @@ CGSize CGSizeScale(CGSize size, CGFloat scale);
 
 // Round a point to integral numbers.
 //
-// The point will always be moved up and left, in view coordinates. To accomplish
+// The point will be moved up and left in native view coordinates (not
+// accounting for flippedness or transformed coordinate systems). To accomplish
 // this:
 //
 //  - On OS X, this function will round down fractional X values and round up
