@@ -177,13 +177,23 @@ describe(@"CGRectFloor", ^{
 		expect(result).to.equal(rect);
 	});
 
-	it(@"rounds down, except in Y.", ^{
-		CGRect rect = CGRectMake(10.1f, 1.1f, -3.4f, -4.7f);
+	#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
+		it(@"rounds down", ^{
+			CGRect rect = CGRectMake(10.1f, 1.1f, -3.4f, -4.7f);
 
-		CGRect result = CGRectFloor(rect);
-		CGRect expectedResult = CGRectMake(10, 2, -4, -5);
-		expect(result).to.equal(expectedResult);
-	});
+			CGRect result = CGRectFloor(rect);
+			CGRect expectedResult = CGRectMake(10, 1, -4, -5);
+			expect(result).to.equal(expectedResult);
+		});
+	#elif TARGET_OS_MAC
+		it(@"rounds down, except in Y", ^{
+			CGRect rect = CGRectMake(10.1, 1.1, -3.4, -4.7);
+
+			CGRect result = CGRectFloor(rect);
+			CGRect expectedResult = CGRectMake(10, 2, -4, -5);
+			expect(result).to.equal(expectedResult);
+		});
+	#endif
 
 	it(@"leaves CGRectNull untouched", ^{
 		CGRect rect = CGRectNull;
@@ -234,12 +244,21 @@ describe(@"CGRectWithSize", ^{
 });
 
 describe(@"CGPointFloor", ^{
-	it(@"rounds components up and left", ^{
-		CGPoint point = CGPointMake(0.5f, 0.49f);
-		CGPoint point2 = CGPointMake(-0.5f, -0.49f);
-		expect(CGPointEqualToPoint(CGPointFloor(point), CGPointMake(0, 1))).to.beTruthy();
-		expect(CGPointEqualToPoint(CGPointFloor(point2), CGPointMake(-1, 0))).to.beTruthy();
-	});
+	#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
+		it(@"rounds components up and left", ^{
+			CGPoint point = CGPointMake(0.5f, 0.49f);
+			CGPoint point2 = CGPointMake(-0.5f, -0.49f);
+			expect(CGPointEqualToPoint(CGPointFloor(point), CGPointMake(0, 0))).to.beTruthy();
+			expect(CGPointEqualToPoint(CGPointFloor(point2), CGPointMake(-1, -1))).to.beTruthy();
+		});
+	#elif TARGET_OS_MAC
+		it(@"rounds components up and left", ^{
+			CGPoint point = CGPointMake(0.5, 0.49);
+			CGPoint point2 = CGPointMake(-0.5, -0.49);
+			expect(CGPointEqualToPoint(CGPointFloor(point), CGPointMake(0, 1))).to.beTruthy();
+			expect(CGPointEqualToPoint(CGPointFloor(point2), CGPointMake(-1, 0))).to.beTruthy();
+		});
+	#endif
 });
 
 describe(@"equality with accuracy", ^{
