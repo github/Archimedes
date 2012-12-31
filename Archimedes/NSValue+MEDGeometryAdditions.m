@@ -31,14 +31,17 @@
 }
 
 - (CGRect)med_rectValue {
+	NSAssert(self.med_geometryStructType == MEDGeometryStructTypeRect, @"Value is not a CGRect: %@", self);
 	return self.CGRectValue;
 }
 
 - (CGPoint)med_pointValue {
+	NSAssert(self.med_geometryStructType == MEDGeometryStructTypePoint, @"Value is not a CGPoint: %@", self);
 	return self.CGPointValue;
 }
 
 - (CGSize)med_sizeValue {
+	NSAssert(self.med_geometryStructType == MEDGeometryStructTypeSize, @"Value is not a CGSize: %@", self);
 	return self.CGSizeValue;
 }
 
@@ -57,14 +60,17 @@
 }
 
 - (CGRect)med_rectValue {
+	NSAssert(self.med_geometryStructType == MEDGeometryStructTypeRect, @"Value is not a CGRect: %@", self);
 	return self.rectValue;
 }
 
 - (CGPoint)med_pointValue {
+	NSAssert(self.med_geometryStructType == MEDGeometryStructTypePoint, @"Value is not a CGPoint: %@", self);
 	return self.pointValue;
 }
 
 - (CGSize)med_sizeValue {
+	NSAssert(self.med_geometryStructType == MEDGeometryStructTypeSize, @"Value is not a CGSize: %@", self);
 	return self.sizeValue;
 }
 
