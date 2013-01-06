@@ -6,5 +6,5 @@
 //  Copyright (c) 2012 GitHub. All rights reserved.
 //
 
-#import "CGGeometry+MEDConvenienceAdditions.h"
-#import "NSValue+MEDGeometryAdditions.h"
+#import <Archimedes/CGGeometry+MEDConvenienceAdditions.h>
+#import <Archimedes/NSValue+MEDGeometryAdditions.h>
