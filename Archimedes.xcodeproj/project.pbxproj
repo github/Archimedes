@@ -764,6 +764,7 @@
 			buildSettings = {
 				GCC_PREFIX_HEADER = "Archimedes/Archimedes-Prefix.pch";
 				PRODUCT_NAME = "Archimedes-Mac";
+				PUBLIC_HEADERS_FOLDER_PATH = include/Archimedes;
 			};
 			name = Debug;
 		};
@@ -773,6 +774,7 @@
 			buildSettings = {
 				GCC_PREFIX_HEADER = "Archimedes/Archimedes-Prefix.pch";
 				PRODUCT_NAME = "Archimedes-Mac";
+				PUBLIC_HEADERS_FOLDER_PATH = include/Archimedes;
 			};
 			name = Release;
 		};
@@ -815,6 +817,7 @@
 				DSTROOT = /tmp/Archimedes.dst;
 				GCC_PREFIX_HEADER = "Archimedes/Archimedes-Prefix.pch";
 				PRODUCT_NAME = "Archimedes-iOS";
+				PUBLIC_HEADERS_FOLDER_PATH = include/Archimedes;
 			};
 			name = Debug;
 		};
@@ -825,6 +828,7 @@
 				DSTROOT = /tmp/Archimedes.dst;
 				GCC_PREFIX_HEADER = "Archimedes/Archimedes-Prefix.pch";
 				PRODUCT_NAME = "Archimedes-iOS";
+				PUBLIC_HEADERS_FOLDER_PATH = include/Archimedes;
 			};
 			name = Release;
 		};
@@ -883,6 +887,7 @@
 			buildSettings = {
 				GCC_PREFIX_HEADER = "Archimedes/Archimedes-Prefix.pch";
 				PRODUCT_NAME = "Archimedes-Mac";
+				PUBLIC_HEADERS_FOLDER_PATH = include/Archimedes;
 			};
 			name = Profile;
 		};
@@ -909,6 +914,7 @@
 				DSTROOT = /tmp/Archimedes.dst;
 				GCC_PREFIX_HEADER = "Archimedes/Archimedes-Prefix.pch";
 				PRODUCT_NAME = "Archimedes-iOS";
+				PUBLIC_HEADERS_FOLDER_PATH = include/Archimedes;
 			};
 			name = Profile;
 		};
