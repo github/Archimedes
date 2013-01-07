@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D005A1A8169A384300A9D2DB /* Archimedes.h in Headers */ = {isa = PBXBuildFile; fileRef = D02FAEE51635DDC0008D42D9 /* Archimedes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D005A1A9169A384400A9D2DB /* Archimedes.h in Headers */ = {isa = PBXBuildFile; fileRef = D02FAEE51635DDC0008D42D9 /* Archimedes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D005A1AA169A384A00A9D2DB /* CGGeometry+MEDConvenienceAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D02FAFDC1635E1E9008D42D9 /* CGGeometry+MEDConvenienceAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D005A1AB169A384C00A9D2DB /* CGGeometry+MEDConvenienceAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D02FAFDC1635E1E9008D42D9 /* CGGeometry+MEDConvenienceAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D005A1AC169A385100A9D2DB /* NSValue+MEDGeometryAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D0626A9B1679506E00E951A5 /* NSValue+MEDGeometryAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D005A1AD169A385300A9D2DB /* NSValue+MEDGeometryAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D0626A9B1679506E00E951A5 /* NSValue+MEDGeometryAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D02FAEEF1635DDC0008D42D9 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FAEEE1635DDC0008D42D9 /* SenTestingKit.framework */; };
 		D02FAEF31635DDC0008D42D9 /* libArchimedes-Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D02FAED91635DDC0008D42D9 /* libArchimedes-Mac.a */; };
 		D02FAEF91635DDC0008D42D9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D02FAEF71635DDC0008D42D9 /* InfoPlist.strings */; };
@@ -135,18 +141,6 @@
 			remoteInfo = "Expecta-iOS";
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		D02FAF8D1635DFD8008D42D9 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/${PRODUCT_NAME}";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D02FAED91635DDC0008D42D9 /* libArchimedes-Mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libArchimedes-Mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -419,10 +413,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		D005A1A7169A384000A9D2DB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D005A1A9169A384400A9D2DB /* Archimedes.h in Headers */,
+				D005A1AB169A384C00A9D2DB /* CGGeometry+MEDConvenienceAdditions.h in Headers */,
+				D005A1AD169A385300A9D2DB /* NSValue+MEDGeometryAdditions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D02FAED71635DDC0008D42D9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D005A1A8169A384300A9D2DB /* Archimedes.h in Headers */,
+				D005A1AA169A384A00A9D2DB /* CGGeometry+MEDConvenienceAdditions.h in Headers */,
+				D005A1AC169A385100A9D2DB /* NSValue+MEDGeometryAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,7 +480,7 @@
 			buildPhases = (
 				D02FAF8B1635DFD8008D42D9 /* Sources */,
 				D02FAF8C1635DFD8008D42D9 /* Frameworks */,
-				D02FAF8D1635DFD8008D42D9 /* CopyFiles */,
+				D005A1A7169A384000A9D2DB /* Headers */,
 			);
 			buildRules = (
 			);
@@ -764,6 +771,7 @@
 			buildSettings = {
 				GCC_PREFIX_HEADER = "Archimedes/Archimedes-Prefix.pch";
 				PRODUCT_NAME = "Archimedes-Mac";
+				PUBLIC_HEADERS_FOLDER_PATH = include/Archimedes;
 			};
 			name = Debug;
 		};
@@ -773,6 +781,7 @@
 			buildSettings = {
 				GCC_PREFIX_HEADER = "Archimedes/Archimedes-Prefix.pch";
 				PRODUCT_NAME = "Archimedes-Mac";
+				PUBLIC_HEADERS_FOLDER_PATH = include/Archimedes;
 			};
 			name = Release;
 		};
@@ -815,6 +824,7 @@
 				DSTROOT = /tmp/Archimedes.dst;
 				GCC_PREFIX_HEADER = "Archimedes/Archimedes-Prefix.pch";
 				PRODUCT_NAME = "Archimedes-iOS";
+				PUBLIC_HEADERS_FOLDER_PATH = include/Archimedes;
 			};
 			name = Debug;
 		};
@@ -825,6 +835,7 @@
 				DSTROOT = /tmp/Archimedes.dst;
 				GCC_PREFIX_HEADER = "Archimedes/Archimedes-Prefix.pch";
 				PRODUCT_NAME = "Archimedes-iOS";
+				PUBLIC_HEADERS_FOLDER_PATH = include/Archimedes;
 			};
 			name = Release;
 		};
@@ -883,6 +894,7 @@
 			buildSettings = {
 				GCC_PREFIX_HEADER = "Archimedes/Archimedes-Prefix.pch";
 				PRODUCT_NAME = "Archimedes-Mac";
+				PUBLIC_HEADERS_FOLDER_PATH = include/Archimedes;
 			};
 			name = Profile;
 		};
@@ -909,6 +921,7 @@
 				DSTROOT = /tmp/Archimedes.dst;
 				GCC_PREFIX_HEADER = "Archimedes/Archimedes-Prefix.pch";
 				PRODUCT_NAME = "Archimedes-iOS";
+				PUBLIC_HEADERS_FOLDER_PATH = include/Archimedes;
 			};
 			name = Profile;
 		};
