@@ -147,8 +147,8 @@ CGRect CGRectWithSize(CGSize size);
 // This is useful in situations where a rect represents the frame of an object
 // like a CALayer, but the object's geometry is in a unit coordinate system.
 //
-// rect			 - The rectangle that will be "converted" to the new unit
-//				   rectangle's coordinate system.
+// rect           - The rectangle that will be "converted" to the new unit
+//                  rectangle's coordinate system.
 CGRect CGRectConvertToUnitRect(CGRect rect);
 
 // Returns a rectangle whose coordinates are the representation of a destination
@@ -158,11 +158,11 @@ CGRect CGRectConvertToUnitRect(CGRect rect);
 // destination rect is required because unit coordinate systems are
 // size agnostic.
 //
-// rect			 - The rectangle, in unit coordinates, to be "converted" to
-//				   the destination rect's coordinate system.
+// rect           - The rectangle, in unit coordinates, to be "converted" to
+//                  the destination rect's coordinate system.
 //
-// destRect		 - The rectangle that represents the size of the screen the
-// 				   unit rect will be converted to.
+// destRect       - The rectangle that represents the size of the screen the
+//                  unit rect will be converted to.
 CGRect CGRectConvertFromUnitRect(CGRect rect, CGRect destRect);
 
 // Returns whether every side of `rect` is within `epsilon` distance of `rect2`.
