@@ -243,6 +243,22 @@ describe(@"CGRectWithSize", ^{
 	});
 });
 
+describe(@"CGRectConvertToUnitRect", ^{
+	it(@"should return a rectangle with unit coordinates", ^{
+		CGRect rect = CGRectConvertToUnitRect(CGRectMake(0, 0, 100, 100));
+		expect(rect).to.equal(CGRectMake(0, 0, 1, 1));
+	});
+});
+
+describe(@"CGRectConvertFromUnitRect", ^{
+	it(@"should return a rectangle with non-unit coordinates", ^{
+		CGRect viewRect = CGRectMake(0, 0, 100, 100);
+		CGRect unitRect = CGRectMake(0, 0, 0.5f, 0.5f);
+		CGRect rect = CGRectConvertFromUnitRect(unitRect, viewRect);
+		expect(rect).to.equal(CGRectMake(0, 0, 50.f, 50.f));
+	});
+});
+
 describe(@"CGPointFloor", ^{
 	#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
 		it(@"rounds components up and left", ^{
