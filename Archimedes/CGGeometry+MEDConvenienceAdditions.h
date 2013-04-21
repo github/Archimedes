@@ -141,18 +141,15 @@ CGRect CGRectInvert(CGRect containingRect, CGRect rect);
 // Returns a rectangle with an origin of `CGPointZero` and the given size.
 CGRect CGRectWithSize(CGSize size);
 
-// Returns a rectangle whose coordinates correspond with a unit rectangle's
-// coordinate system.
+// Converts a rectangle to one in the unit coordinate space.
 //
-// This is useful in situations where a rect represents the frame of an object
-// like a CALayer, but the object's geometry is in a unit coordinate system.
-//
-// rect           - The rectangle that will be "converted" to the new unit
-//                  rectangle's coordinate system.
+// Unit rectangles are an abstraction from screen sizes that range from 0-1
+// along both axes.  This function will attempt to find the nearest fractional
+// representation of the components of the given rectangle.
 CGRect CGRectConvertToUnitRect(CGRect rect);
 
-// Returns a rectangle whose coordinates are the representation of a destination
-// rect coordinate system from a rect that is in a unit coordinate system.
+// Converts a rectangle from a destination rectangle and a rectangle
+// whose coordinates fall in unit coordinate space.
 //
 // This is the exact opposite of `CGRectConvertToUnitRect`, however a
 // destination rect is required because unit coordinate systems are

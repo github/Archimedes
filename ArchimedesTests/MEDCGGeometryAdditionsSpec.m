@@ -253,9 +253,9 @@ describe(@"CGRectConvertToUnitRect", ^{
 describe(@"CGRectConvertFromUnitRect", ^{
 	it(@"should return a rectangle with non-unit coordinates", ^{
 		CGRect viewRect = CGRectMake(0, 0, 100, 100);
-		CGRect unitRect = CGRectMake(0, 0, 0.5f, 0.5f);
+		CGRect unitRect = CGRectMake(0, 0, 0.5, 0.5);
 		CGRect rect = CGRectConvertFromUnitRect(unitRect, viewRect);
-		expect(rect).to.equal(CGRectMake(0, 0, 50.f, 50.f));
+		expect(rect).to.equal(CGRectMake(0, 0, 50, 50));
 	});
 });
 
