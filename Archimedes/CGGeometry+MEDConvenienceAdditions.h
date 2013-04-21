@@ -148,8 +148,8 @@ CGRect CGRectWithSize(CGSize size);
 // representation of the components of the given rectangle.
 CGRect CGRectConvertToUnitRect(CGRect rect);
 
-// Converts a rectangle from a destination rectangle and a rectangle
-// whose coordinates fall in unit coordinate space.
+// Converts a unit rectangle into the coordinate space of a destination
+// rectangle.
 //
 // This is the exact opposite of `CGRectConvertToUnitRect`, however a
 // destination rect is required because unit coordinate systems are
@@ -157,7 +157,6 @@ CGRect CGRectConvertToUnitRect(CGRect rect);
 //
 // rect           - The rectangle, in unit coordinates, to be "converted" to
 //                  the destination rect's coordinate system.
-//
 // destRect       - The rectangle that represents the size of the screen the
 //                  unit rect will be converted to.
 CGRect CGRectConvertFromUnitRect(CGRect rect, CGRect destRect);
