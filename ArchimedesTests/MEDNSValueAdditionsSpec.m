@@ -54,6 +54,19 @@ describe(@"MEDBox", ^{
 		NSValue *value = MEDBox(size);
 		expect(value).to.equal(sizeValue);
 	});
+
+	// Specifically used because we don't support it directly.
+	it(@"should wrap a CGAffineTransform", ^{
+		CGAffineTransform transform = CGAffineTransformMake(1, 2, 5, 8, 13, 21);
+
+		NSValue *value = MEDBox(transform);
+		expect(value).notTo.beNil();
+
+		CGAffineTransform readTransform;
+		[value getValue:&readTransform];
+
+		expect(CGAffineTransformEqualToTransform(transform, readTransform)).to.beTruthy();
+	});
 });
 
 describe(@"med_geometryStructType", ^{
