@@ -8,7 +8,7 @@
 
 #import <CoreGraphics/CoreGraphics.h>
 
-// Boxes a CGRect, CGPoint, or CGSize value.
+// Boxes a geometry structure.
 //
 // Returns an NSValue.
 #define MEDBox(VALUE) \
@@ -16,11 +16,7 @@
         __typeof__(VALUE) value_ = (VALUE); \
         const void *value_ptr_ = &value_; \
         \
-        _Generic(value_, \
-            CGRect: [NSValue med_valueWithRect:*(CGRect *)value_ptr_], \
-            CGSize: [NSValue med_valueWithSize:*(CGSize *)value_ptr_], \
-            CGPoint: [NSValue med_valueWithPoint:*(CGPoint *)value_ptr_] \
-        ); \
+        [NSValue valueWithBytes:value_ptr_ objCType:@encode(__typeof__(VALUE))]; \
     })
 
 // Indicates the type of geometry structure that an NSValue contains.
