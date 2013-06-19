@@ -518,7 +518,7 @@
 		D02FAED01635DDC0008D42D9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = GitHub;
 			};
 			buildConfigurationList = D02FAED31635DDC0008D42D9 /* Build configuration list for PBXProject "Archimedes" */;
@@ -748,11 +748,8 @@
 			baseConfigurationReference = D02FAF0C1635DE46008D42D9 /* Debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_WARN_EMPTY_BODY = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 			};
 			name = Debug;
@@ -762,8 +759,6 @@
 			baseConfigurationReference = D02FAF0E1635DE46008D42D9 /* Release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_WARN_EMPTY_BODY = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_LDFLAGS = "-ObjC";
@@ -887,8 +882,6 @@
 			baseConfigurationReference = D02FAF0D1635DE46008D42D9 /* Profile.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_WARN_EMPTY_BODY = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_LDFLAGS = "-ObjC";
