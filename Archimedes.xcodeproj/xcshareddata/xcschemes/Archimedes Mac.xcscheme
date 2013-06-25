@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0500"
+   LastUpgradeVersion = "0460"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D02FAED81635DDC0008D42D9"
-               BuildableName = "libArchimedes-Mac.a"
+               BlueprintIdentifier = "D0D628E917790B29008EF295"
+               BuildableName = "Archimedes.framework"
                BlueprintName = "Archimedes Mac"
                ReferencedContainer = "container:Archimedes.xcodeproj">
             </BuildableReference>
@@ -23,12 +23,12 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "YES"
+            buildForProfiling = "NO"
             buildForArchiving = "NO"
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D02FAEEC1635DDC0008D42D9"
+               BlueprintIdentifier = "D0D628FF17790B2A008EF295"
                BuildableName = "Archimedes Mac Tests.octest"
                BlueprintName = "Archimedes Mac Tests"
                ReferencedContainer = "container:Archimedes.xcodeproj">
@@ -46,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D02FAEEC1635DDC0008D42D9"
+               BlueprintIdentifier = "D0D628FF17790B2A008EF295"
                BuildableName = "Archimedes Mac Tests.octest"
                BlueprintName = "Archimedes Mac Tests"
                ReferencedContainer = "container:Archimedes.xcodeproj">
