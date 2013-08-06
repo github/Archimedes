@@ -41,7 +41,11 @@ NSString * NSStringFromMEDEdgeInsets(MEDEdgeInsets insets) {
 MEDEdgeInsets MEDEdgeInsetsFromString(NSString *string) {
 	MEDEdgeInsets insets = MEDEdgeInsetsZero;
 	if (string) {
+#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
+		sscanf(string.UTF8String, "{%g, %g, %g, %g}", &insets.top, &insets.left, &insets.bottom, &insets.right);
+#elif TARGET_OS_MAC
 		sscanf(string.UTF8String, "{%lg, %lg, %lg, %lg}", &insets.top, &insets.left, &insets.bottom, &insets.right);
+#endif
 	}
 	return insets;
 }
