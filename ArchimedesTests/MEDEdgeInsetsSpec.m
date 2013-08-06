@@ -10,7 +10,7 @@
 
 MEDEdgeInsets insets = (MEDEdgeInsets){1, 2, 3, 4};
 
-SpecBegin(MEDNSEdgeInsets);
+SpecBegin(MEDEdgeInsets);
 
 it(@"should check equality between MEDEdgeInsets", ^{
 	MEDEdgeInsets insets2 = (MEDEdgeInsets){1.05f, 2.05f, 3.05f, 4.05f};
