@@ -10,13 +10,9 @@
 
 #ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
 #import <UIKit/UIKit.h>
-#elif TARGET_OS_MAC
-#import <AppKit/AppKit.h>
-#endif
-
-#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
 typedef UIEdgeInsets MEDEdgeInsets;
 #elif TARGET_OS_MAC
+#import <AppKit/AppKit.h>
 typedef NSEdgeInsets MEDEdgeInsets;
 #endif
 
