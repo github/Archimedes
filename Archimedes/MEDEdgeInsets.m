@@ -40,9 +40,8 @@ NSString * NSStringFromMEDEdgeInsets(MEDEdgeInsets insets) {
 }
 
 MEDEdgeInsets MEDEdgeInsetsFromString(NSString *string) {
+	NSCParameterAssert(string != nil);
 	double top = 0, left = 0, bottom = 0, right = 0;
-	if (string != nil) {
-		sscanf(string.UTF8String, "{%lg, %lg, %lg, %lg}", &top, &left, &bottom, &right);
-	}
+	sscanf(string.UTF8String, "{%lg, %lg, %lg, %lg}", &top, &left, &bottom, &right);
 	return MEDEdgeInsetsMake((CGFloat)top, (CGFloat)left, (CGFloat)bottom, (CGFloat)right);
 }
