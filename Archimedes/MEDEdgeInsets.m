@@ -20,16 +20,19 @@ BOOL MEDEdgeInsetsEqualToEdgeInsets(MEDEdgeInsets insets1, MEDEdgeInsets insets2
 }
 
 CGRect MEDEdgeInsetsInsetRect(CGRect rect, MEDEdgeInsets insets) {
-	rect.origin.x += insets.left;
+	if (((insets.top + insets.bottom) > rect.size.height) || ((insets.left + insets.right) > rect.size.width)) {
+		return CGRectNull;
+	} else {
+		rect.origin.x += insets.left;
 #ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
-	rect.origin.y += insets.top;
+		rect.origin.y += insets.top;
 #elif TARGET_OS_MAC
-	rect.origin.y += insets.bottom;
+		rect.origin.y += insets.bottom;
 #endif
-	rect.size.height -= (insets.top + insets.bottom);
-	rect.size.width -= (insets.left + insets.right);
-	return rect;
-	
+		rect.size.height -= (insets.top + insets.bottom);
+		rect.size.width -= (insets.left + insets.right);
+		return rect;
+	}
 }
 
 NSString * NSStringFromMEDEdgeInsets(MEDEdgeInsets insets) {
