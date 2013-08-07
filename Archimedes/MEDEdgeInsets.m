@@ -9,7 +9,7 @@
 #import "MEDEdgeInsets.h"
 
 MEDEdgeInsets MEDEdgeInsetsMake(CGFloat top, CGFloat left, CGFloat bottom, CGFloat right) {
-	return (MEDEdgeInsets){top, left, bottom, right};
+	return (MEDEdgeInsets){ .top = top, .left = left, .bottom = bottom, .right = right };
 }
 
 BOOL MEDEdgeInsetsEqualToEdgeInsets(MEDEdgeInsets insets1, MEDEdgeInsets insets2) {
@@ -38,7 +38,7 @@ NSString * NSStringFromMEDEdgeInsets(MEDEdgeInsets insets) {
 
 MEDEdgeInsets MEDEdgeInsetsFromString(NSString *string) {
 	MEDEdgeInsets insets = MEDEdgeInsetsZero;
-	if (string) {
+	if (string != nil) {
 #ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
 		sscanf(string.UTF8String, "{%g, %g, %g, %g}", &insets.top, &insets.left, &insets.bottom, &insets.right);
 #elif TARGET_OS_MAC

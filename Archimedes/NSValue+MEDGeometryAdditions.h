@@ -22,17 +22,17 @@
 
 // Indicates the type of geometry structure that an NSValue contains.
 //
-// MEDGeometryStructTypeUnknown		- The NSValue contains a value of unknown type.
-// MEDGeometryStructTypeRect		- The NSValue contains a CGRect.
-// MEDGeometryStructTypePoint		- The NSValue contains a CGPoint.
-// MEDGeometryStructTypeSize		- The NSValue contains a CGSize.
-// MEDGeometryStructTypeEdgeInsets	- The NSValue contains an MEDEdgeInsets.
+// MEDGeometryStructTypeUnknown     - The NSValue contains a value of unknown type.
+// MEDGeometryStructTypeRect        - The NSValue contains a CGRect.
+// MEDGeometryStructTypePoint       - The NSValue contains a CGPoint.
+// MEDGeometryStructTypeSize        - The NSValue contains a CGSize.
+// MEDGeometryStructTypeEdgeInsets  - The NSValue contains an MEDEdgeInsets.
 typedef enum : NSUInteger {
     MEDGeometryStructTypeUnknown,
     MEDGeometryStructTypeRect,
     MEDGeometryStructTypePoint,
     MEDGeometryStructTypeSize,
-	MEDGeometryStructTypeEdgeInsets
+    MEDGeometryStructTypeEdgeInsets
 } MEDGeometryStructType;
 
 // Implements a cross-platform interface for manipulating geometry structures

@@ -8,20 +8,20 @@
 
 #import "MEDEdgeInsets.h"
 
-MEDEdgeInsets insets = (MEDEdgeInsets){1, 2, 3, 4};
+static const MEDEdgeInsets insets = (MEDEdgeInsets){ .top = 1, .left = 2, .bottom = 3, .right = 4 };
 
-SpecBegin(MEDEdgeInsets);
+SpecBegin(MEDEdgeInsets)
 
 it(@"should check equality between MEDEdgeInsets", ^{
-	MEDEdgeInsets insets2 = (MEDEdgeInsets){1.05f, 2.05f, 3.05f, 4.05f};
-	MEDEdgeInsets insets3 = (MEDEdgeInsets){5, 6, 7, 8};
+	MEDEdgeInsets insets2 = MEDEdgeInsetsMake(1.05f, 2.05f, 3.05f, 4.05f);
+	MEDEdgeInsets insets3 = MEDEdgeInsetsMake(5, 6, 7, 8);
 	expect(MEDEdgeInsetsEqualToEdgeInsets(insets, insets)).to.beTruthy();
 	expect(MEDEdgeInsetsEqualToEdgeInsets(insets, insets2)).to.beTruthy();
 	expect(MEDEdgeInsetsEqualToEdgeInsets(insets, insets3)).to.beFalsy();
 });
 
 it(@"should make an MEDEdgeInsets", ^{
-	expect(MEDEdgeInsetsEqualToEdgeInsets(MEDEdgeInsetsMake(1, 2, 3, 4), insets)).to.beTruthy();
+	expect(MEDEdgeInsetsMake(1, 2, 3, 4)).to.equal(insets);
 });
 
 it(@"should inset a CGRect", ^{
@@ -31,7 +31,7 @@ it(@"should inset a CGRect", ^{
 #elif TARGET_OS_MAC
 	CGRect insetRect = CGRectMake(12, 13, 4, 6);
 #endif
-	expect(CGRectEqualToRect(MEDEdgeInsetsInsetRect(rect, insets), insetRect));
+	expect(MEDEdgeInsetsInsetRect(rect, insets)).to.equal(insetRect);
 });
 
 it(@"should create a string from an MEDEdgeInsets", ^{
@@ -42,4 +42,4 @@ it(@"should create an MEDEdgeInsets from a string", ^{
 	expect(MEDEdgeInsetsEqualToEdgeInsets(insets, MEDEdgeInsetsFromString(@"{1, 2, 3, 4}"))).to.beTruthy();
 });
 
-SpecEnd;
+SpecEnd
