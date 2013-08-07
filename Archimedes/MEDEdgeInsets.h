@@ -17,7 +17,7 @@ typedef NSEdgeInsets MEDEdgeInsets;
 #endif
 
 // `MEDEdgeInsets` structure with all members set to 0.
-extern MEDEdgeInsets const MEDEdgeInsetsZero;
+#define MEDEdgeInsetsZero (MEDEdgeInsets){ .top = 0, .left = 0, .bottom = 0, .right = 0 }
 
 // Returns an MEDEgeInsets struct with the given edge insets.
 MEDEdgeInsets MEDEdgeInsetsMake(CGFloat top, CGFloat left, CGFloat bottom, CGFloat right);

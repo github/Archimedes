@@ -8,8 +8,6 @@
 
 #import "MEDEdgeInsets.h"
 
-MEDEdgeInsets const MEDEdgeInsetsZero = {0, 0, 0, 0};
-
 MEDEdgeInsets MEDEdgeInsetsMake(CGFloat top, CGFloat left, CGFloat bottom, CGFloat right) {
 	return (MEDEdgeInsets){top, left, bottom, right};
 }
