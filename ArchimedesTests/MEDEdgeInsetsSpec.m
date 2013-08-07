@@ -9,11 +9,7 @@
 #import "MEDEdgeInsets.h"
 
 static const MEDEdgeInsets insets = (MEDEdgeInsets){ .top = 1, .left = 2, .bottom = 3, .right = 4 };
-#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
 static const MEDEdgeInsets insets2 = (MEDEdgeInsets){ .top = 1.05f, .left = 2.05f, .bottom = 3.05f, .right = 4.05f };
-#elif TARGET_OS_MAC
-static const MEDEdgeInsets insets2 = (MEDEdgeInsets){ .top = 1.05, .left = 2.05, .bottom = 3.05, .right = 4.05 };
-#endif
 
 SpecBegin(MEDEdgeInsets)
 
@@ -45,7 +41,7 @@ it(@"should create a string from an MEDEdgeInsets", ^{
 
 it(@"should create an MEDEdgeInsets from a string", ^{
 	expect(MEDEdgeInsetsFromString(@"{1, 2, 3, 4}")).to.equal(insets);
-	expect(MEDEdgeInsetsFromString(@"{1.05, 2.05, 3.05, 4.05}")).to.equal(insets2);
+	expect(MEDEdgeInsetsEqualToEdgeInsets(MEDEdgeInsetsFromString(@"{1.05, 2.05, 3.05, 4.05}"), insets2)).to.beTruthy();
 });
 
 SpecEnd
