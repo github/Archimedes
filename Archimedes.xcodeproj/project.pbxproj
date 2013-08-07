@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0378ABA717B16F980056C690 /* MEDEdgeInsets.h in Headers */ = {isa = PBXBuildFile; fileRef = 0378ABA517B16F980056C690 /* MEDEdgeInsets.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0378ABA817B16F980056C690 /* MEDEdgeInsets.m in Sources */ = {isa = PBXBuildFile; fileRef = 0378ABA617B16F980056C690 /* MEDEdgeInsets.m */; };
+		0378ABA917B16F9A0056C690 /* MEDEdgeInsets.m in Sources */ = {isa = PBXBuildFile; fileRef = 0378ABA617B16F980056C690 /* MEDEdgeInsets.m */; };
+		0378ABAA17B16FA10056C690 /* MEDEdgeInsets.h in Headers */ = {isa = PBXBuildFile; fileRef = 0378ABA517B16F980056C690 /* MEDEdgeInsets.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0378ABC417B17A160056C690 /* MEDEdgeInsetsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0378ABC317B17A160056C690 /* MEDEdgeInsetsSpec.m */; };
+		0378ABC517B17A160056C690 /* MEDEdgeInsetsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0378ABC317B17A160056C690 /* MEDEdgeInsetsSpec.m */; };
 		D005A1A9169A384400A9D2DB /* Archimedes.h in Headers */ = {isa = PBXBuildFile; fileRef = D02FAEE51635DDC0008D42D9 /* Archimedes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D005A1AB169A384C00A9D2DB /* CGGeometry+MEDConvenienceAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D02FAFDC1635E1E9008D42D9 /* CGGeometry+MEDConvenienceAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D005A1AD169A385300A9D2DB /* NSValue+MEDGeometryAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D0626A9B1679506E00E951A5 /* NSValue+MEDGeometryAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -144,6 +150,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0378ABA517B16F980056C690 /* MEDEdgeInsets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDEdgeInsets.h; sourceTree = "<group>"; };
+		0378ABA617B16F980056C690 /* MEDEdgeInsets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDEdgeInsets.m; sourceTree = "<group>"; };
+		0378ABC317B17A160056C690 /* MEDEdgeInsetsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDEdgeInsetsSpec.m; sourceTree = "<group>"; };
 		D02FAEE11635DDC0008D42D9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D02FAEE41635DDC0008D42D9 /* Archimedes-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Archimedes-Prefix.pch"; sourceTree = "<group>"; };
 		D02FAEE51635DDC0008D42D9 /* Archimedes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Archimedes.h; sourceTree = "<group>"; };
@@ -400,6 +409,7 @@
 			children = (
 				D02FAFD31635E1A8008D42D9 /* MEDCGGeometryAdditionsSpec.m */,
 				D0626AA0167950D200E951A5 /* MEDNSValueAdditionsSpec.m */,
+				0378ABC317B17A160056C690 /* MEDEdgeInsetsSpec.m */,
 			);
 			name = Specs;
 			sourceTree = "<group>";
@@ -411,6 +421,8 @@
 				D02FAFDD1635E1E9008D42D9 /* CGGeometry+MEDConvenienceAdditions.m */,
 				D0626A9B1679506E00E951A5 /* NSValue+MEDGeometryAdditions.h */,
 				D0626A9C1679506E00E951A5 /* NSValue+MEDGeometryAdditions.m */,
+				0378ABA517B16F980056C690 /* MEDEdgeInsets.h */,
+				0378ABA617B16F980056C690 /* MEDEdgeInsets.m */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -424,6 +436,7 @@
 			files = (
 				D005A1A9169A384400A9D2DB /* Archimedes.h in Headers */,
 				D005A1AB169A384C00A9D2DB /* CGGeometry+MEDConvenienceAdditions.h in Headers */,
+				0378ABAA17B16FA10056C690 /* MEDEdgeInsets.h in Headers */,
 				D005A1AD169A385300A9D2DB /* NSValue+MEDGeometryAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,6 +447,7 @@
 			files = (
 				D0D6292517790BF2008EF295 /* Archimedes.h in Headers */,
 				D0D6292617790BF4008EF295 /* NSValue+MEDGeometryAdditions.h in Headers */,
+				0378ABA717B16F980056C690 /* MEDEdgeInsets.h in Headers */,
 				D0D6292717790BF6008EF295 /* CGGeometry+MEDConvenienceAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -674,6 +688,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0378ABA917B16F9A0056C690 /* MEDEdgeInsets.m in Sources */,
 				D02FAFE01635E1EA008D42D9 /* CGGeometry+MEDConvenienceAdditions.m in Sources */,
 				D0626A9F1679506E00E951A5 /* NSValue+MEDGeometryAdditions.m in Sources */,
 			);
@@ -685,6 +700,7 @@
 			files = (
 				D02FAFD51635E1A8008D42D9 /* MEDCGGeometryAdditionsSpec.m in Sources */,
 				D02FAFDA1635E1BF008D42D9 /* MEDGeometryTestObject.m in Sources */,
+				0378ABC517B17A160056C690 /* MEDEdgeInsetsSpec.m in Sources */,
 				D0626AA2167950D200E951A5 /* MEDNSValueAdditionsSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -693,6 +709,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0378ABA817B16F980056C690 /* MEDEdgeInsets.m in Sources */,
 				D0D6292317790BED008EF295 /* CGGeometry+MEDConvenienceAdditions.m in Sources */,
 				D0D6292417790BED008EF295 /* NSValue+MEDGeometryAdditions.m in Sources */,
 			);
@@ -704,6 +721,7 @@
 			files = (
 				D0D6292E17790C2B008EF295 /* MEDNSValueAdditionsSpec.m in Sources */,
 				D0D6292D17790C29008EF295 /* MEDCGGeometryAdditionsSpec.m in Sources */,
+				0378ABC417B17A160056C690 /* MEDEdgeInsetsSpec.m in Sources */,
 				D0D6292F17790C2C008EF295 /* MEDGeometryTestObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

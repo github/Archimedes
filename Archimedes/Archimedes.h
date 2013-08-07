@@ -8,3 +8,4 @@
 
 #import <Archimedes/CGGeometry+MEDConvenienceAdditions.h>
 #import <Archimedes/NSValue+MEDGeometryAdditions.h>
+#import <Archimedes/MEDEdgeInsets.h>

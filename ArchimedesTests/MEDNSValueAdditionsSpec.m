@@ -6,15 +6,19 @@
 //  Copyright (c) 2012 GitHub. All rights reserved.
 //
 
+#import "MEDEdgeInsets.h"
+
 SpecBegin(MEDNSValueAdditions)
 
 CGRect rect = CGRectMake(10, 20, 30, 40);
 CGPoint point = CGPointMake(100, 200);
 CGSize size = CGSizeMake(300, 400);
+MEDEdgeInsets insets = MEDEdgeInsetsMake(1, 2, 3, 4);
 
 __block NSValue *rectValue;
 __block NSValue *pointValue;
 __block NSValue *sizeValue;
+__block NSValue *insetsValue;
 
 beforeEach(^{
 	rectValue = [NSValue med_valueWithRect:rect];
@@ -25,6 +29,9 @@ beforeEach(^{
 
 	sizeValue = [NSValue med_valueWithSize:size];
 	expect(sizeValue).notTo.beNil();
+	
+	insetsValue = [NSValue med_valueWithEdgeInsets:insets];
+	expect(insetsValue).notTo.beNil();
 });
 
 it(@"should wrap a CGRect", ^{
@@ -37,6 +44,10 @@ it(@"should wrap a CGPoint", ^{
 
 it(@"should wrap a CGSize", ^{
 	expect(CGSizeEqualToSize(sizeValue.med_sizeValue, size)).to.beTruthy();
+});
+
+it(@"should wrap an MEDEdgeInsets", ^{
+	expect(MEDEdgeInsetsEqualToEdgeInsets(insetsValue.med_edgeInsetsValue, insets)).to.beTruthy();
 });
 
 describe(@"MEDBox", ^{
@@ -53,6 +64,11 @@ describe(@"MEDBox", ^{
 	it(@"should wrap a CGSize", ^{
 		NSValue *value = MEDBox(size);
 		expect(value).to.equal(sizeValue);
+	});
+	
+	it(@"should wrap a MEDEdgeInsets", ^{
+		NSValue *value = MEDBox(insets);
+		expect(value).to.equal(insetsValue);
 	});
 
 	// Specifically used because we don't support it directly.
@@ -80,6 +96,10 @@ describe(@"med_geometryStructType", ^{
 
 	it(@"should identify a CGSize", ^{
 		expect(sizeValue.med_geometryStructType).to.equal(MEDGeometryStructTypeSize);
+	});
+	
+	it(@"should identify an MEDEdgeInsets", ^{
+		expect(insetsValue.med_geometryStructType).to.equal(MEDGeometryStructTypeEdgeInsets);
 	});
 
 	it(@"should return MEDGeometryStructTypeUnknown for unknown types", ^{

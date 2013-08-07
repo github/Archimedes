@@ -30,6 +30,10 @@
 	return [self valueWithCGSize:size];
 }
 
++ (NSValue *)med_valueWithEdgeInsets:(MEDEdgeInsets)insets {
+	return [self valueWithUIEdgeInsets:insets];
+}
+
 - (CGRect)med_rectValue {
 	NSAssert(self.med_geometryStructType == MEDGeometryStructTypeRect, @"Value is not a CGRect: %@", self);
 	return self.CGRectValue;
@@ -45,6 +49,11 @@
 	return self.CGSizeValue;
 }
 
+- (MEDEdgeInsets)med_edgeInsetsValue {
+	NSAssert(self.med_geometryStructType == MEDGeometryStructTypeEdgeInsets, @"Value is not an MEDEdgeInsets: %@", self);
+	return self.UIEdgeInsetsValue;
+}
+
 #elif TARGET_OS_MAC
 
 + (NSValue *)med_valueWithRect:(CGRect)rect {
@@ -57,6 +66,10 @@
 
 + (NSValue *)med_valueWithSize:(CGSize)size {
 	return [self valueWithSize:size];
+}
+
++ (NSValue *)med_valueWithEdgeInsets:(MEDEdgeInsets)insets {
+	return [self valueWithBytes:&insets objCType:@encode(MEDEdgeInsets)];
 }
 
 - (CGRect)med_rectValue {
@@ -74,6 +87,12 @@
 	return self.sizeValue;
 }
 
+- (MEDEdgeInsets)med_edgeInsetsValue {
+	NSAssert(self.med_geometryStructType == MEDGeometryStructTypeEdgeInsets, @"Value is not an MEDEdgeInsets: %@", self);
+	MEDEdgeInsets insets;
+	[self getValue:&insets];
+	return insets;
+}
 #endif
 
 - (MEDGeometryStructType)med_geometryStructType {
@@ -85,6 +104,8 @@
 		return MEDGeometryStructTypePoint;
 	} else if (strcmp(type, @encode(CGSize)) == 0) {
 		return MEDGeometryStructTypeSize;
+	} else if (strcmp(type, @encode(MEDEdgeInsets)) == 0) {
+		return MEDGeometryStructTypeEdgeInsets;
 	} else {
 		return MEDGeometryStructTypeUnknown;
 	}
