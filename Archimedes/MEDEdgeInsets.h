@@ -25,12 +25,12 @@ MEDEdgeInsets MEDEdgeInsetsMake(CGFloat top, CGFloat left, CGFloat bottom, CGFlo
 // Returns whether the two given `MEDEdgeInsets` are equal.
 BOOL MEDEdgeInsetsEqualToEdgeInsets(MEDEdgeInsets insets1, MEDEdgeInsets insets2);
 
+// The top inset will affect the min Y coordinate on iOS, and max Y coordinate on
+// OS X, and vice-versa for bottom due to the default flippedness of drawing contexts
+// on each platform.
+//
 // Returns a rectangle adjusted by incrementing the origin and decrementing the size
 // of the given rect by applying the given insets.
-//
-// The behaviour of this function differs between Mac and iOS in that the Y origin of
-// the rect is incremented using the `top` member on iOS and the `bottom` member on Mac
-// due to the default flippedness of drawing contexts on each platform.
 CGRect MEDEdgeInsetsInsetRect(CGRect rect, MEDEdgeInsets insets);
 
 // Returns a string formatted to contain data from an `MEDEdgeInsets` structure.
