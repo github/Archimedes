@@ -27,28 +27,28 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 #import <tgmath.h>
 
 // Hide our crazy macros within the implementation.
-#undef CGRectDivide
-#undef CGRectDivideWithPadding
+#undef MEDRectDivide
+#undef MEDRectDivideWithPadding
 
-CGPoint CGRectCenterPoint(CGRect rect) {
+CGPoint MEDRectCenterPoint(CGRect rect) {
 	return CGPointMake(CGRectGetMinX(rect) + CGRectGetWidth(rect) / 2, CGRectGetMinY(rect) + CGRectGetHeight(rect) / 2);
 }
 
-CGRect CGRectRemainder(CGRect rect, CGFloat amount, CGRectEdge edge) {
+CGRect MEDRectRemainder(CGRect rect, CGFloat amount, CGRectEdge edge) {
 	CGRect slice, remainder;
 	CGRectDivide(rect, &slice, &remainder, amount, edge);
 
 	return remainder;
 }
 
-CGRect CGRectSlice(CGRect rect, CGFloat amount, CGRectEdge edge) {
+CGRect MEDRectSlice(CGRect rect, CGFloat amount, CGRectEdge edge) {
 	CGRect slice, remainder;
 	CGRectDivide(rect, &slice, &remainder, amount, edge);
 
 	return slice;
 }
 
-CGRect CGRectGrow(CGRect rect, CGFloat amount, CGRectEdge edge) {
+CGRect MEDRectGrow(CGRect rect, CGFloat amount, CGRectEdge edge) {
 	switch (edge) {
 		case CGRectMinXEdge:
 			return CGRectMake(CGRectGetMinX(rect) - amount, CGRectGetMinY(rect), CGRectGetWidth(rect) + amount, CGRectGetHeight(rect));
@@ -68,7 +68,7 @@ CGRect CGRectGrow(CGRect rect, CGFloat amount, CGRectEdge edge) {
 	}
 }
 
-void CGRectDivideWithPadding(CGRect rect, CGRect *slicePtr, CGRect *remainderPtr, CGFloat sliceAmount, CGFloat padding, CGRectEdge edge) {
+void MEDRectDivideWithPadding(CGRect rect, CGRect *slicePtr, CGRect *remainderPtr, CGFloat sliceAmount, CGFloat padding, CGRectEdge edge) {
 	CGRect slice;
 
 	// slice
@@ -80,7 +80,7 @@ void CGRectDivideWithPadding(CGRect rect, CGRect *slicePtr, CGRect *remainderPtr
 	if (remainderPtr) *remainderPtr = rect;
 }
 
-CGRect CGRectFloor(CGRect rect) {
+CGRect MEDRectFloor(CGRect rect) {
 	#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
 		return CGRectMake(floor(rect.origin.x), floor(rect.origin.y), floor(rect.size.width), floor(rect.size.height));
 	#elif TARGET_OS_MAC
@@ -88,42 +88,42 @@ CGRect CGRectFloor(CGRect rect) {
 	#endif
 }
 
-CGRect CGRectMakeInverted(CGRect containingRect, CGFloat x, CGFloat y, CGFloat width, CGFloat height) {
+CGRect MEDRectMakeInverted(CGRect containingRect, CGFloat x, CGFloat y, CGFloat width, CGFloat height) {
 	CGRect rect = CGRectMake(x, y, width, height);
-	return CGRectInvert(containingRect, rect);
+	return MEDRectInvert(containingRect, rect);
 }
 
-CGRect CGRectInvert(CGRect containingRect, CGRect rect) {
+CGRect MEDRectInvert(CGRect containingRect, CGRect rect) {
 	return CGRectMake(CGRectGetMinX(rect), CGRectGetHeight(containingRect) - CGRectGetMaxY(rect), CGRectGetWidth(rect), CGRectGetHeight(rect));
 }
 
-BOOL CGRectEqualToRectWithAccuracy(CGRect rect, CGRect rect2, CGFloat epsilon) {
-	return CGPointEqualToPointWithAccuracy(rect.origin, rect2.origin, epsilon) && CGSizeEqualToSizeWithAccuracy(rect.size, rect2.size, epsilon);
+BOOL MEDRectEqualToRectWithAccuracy(CGRect rect, CGRect rect2, CGFloat epsilon) {
+	return MEDPointEqualToPointWithAccuracy(rect.origin, rect2.origin, epsilon) && MEDSizeEqualToSizeWithAccuracy(rect.size, rect2.size, epsilon);
 }
 
-CGRect CGRectWithSize(CGSize size) {
+CGRect MEDRectWithSize(CGSize size) {
 	return CGRectMake(0, 0, size.width, size.height);
 }
 
-CGRect CGRectConvertToUnitRect(CGRect rect) {
+CGRect MEDRectConvertToUnitRect(CGRect rect) {
 	CGAffineTransform unitTransform = CGAffineTransformMakeScale(1 / CGRectGetWidth(rect), 1 / CGRectGetHeight(rect));
 	return CGRectApplyAffineTransform(rect, unitTransform);
 }
 
-CGRect CGRectConvertFromUnitRect(CGRect rect, CGRect destinationRect) {
+CGRect MEDRectConvertFromUnitRect(CGRect rect, CGRect destinationRect) {
 	CGAffineTransform unitTransform = CGAffineTransformMakeScale(CGRectGetWidth(rect), CGRectGetHeight(rect));
 	return CGRectApplyAffineTransform(destinationRect, unitTransform);
 }
 
-BOOL CGSizeEqualToSizeWithAccuracy(CGSize size, CGSize size2, CGFloat epsilon) {
+BOOL MEDSizeEqualToSizeWithAccuracy(CGSize size, CGSize size2, CGFloat epsilon) {
 	return (fabs(size.width - size2.width) <= epsilon) && (fabs(size.height - size2.height) <= epsilon);
 }
 
-CGSize CGSizeScale(CGSize size, CGFloat scale) {
+CGSize MEDSizeScale(CGSize size, CGFloat scale) {
 	return CGSizeMake(size.width * scale, size.height * scale);
 }
 
-CGPoint CGPointFloor(CGPoint point) {
+CGPoint MEDPointFloor(CGPoint point) {
 	#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
 		return CGPointMake(floor(point.x), floor(point.y));
 	#elif TARGET_OS_MAC
@@ -131,50 +131,50 @@ CGPoint CGPointFloor(CGPoint point) {
 	#endif
 }
 
-BOOL CGPointEqualToPointWithAccuracy(CGPoint p, CGPoint q, CGFloat epsilon) {
+BOOL MEDPointEqualToPointWithAccuracy(CGPoint p, CGPoint q, CGFloat epsilon) {
 	return (fabs(p.x - q.x) <= epsilon) && (fabs(p.y - q.y) <= epsilon);
 }
 
-CGFloat CGPointDotProduct(CGPoint point, CGPoint point2) {
+CGFloat MEDPointDotProduct(CGPoint point, CGPoint point2) {
 	return (point.x * point2.x + point.y * point2.y);
 }
 
-CGPoint CGPointScale(CGPoint point, CGFloat scale) {
+CGPoint MEDPointScale(CGPoint point, CGFloat scale) {
 	return CGPointMake(point.x * scale, point.y * scale);
 }
 
-CGFloat CGPointLength(CGPoint point) {
-	return (CGFloat)sqrt(CGPointDotProduct(point, point));
+CGFloat MEDPointLength(CGPoint point) {
+	return (CGFloat)sqrt(MEDPointDotProduct(point, point));
 }
 
-CGPoint CGPointNormalize(CGPoint point) {
-	CGFloat len = CGPointLength(point);
-	if (len > 0) return CGPointScale(point, 1/len);
+CGPoint MEDPointNormalize(CGPoint point) {
+	CGFloat len = MEDPointLength(point);
+	if (len > 0) return MEDPointScale(point, 1/len);
 
 	return point;
 }
 
-CGPoint CGPointProject(CGPoint point, CGPoint direction) {
-	CGPoint normalizedDirection = CGPointNormalize(direction);
-	CGFloat distance = CGPointDotProduct(point, normalizedDirection);
+CGPoint MEDPointProject(CGPoint point, CGPoint direction) {
+	CGPoint normalizedDirection = MEDPointNormalize(direction);
+	CGFloat distance = MEDPointDotProduct(point, normalizedDirection);
 
-	return CGPointScale(normalizedDirection, distance);
+	return MEDPointScale(normalizedDirection, distance);
 }
 
-CGPoint CGPointProjectAlongAngle(CGPoint point, CGFloat angleInDegrees) {
+CGPoint MEDPointProjectAlongAngle(CGPoint point, CGFloat angleInDegrees) {
 	CGFloat angleInRads = (CGFloat)(angleInDegrees * M_PI / 180);
 	CGPoint direction = CGPointMake(cos(angleInRads), sin(angleInRads));
-	return CGPointProject(point, direction);
+	return MEDPointProject(point, direction);
 }
 
-CGFloat CGPointAngleInDegrees(CGPoint point) {
+CGFloat MEDPointAngleInDegrees(CGPoint point) {
 	return (CGFloat)(atan2(point.y, point.x) * 180 / M_PI);
 }
 
-CGPoint CGPointAdd(CGPoint p1, CGPoint p2) {
+CGPoint MEDPointAdd(CGPoint p1, CGPoint p2) {
 	return CGPointMake(p1.x + p2.x, p1.y + p2.y);
 }
 
-CGPoint CGPointSubtract(CGPoint p1, CGPoint p2) {
+CGPoint MEDPointSubtract(CGPoint p1, CGPoint p2) {
 	return CGPointMake(p1.x - p2.x, p1.y - p2.y);
 }
