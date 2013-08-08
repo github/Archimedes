@@ -51,6 +51,18 @@ CGRect CGRectRemainder(CGRect rect, CGFloat amount, CGRectEdge edge);
 // size of the rectangle along the axis being sliced.
 CGRect CGRectSlice(CGRect rect, CGFloat amount, CGRectEdge edge);
 
+// Returns a new CGRect based on the resized and centered dimensions of 'rect'
+// fit inside 'maxRect'. Maintains aspect ratio while growing or shrinking to
+// match maxRects size as closely as possible. Similar to UIViews
+// 'UIViewContentModeScaleAspectFit'.
+CGRect CGRectScaleAspectFit(CGRect rect, CGRect maxRect);
+
+// Like CGRectAspectFit, but instead uses the aspect-maintining resized and
+// centered dimensions of 'rect' which completely overlap 'minRect'. Will grow
+// or shrink to match maxRects size as closely as possible. Similar to UIViews
+// 'UIViewContentModeScaleAspectFill'.
+CGRect CGRectScaleAspectFill(CGRect rect, CGRect minRect);
+
 // Adds the given amount to a rectangle's edge.
 //
 // rect   - The rectangle to grow.
