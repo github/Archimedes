@@ -254,6 +254,7 @@
 				D02FAEDA1635DDC0008D42D9 /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 1;
 		};
 		D02FAEDA1635DDC0008D42D9 /* Products */ = {
 			isa = PBXGroup;
