@@ -80,6 +80,16 @@ void MEDRectDivideWithPadding(CGRect rect, CGRect *slicePtr, CGRect *remainderPt
 	if (remainderPtr) *remainderPtr = rect;
 }
 
+CGRect MEDRectCenterInRect(CGRect inner, CGRect outer)
+{
+	CGPoint origin = {
+		.x = CGRectGetMidX(outer) - CGRectGetWidth(inner)  / 2,
+		.y = CGRectGetMidY(outer) - CGRectGetHeight(inner) / 2
+	};
+
+	return (CGRect){ .origin = origin, .size = inner.size };
+}
+
 CGRect MEDRectFloor(CGRect rect) {
 	#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
 		return CGRectMake(floor(rect.origin.x), floor(rect.origin.y), floor(rect.size.width), floor(rect.size.height));
