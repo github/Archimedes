@@ -97,6 +97,17 @@ void MEDRectDivideWithPadding(CGRect rect, CGRect *slice, CGRect *remainder, CGF
 		_MEDAssignToRectByReference(REMAINDER, _remainder); \
 	} while (0)
 
+// Aligns a rectangle with on edge of another rectangle.
+//
+// inner - The rectangle that should be aligned.
+// outer - The rectangle to align `inner` with.
+// edge  - The edge that `inner` should share with `outer`.
+//
+// Returns a rectangle with the dimensions of `inner` that shares the edge
+// specified by `edge` with `outer`. The remaining coordinate of `inner` is left
+// unchanged.
+CGRect MEDRectAlignWithRect(CGRect inner, CGRect outer, CGRectEdge edge);
+
 // Round a rectangle to integral numbers.
 //
 // The rect will be moved up and left in native view coordinates (not accounting

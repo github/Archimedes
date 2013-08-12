@@ -80,6 +80,35 @@ void MEDRectDivideWithPadding(CGRect rect, CGRect *slicePtr, CGRect *remainderPt
 	if (remainderPtr) *remainderPtr = rect;
 }
 
+CGRect MEDRectAlignWithRect(CGRect inner, CGRect outer, CGRectEdge edge)
+{
+	CGPoint origin;
+
+	switch (edge) {
+		case CGRectMinXEdge:
+			origin = CGPointMake(CGRectGetMinX(outer), CGRectGetMinY(inner));
+			break;
+
+		case CGRectMinYEdge:
+			origin = CGPointMake(CGRectGetMinX(inner), CGRectGetMinY(outer));
+			break;
+
+		case CGRectMaxXEdge:
+			origin = CGPointMake(CGRectGetMaxX(outer) - CGRectGetWidth(inner), CGRectGetMinY(inner));
+			break;
+
+		case CGRectMaxYEdge:
+			origin = CGPointMake(CGRectGetMinX(inner), CGRectGetMaxY(outer) - CGRectGetHeight(inner));
+			break;
+
+		default:
+			NSCAssert(NO, @"Unrecognized CGRectEdge %i", (int)edge);
+			return CGRectNull;
+	}
+
+	return (CGRect){ .origin = origin, .size = inner.size }; 
+}
+
 CGRect MEDRectFloor(CGRect rect) {
 	#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
 		return CGRectMake(floor(rect.origin.x), floor(rect.origin.y), floor(rect.size.width), floor(rect.size.height));
