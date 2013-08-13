@@ -80,24 +80,24 @@ void MEDRectDivideWithPadding(CGRect rect, CGRect *slicePtr, CGRect *remainderPt
 	if (remainderPtr) *remainderPtr = rect;
 }
 
-CGRect MEDRectAlignWithRect(CGRect inner, CGRect outer, CGRectEdge edge) {
+CGRect MEDRectAlignWithRect(CGRect rect, CGRect referenceRect, CGRectEdge edge) {
 	CGPoint origin;
 
 	switch (edge) {
 		case CGRectMinXEdge:
-			origin = CGPointMake(CGRectGetMinX(outer), CGRectGetMinY(inner));
+			origin = CGPointMake(CGRectGetMinX(referenceRect), CGRectGetMinY(rect));
 			break;
 
 		case CGRectMinYEdge:
-			origin = CGPointMake(CGRectGetMinX(inner), CGRectGetMinY(outer));
+			origin = CGPointMake(CGRectGetMinX(rect), CGRectGetMinY(referenceRect));
 			break;
 
 		case CGRectMaxXEdge:
-			origin = CGPointMake(CGRectGetMaxX(outer) - CGRectGetWidth(inner), CGRectGetMinY(inner));
+			origin = CGPointMake(CGRectGetMaxX(referenceRect) - CGRectGetWidth(rect), CGRectGetMinY(rect));
 			break;
 
 		case CGRectMaxYEdge:
-			origin = CGPointMake(CGRectGetMinX(inner), CGRectGetMaxY(outer) - CGRectGetHeight(inner));
+			origin = CGPointMake(CGRectGetMinX(rect), CGRectGetMaxY(referenceRect) - CGRectGetHeight(rect));
 			break;
 
 		default:
@@ -105,7 +105,7 @@ CGRect MEDRectAlignWithRect(CGRect inner, CGRect outer, CGRectEdge edge) {
 			return CGRectNull;
 	}
 
-	return (CGRect){ .origin = origin, .size = inner.size };
+	return (CGRect){ .origin = origin, .size = rect.size };
 }
 
 CGRect MEDRectCenterInRect(CGRect inner, CGRect outer)
