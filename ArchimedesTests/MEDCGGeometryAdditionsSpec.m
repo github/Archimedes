@@ -138,6 +138,29 @@ describe(@"MEDRectDivideWithPadding", ^{
 	});
 });
 
+describe(@"MEDRectCenterInRect", ^{
+	it(@"should return a rectangle centered in another rectangle", ^{
+		CGRect inner = CGRectMake(0, 0, 10, 10);
+		CGRect outer = CGRectMake(0, 0, 20, 20);
+
+		expect(MEDRectCenterInRect(inner, outer)).to.equal(CGRectMake(5, 5, 10, 10));
+	});
+
+	it(@"should return a non-integral rectangle", ^{
+		CGRect inner = CGRectMake(0, 0, 10, 10);
+		CGRect outer = CGRectMake(0, 0, 19, 19);
+
+		expect(MEDRectCenterInRect(inner, outer)).to.equal(CGRectMake(4.5f, 4.5f, 10, 10));
+	});
+
+	describe(@"it should handle centering bigger rectanlges in smaller ones", ^{
+		CGRect inner = CGRectMake(0, 0, 10, 10);
+		CGRect outer = CGRectZero;
+
+		expect(MEDRectCenterInRect(inner, outer)).to.equal(CGRectMake(-5, -5, 10, 10));
+	});
+});
+
 describe(@"MEDRectRemainder", ^{
 	it(@"should return the rectangle's remainder", ^{
 		CGRect rect = CGRectMake(100, 100, 100, 100);
