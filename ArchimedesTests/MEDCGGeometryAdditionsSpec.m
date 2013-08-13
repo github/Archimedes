@@ -139,12 +139,12 @@ describe(@"MEDRectDivideWithPadding", ^{
 });
 
 describe(@"MEDRectAlignWithRect", ^{
-	CGRect inner = CGRectMake(0, 0, 10, 10);
-	CGRect outer = CGRectMake(10, 20, 30, 40);
+	CGRect rect = CGRectMake(0, 0, 10, 10);
+	CGRect referenceRect = CGRectMake(10, 20, 30, 40);
 
 	describe(@"when aligning on the min x edge", ^{
 		it(@"should return an aligned rectangle", ^{
-			CGRect aligned = MEDRectAlignWithRect(inner, outer, CGRectMinXEdge);
+			CGRect aligned = MEDRectAlignWithRect(rect, referenceRect, CGRectMinXEdge);
 
 			expect(aligned).to.equal(CGRectMake(10, 0, 10, 10));
 		});
@@ -152,7 +152,7 @@ describe(@"MEDRectAlignWithRect", ^{
 
 	describe(@"when aligning on the min y edge", ^{
 		it(@"should return an aligned rectangle", ^{
-			CGRect aligned = MEDRectAlignWithRect(inner, outer, CGRectMinYEdge);
+			CGRect aligned = MEDRectAlignWithRect(rect, referenceRect, CGRectMinYEdge);
 
 			expect(aligned).to.equal(CGRectMake(0, 20, 10, 10));
 		});
@@ -160,7 +160,7 @@ describe(@"MEDRectAlignWithRect", ^{
 
 	describe(@"when aligning on the max x edge", ^{
 		it(@"should return an aligned rectangle", ^{
-			CGRect aligned = MEDRectAlignWithRect(inner, outer, CGRectMaxXEdge);
+			CGRect aligned = MEDRectAlignWithRect(rect, referenceRect, CGRectMaxXEdge);
 
 			expect(aligned).to.equal(CGRectMake(30, 0, 10, 10));
 		});
@@ -168,7 +168,7 @@ describe(@"MEDRectAlignWithRect", ^{
 
 	describe(@"when aligning on the max y edge", ^{
 		it(@"should return an aligned rectangle", ^{
-			CGRect aligned = MEDRectAlignWithRect(inner, outer, CGRectMaxYEdge);
+			CGRect aligned = MEDRectAlignWithRect(rect, referenceRect, CGRectMaxYEdge);
 
 			expect(aligned).to.equal(CGRectMake(0, 50, 10, 10));
 		});
