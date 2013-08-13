@@ -80,8 +80,7 @@ void MEDRectDivideWithPadding(CGRect rect, CGRect *slicePtr, CGRect *remainderPt
 	if (remainderPtr) *remainderPtr = rect;
 }
 
-CGRect MEDRectAlignWithRect(CGRect inner, CGRect outer, CGRectEdge edge)
-{
+CGRect MEDRectAlignWithRect(CGRect inner, CGRect outer, CGRectEdge edge) {
 	CGPoint origin;
 
 	switch (edge) {
