@@ -166,7 +166,7 @@ describe(@"MEDRectAlignWithRect", ^{
 		});
 	});
 
-	describe(@"when aligning on the max x edge", ^{
+	describe(@"when aligning on the max y edge", ^{
 		it(@"should return an aligned rectangle", ^{
 			CGRect aligned = MEDRectAlignWithRect(inner, outer, CGRectMaxYEdge);
 
