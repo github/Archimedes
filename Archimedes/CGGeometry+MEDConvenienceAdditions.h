@@ -100,12 +100,12 @@ void MEDRectDivideWithPadding(CGRect rect, CGRect *slice, CGRect *remainder, CGF
 // Aligns a rectangle with on edge of another rectangle.
 //
 // rect          - The rectangle that should be aligned.
-// referenceRect - The rectangle to align `inner` with.
-// edge          - The edge that `inner` should share with `outer`.
+// referenceRect - The rectangle to align `rect` with.
+// edge          - The edge that `rect` should share with `referenceRect`.
 //
-// Returns a rectangle with the dimensions of `inner` that shares the edge
-// specified by `edge` with `outer`. The remaining coordinate of `inner` is left
-// unchanged.
+// Returns a rectangle with the dimensions of `rect` that shares the edge
+// specified by `edge` with `referenceRect`. The remaining coordinate of `rect`
+// is left unchanged.
 CGRect MEDRectAlignWithRect(CGRect rect, CGRect referenceRect, CGRectEdge edge);
 
 // Centers a rectangle in another rectangle.
