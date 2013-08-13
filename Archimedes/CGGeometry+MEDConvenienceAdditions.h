@@ -108,6 +108,14 @@ void MEDRectDivideWithPadding(CGRect rect, CGRect *slice, CGRect *remainder, CGF
 // unchanged.
 CGRect MEDRectAlignWithRect(CGRect inner, CGRect outer, CGRectEdge edge);
 
+// Centers a rectangle in another rectangle.
+//
+// inner - The rectangle that will be centered.
+// outer - The rectangle in which to center `inner`.
+//
+// Returns a rectangle with the dimensions of `inner` centered in `outer`.
+CGRect MEDRectCenterInRect(CGRect inner, CGRect outer);
+
 // Round a rectangle to integral numbers.
 //
 // The rect will be moved up and left in native view coordinates (not accounting

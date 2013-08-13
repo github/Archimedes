@@ -106,7 +106,17 @@ CGRect MEDRectAlignWithRect(CGRect inner, CGRect outer, CGRectEdge edge)
 			return CGRectNull;
 	}
 
-	return (CGRect){ .origin = origin, .size = inner.size }; 
+	return (CGRect){ .origin = origin, .size = inner.size };
+}
+
+CGRect MEDRectCenterInRect(CGRect inner, CGRect outer)
+{
+	CGPoint origin = {
+		.x = CGRectGetMidX(outer) - CGRectGetWidth(inner)  / 2,
+		.y = CGRectGetMidY(outer) - CGRectGetHeight(inner) / 2
+	};
+
+	return (CGRect){ .origin = origin, .size = inner.size };
 }
 
 CGRect MEDRectFloor(CGRect rect) {
