@@ -80,6 +80,34 @@ void MEDRectDivideWithPadding(CGRect rect, CGRect *slicePtr, CGRect *remainderPt
 	if (remainderPtr) *remainderPtr = rect;
 }
 
+CGRect MEDRectAlignWithRect(CGRect rect, CGRect referenceRect, CGRectEdge edge) {
+	CGPoint origin;
+
+	switch (edge) {
+		case CGRectMinXEdge:
+			origin = CGPointMake(CGRectGetMinX(referenceRect), CGRectGetMinY(rect));
+			break;
+
+		case CGRectMinYEdge:
+			origin = CGPointMake(CGRectGetMinX(rect), CGRectGetMinY(referenceRect));
+			break;
+
+		case CGRectMaxXEdge:
+			origin = CGPointMake(CGRectGetMaxX(referenceRect) - CGRectGetWidth(rect), CGRectGetMinY(rect));
+			break;
+
+		case CGRectMaxYEdge:
+			origin = CGPointMake(CGRectGetMinX(rect), CGRectGetMaxY(referenceRect) - CGRectGetHeight(rect));
+			break;
+
+		default:
+			NSCAssert(NO, @"Unrecognized CGRectEdge %i", (int)edge);
+			return CGRectNull;
+	}
+
+	return (CGRect){ .origin = origin, .size = rect.size };
+}
+
 CGRect MEDRectCenterInRect(CGRect inner, CGRect outer)
 {
 	CGPoint origin = {
