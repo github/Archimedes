@@ -20,7 +20,11 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 */
 
-#import <CoreGraphics/CoreGraphics.h>
+#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
+	#import <CoreGraphics/CoreGraphics.h>
+#elif TARGET_OS_MAC
+	#import <ApplicationServices/ApplicationServices.h>
+#endif
 
 // Extends CGRectDivide() to accept the following additional types for the
 // `SLICE` and `REMAINDER` arguments:
