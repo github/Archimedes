@@ -6,7 +6,11 @@
 //  Copyright (c) 2012 GitHub. All rights reserved.
 //
 
-#import <CoreGraphics/CoreGraphics.h>
+#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
+	#import <CoreGraphics/CoreGraphics.h>
+#elif TARGET_OS_MAC
+	#import <ApplicationServices/ApplicationServices.h>
+#endif
 #import "MEDEdgeInsets.h"
 
 // Boxes a geometry structure.
