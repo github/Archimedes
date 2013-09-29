@@ -7,9 +7,9 @@
 //
 
 #ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
-    #import <CoreGraphics/CoreGraphics.h>
+	#import <CoreGraphics/CoreGraphics.h>
 #elif TARGET_OS_MAC
-    #import <ApplicationServices/ApplicationServices.h>
+	#import <ApplicationServices/ApplicationServices.h>
 #endif
 #import "MEDEdgeInsets.h"
 
