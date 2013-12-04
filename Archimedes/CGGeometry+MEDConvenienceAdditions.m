@@ -165,9 +165,9 @@ CGSize MEDSizeScaleAspectFit(CGSize size, CGSize maxSize) {
     CGFloat originalAspectRatio = size.width / size.height;
     CGFloat maxAspectRatio = maxSize.width / maxSize.height;
 	CGSize newSize = maxSize;
-    if (originalAspectRatio > maxAspectRatio) { // scale by width
+    if (originalAspectRatio > maxAspectRatio) {
         newSize.height = maxSize.width / originalAspectRatio;
-    } else { // or scale by height
+    } else {
         newSize.width = maxSize.height * originalAspectRatio;
     }
 
@@ -179,7 +179,6 @@ CGSize MEDSizeScaleAspectFill(CGSize size, CGSize minSize) {
     CGFloat scaleHeight = minSize.height / size.height;
 
     CGFloat scale = MAX(scaleWidth, scaleHeight);
-
     CGFloat newWidth = size.width * scale;
     CGFloat newHeight = size.height * scale;
 
