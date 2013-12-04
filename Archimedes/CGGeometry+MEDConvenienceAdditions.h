@@ -55,18 +55,6 @@ CGRect MEDRectRemainder(CGRect rect, CGFloat amount, CGRectEdge edge);
 // size of the rectangle along the axis being sliced.
 CGRect MEDRectSlice(CGRect rect, CGFloat amount, CGRectEdge edge);
 
-// Returns a new CGRect based on the resized and centered dimensions of 'rect'
-// fit inside 'maxRect'. Maintains aspect ratio while growing or shrinking to
-// match maxRects size as closely as possible. Similar to UIViews
-// 'UIViewContentModeScaleAspectFit'.
-CGRect CGRectScaleAspectFit(CGRect rect, CGRect maxRect);
-
-// Like CGRectAspectFit, but instead uses the aspect-maintining resized and
-// centered dimensions of 'rect' which completely overlap 'minRect'. Will grow
-// or shrink to match maxRects size as closely as possible. Similar to UIViews
-// 'UIViewContentModeScaleAspectFill'.
-CGRect CGRectScaleAspectFill(CGRect rect, CGRect minRect);
-
 // Adds the given amount to a rectangle's edge.
 //
 // rect   - The rectangle to grow.
@@ -204,6 +192,24 @@ BOOL MEDSizeEqualToSizeWithAccuracy(CGSize size, CGSize size2, CGFloat epsilon);
 
 // Scales the components of `size` by `scale`.
 CGSize MEDSizeScale(CGSize size, CGFloat scale);
+
+// Scales a size a size to fit within a different size.
+//
+// size    - The size to scale.
+// maxSize - The size to fit original size within.
+//
+// Returns a new CGSize that has the same aspect ratio as the provided size, but
+// is resized fit inside the maxSize.
+CGSize MEDSizeScaleAspectFit(CGSize size, CGSize maxSize);
+
+// Scales a size a size to fill a different size.
+//
+// size    - The size to scale.
+// minSize - The size to fill.
+//
+// Returns a new CGSize that has the same aspect ratio as the provided size, but
+// is resized fill the minSize.
+CGSize MEDSizeScaleAspectFill(CGSize size, CGSize minSize);
 
 // Round a point to integral numbers.
 //

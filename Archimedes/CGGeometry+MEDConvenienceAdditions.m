@@ -48,39 +48,6 @@ CGRect MEDRectSlice(CGRect rect, CGFloat amount, CGRectEdge edge) {
 	return slice;
 }
 
-CGRect MEDRectScaleAspectFit(CGRect rect, CGRect maxRect) {
-    CGFloat originalAspectRatio = CGRectGetWidth(rect) / CGRectGetHeight(rect);
-    CGFloat maxAspectRatio = CGRectGetWidth(maxRect) / CGRectGetHeight(maxRect);
-    
-    CGRect newRect = maxRect;
-    if (originalAspectRatio > maxAspectRatio) { // scale by width
-        newRect.size.height = CGRectGetHeight(maxRect) * CGRectGetHeight(rect) / CGRectGetWidth(rect);
-        newRect.origin.y += (CGRectGetHeight(maxRect) - CGRectGetHeight(newRect))/2.0;
-    } else { // or scale by height
-        newRect.size.width = CGRectGetHeight(maxRect) * CGRectGetWidth(rect) / CGRectGetHeight(rect);
-        newRect.origin.x += (CGRectGetWidth(maxRect) - CGRectGetWidth(newRect))/2.0;
-    }
-    
-    return newRect;
-}
-
-CGRect MEDRectScaleAspectFill(CGRect rect, CGRect minRect) {
-    CGFloat scaleWidth = CGRectGetWidth(minRect) / CGRectGetWidth(rect);
-    CGFloat scaleHeight = CGRectGetHeight(minRect) / CGRectGetWidth(rect);
-
-    CGFloat scale = MAX(scaleWidth, scaleHeight);
-
-    
-    CGFloat newWidth = CGRectGetWidth(rect) * scale;
-    CGFloat newHeight = CGRectGetHeight(rect) * scale;
-    
-    CGFloat newX = ((CGRectGetWidth(minRect) - newWidth) / 2.0f);
-    CGFloat newY = ((CGRectGetHeight(minRect) - newHeight) / 2.0f);
-    
-    CGRect newRect = CGRectMake(newX, newY, newWidth, newHeight);
-    return newRect;
-}
-
 CGRect MEDRectGrow(CGRect rect, CGFloat amount, CGRectEdge edge) {
 	switch (edge) {
 		case CGRectMinXEdge:
@@ -192,6 +159,31 @@ BOOL MEDSizeEqualToSizeWithAccuracy(CGSize size, CGSize size2, CGFloat epsilon) 
 
 CGSize MEDSizeScale(CGSize size, CGFloat scale) {
 	return CGSizeMake(size.width * scale, size.height * scale);
+}
+
+CGSize MEDSizeScaleAspectFit(CGSize size, CGSize maxSize) {
+    CGFloat originalAspectRatio = size.width / size.height;
+    CGFloat maxAspectRatio = maxSize.width / maxSize.height;
+	CGSize newSize = maxSize;
+    if (originalAspectRatio > maxAspectRatio) { // scale by width
+        newSize.height = maxSize.width / originalAspectRatio;
+    } else { // or scale by height
+        newSize.width = maxSize.height * originalAspectRatio;
+    }
+
+    return newSize;
+}
+
+CGSize MEDSizeScaleAspectFill(CGSize size, CGSize minSize) {
+    CGFloat scaleWidth = minSize.width / size.width;
+    CGFloat scaleHeight = minSize.height / size.height;
+
+    CGFloat scale = MAX(scaleWidth, scaleHeight);
+
+    CGFloat newWidth = size.width * scale;
+    CGFloat newHeight = size.height * scale;
+
+    return CGSizeMake(newWidth, newHeight);
 }
 
 CGPoint MEDPointFloor(CGPoint point) {
