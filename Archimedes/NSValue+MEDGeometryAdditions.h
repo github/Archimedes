@@ -6,7 +6,12 @@
 //  Copyright (c) 2012 GitHub. All rights reserved.
 //
 
-#import <CoreGraphics/CoreGraphics.h>
+#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
+	#import <CoreGraphics/CoreGraphics.h>
+#elif TARGET_OS_MAC
+	#import <ApplicationServices/ApplicationServices.h>
+#endif
+#import "MEDEdgeInsets.h"
 
 // Boxes a geometry structure.
 //
@@ -21,15 +26,17 @@
 
 // Indicates the type of geometry structure that an NSValue contains.
 //
-// MEDGeometryStructTypeUnknown - The NSValue contains a value of unknown type.
-// MEDGeometryStructTypeRect    - The NSValue contains a CGRect.
-// MEDGeometryStructTypePoint   - The NSValue contains a CGPoint.
-// MEDGeometryStructTypeSize    - The NSValue contains a CGSize.
+// MEDGeometryStructTypeUnknown     - The NSValue contains a value of unknown type.
+// MEDGeometryStructTypeRect        - The NSValue contains a CGRect.
+// MEDGeometryStructTypePoint       - The NSValue contains a CGPoint.
+// MEDGeometryStructTypeSize        - The NSValue contains a CGSize.
+// MEDGeometryStructTypeEdgeInsets  - The NSValue contains an MEDEdgeInsets.
 typedef enum : NSUInteger {
     MEDGeometryStructTypeUnknown,
     MEDGeometryStructTypeRect,
     MEDGeometryStructTypePoint,
-    MEDGeometryStructTypeSize
+    MEDGeometryStructTypeSize,
+    MEDGeometryStructTypeEdgeInsets
 } MEDGeometryStructType;
 
 // Implements a cross-platform interface for manipulating geometry structures
@@ -45,6 +52,9 @@ typedef enum : NSUInteger {
 // Returns an NSValue wrapping the given size.
 + (NSValue *)med_valueWithSize:(CGSize)size;
 
+// Returns an NSValue wrapping the given edge insets.
++ (NSValue *)med_valueWithEdgeInsets:(MEDEdgeInsets)insets;
+
 // Returns the type of geometry structure stored in the receiver, or
 // MEDGeometryStructTypeUnknown if the type can't be identified.
 @property (nonatomic, assign, readonly) MEDGeometryStructType med_geometryStructType;
@@ -57,5 +67,8 @@ typedef enum : NSUInteger {
 
 // Returns the CGSize value in the receiver.
 @property (nonatomic, assign, readonly) CGSize med_sizeValue;
+
+// Returns the MEDEdgeInsets value in the receiver.
+@property (nonatomic, assign, readonly) MEDEdgeInsets med_edgeInsetsValue;
 
 @end

@@ -24,16 +24,16 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 SpecBegin(MEDCGGeometryAdditions)
 
-describe(@"CGRectDivide macro", ^{
+describe(@"MEDRectDivide macro", ^{
 	CGRect rect = CGRectMake(10, 20, 30, 40);
 
 	it(@"should accept NULLs", ^{
-		CGRectDivide(rect, NULL, NULL, 10, CGRectMinXEdge);
+		MEDRectDivide(rect, NULL, NULL, 10, CGRectMinXEdge);
 	});
 
 	it(@"should accept pointers", ^{
 		CGRect slice, remainder;
-		CGRectDivide(rect, &slice, &remainder, 10, CGRectMinXEdge);
+		MEDRectDivide(rect, &slice, &remainder, 10, CGRectMinXEdge);
 
 		expect(slice).to.equal(CGRectMake(10, 20, 10, 40));
 		expect(remainder).to.equal(CGRectMake(20, 20, 20, 40));
@@ -41,7 +41,7 @@ describe(@"CGRectDivide macro", ^{
 
 	it(@"should accept raw variables", ^{
 		CGRect slice, remainder;
-		CGRectDivide(rect, slice, remainder, 10, CGRectMinXEdge);
+		MEDRectDivide(rect, slice, remainder, 10, CGRectMinXEdge);
 
 		expect(slice).to.equal(CGRectMake(10, 20, 10, 40));
 		expect(remainder).to.equal(CGRectMake(20, 20, 20, 40));
@@ -51,31 +51,31 @@ describe(@"CGRectDivide macro", ^{
 		MEDGeometryTestObject *obj = [[MEDGeometryTestObject alloc] init];
 		expect(obj).notTo.beNil();
 
-		CGRectDivide(rect, obj.slice, obj.remainder, 10, CGRectMinXEdge);
+		MEDRectDivide(rect, obj.slice, obj.remainder, 10, CGRectMinXEdge);
 
 		expect(obj.slice).to.equal(CGRectMake(10, 20, 10, 40));
 		expect(obj.remainder).to.equal(CGRectMake(20, 20, 20, 40));
 	});
 });
 
-describe(@"CGRectCenterPoint", ^{
+describe(@"MEDRectCenterPoint", ^{
 	it(@"should return the center of a valid rectangle", ^{
 		CGRect rect = CGRectMake(10, 20, 30, 40);
-		expect(CGRectCenterPoint(rect)).to.equal(CGPointMake(25, 40));
+		expect(MEDRectCenterPoint(rect)).to.equal(CGPointMake(25, 40));
 	});
 
 	it(@"should return the center of an empty rectangle", ^{
 		CGRect rect = CGRectMake(10, 20, 0, 0);
-		expect(CGRectCenterPoint(rect)).to.equal(CGPointMake(10, 20));
+		expect(MEDRectCenterPoint(rect)).to.equal(CGPointMake(10, 20));
 	});
 
 	it(@"should return non-integral center points", ^{
 		CGRect rect = CGRectMake(10, 20, 15, 7);
-		expect(CGRectCenterPoint(rect)).to.equal(CGPointMake(17.5f, 23.5f));
+		expect(MEDRectCenterPoint(rect)).to.equal(CGPointMake(17.5f, 23.5f));
 	});
 });
 
-describe(@"CGRectDivideWithPadding", ^{
+describe(@"MEDRectDivideWithPadding", ^{
 	CGRect rect = CGRectMake(50, 50, 100, 100);
 
 	__block CGRect slice, remainder;
@@ -88,7 +88,7 @@ describe(@"CGRectDivideWithPadding", ^{
 		CGRect expectedSlice = CGRectMake(50, 50, 40, 100);
 		CGRect expectedRemainder = CGRectMake(90 + 10, 50, 50, 100);
 
-		CGRectDivideWithPadding(rect, &slice, &remainder, 40, 10, CGRectMinXEdge);
+		MEDRectDivideWithPadding(rect, &slice, &remainder, 40, 10, CGRectMinXEdge);
 
 		expect(slice).to.equal(expectedSlice);
 		expect(remainder).to.equal(expectedRemainder);
@@ -97,19 +97,19 @@ describe(@"CGRectDivideWithPadding", ^{
 	it(@"should divide with a null slice", ^{
 		CGRect expectedRemainder = CGRectMake(90 + 10, 50, 50, 100);
 
-		CGRectDivideWithPadding(rect, NULL, &remainder, 40, 10, CGRectMinXEdge);
+		MEDRectDivideWithPadding(rect, NULL, &remainder, 40, 10, CGRectMinXEdge);
 		expect(remainder).to.equal(expectedRemainder);
 	});
 
 	it(@"should divide with a null remainder", ^{
 		CGRect expectedSlice = CGRectMake(50, 50, 40, 100);
-		CGRectDivideWithPadding(rect, &slice, NULL, 40, 10, CGRectMinXEdge);
+		MEDRectDivideWithPadding(rect, &slice, NULL, 40, 10, CGRectMinXEdge);
 		expect(slice).to.equal(expectedSlice);
 	});
 
 	it(@"should divide with no space for remainder", ^{
 		CGRect expectedSlice = CGRectMake(50, 50, 95, 100);
-		CGRectDivideWithPadding(rect, &slice, &remainder, 95, 10, CGRectMinXEdge);
+		MEDRectDivideWithPadding(rect, &slice, &remainder, 95, 10, CGRectMinXEdge);
 		expect(slice).to.equal(expectedSlice);
 		expect(CGRectIsEmpty(remainder)).to.beTruthy();
 	});
@@ -118,7 +118,7 @@ describe(@"CGRectDivideWithPadding", ^{
 		CGRect expectedSlice = CGRectMake(50, 50, 40, 100);
 		CGRect expectedRemainder = CGRectMake(90 + 10, 50, 50, 100);
 
-		CGRectDivideWithPadding(rect, slice, remainder, 40, 10, CGRectMinXEdge);
+		MEDRectDivideWithPadding(rect, slice, remainder, 40, 10, CGRectMinXEdge);
 
 		expect(slice).to.equal(expectedSlice);
 		expect(remainder).to.equal(expectedRemainder);
@@ -131,49 +131,109 @@ describe(@"CGRectDivideWithPadding", ^{
 		CGRect expectedSlice = CGRectMake(50, 50, 40, 100);
 		CGRect expectedRemainder = CGRectMake(90 + 10, 50, 50, 100);
 
-		CGRectDivideWithPadding(rect, obj.slice, obj.remainder, 40, 10, CGRectMinXEdge);
+		MEDRectDivideWithPadding(rect, obj.slice, obj.remainder, 40, 10, CGRectMinXEdge);
 
 		expect(obj.slice).to.equal(expectedSlice);
 		expect(obj.remainder).to.equal(expectedRemainder);
 	});
 });
 
-describe(@"CGRectRemainder", ^{
+describe(@"MEDRectAlignWithRect", ^{
+	CGRect rect = CGRectMake(0, 0, 10, 10);
+	CGRect referenceRect = CGRectMake(10, 20, 30, 40);
+
+	describe(@"when aligning on the min x edge", ^{
+		it(@"should return an aligned rectangle", ^{
+			CGRect aligned = MEDRectAlignWithRect(rect, referenceRect, CGRectMinXEdge);
+
+			expect(aligned).to.equal(CGRectMake(10, 0, 10, 10));
+		});
+	});
+
+	describe(@"when aligning on the min y edge", ^{
+		it(@"should return an aligned rectangle", ^{
+			CGRect aligned = MEDRectAlignWithRect(rect, referenceRect, CGRectMinYEdge);
+
+			expect(aligned).to.equal(CGRectMake(0, 20, 10, 10));
+		});
+	});
+
+	describe(@"when aligning on the max x edge", ^{
+		it(@"should return an aligned rectangle", ^{
+			CGRect aligned = MEDRectAlignWithRect(rect, referenceRect, CGRectMaxXEdge);
+
+			expect(aligned).to.equal(CGRectMake(30, 0, 10, 10));
+		});
+	});
+
+	describe(@"when aligning on the max y edge", ^{
+		it(@"should return an aligned rectangle", ^{
+			CGRect aligned = MEDRectAlignWithRect(rect, referenceRect, CGRectMaxYEdge);
+
+			expect(aligned).to.equal(CGRectMake(0, 50, 10, 10));
+		});
+	});
+});
+
+describe(@"MEDRectCenterInRect", ^{
+	it(@"should return a rectangle centered in another rectangle", ^{
+		CGRect inner = CGRectMake(0, 0, 10, 10);
+		CGRect outer = CGRectMake(0, 0, 20, 20);
+
+		expect(MEDRectCenterInRect(inner, outer)).to.equal(CGRectMake(5, 5, 10, 10));
+	});
+
+	it(@"should return a non-integral rectangle", ^{
+		CGRect inner = CGRectMake(0, 0, 10, 10);
+		CGRect outer = CGRectMake(0, 0, 19, 19);
+
+		expect(MEDRectCenterInRect(inner, outer)).to.equal(CGRectMake(4.5f, 4.5f, 10, 10));
+	});
+
+	describe(@"it should handle centering bigger rectanlges in smaller ones", ^{
+		CGRect inner = CGRectMake(0, 0, 10, 10);
+		CGRect outer = CGRectZero;
+
+		expect(MEDRectCenterInRect(inner, outer)).to.equal(CGRectMake(-5, -5, 10, 10));
+	});
+});
+
+describe(@"MEDRectRemainder", ^{
 	it(@"should return the rectangle's remainder", ^{
 		CGRect rect = CGRectMake(100, 100, 100, 100);
 
-		CGRect result = CGRectRemainder(rect, 25, CGRectMaxXEdge);
+		CGRect result = MEDRectRemainder(rect, 25, CGRectMaxXEdge);
 		CGRect expectedResult = CGRectMake(100, 100, 75, 100);
 
 		expect(result).to.equal(expectedResult);
 	});
 });
 
-describe(@"CGRectSlice", ^{
+describe(@"MEDRectSlice", ^{
 	it(@"should return the rectangle's slice", ^{
 		CGRect rect = CGRectMake(100, 100, 100, 100);
 
-		CGRect result = CGRectSlice(rect, 25, CGRectMaxXEdge);
+		CGRect result = MEDRectSlice(rect, 25, CGRectMaxXEdge);
 		CGRect expectedResult = CGRectMake(175, 100, 25, 100);
 
 		expect(result).to.equal(expectedResult);
 	});
 });
 
-describe(@"CGRectGrow", ^{
+describe(@"MEDRectGrow", ^{
 	it(@"should return a larger rectangle", ^{
 		CGRect rect = CGRectMake(100, 100, 100, 100);
 
-		CGRect result = CGRectGrow(rect, 25, CGRectMinXEdge);
+		CGRect result = MEDRectGrow(rect, 25, CGRectMinXEdge);
 		CGRect expectedResult = CGRectMake(75, 100, 125, 100);
 		expect(result).to.equal(expectedResult);
 	});
 });
 
-describe(@"CGRectFloor", ^{
+describe(@"MEDRectFloor", ^{
 	it(@"leaves integers untouched", ^{
 		CGRect rect = CGRectMake(-10, 20, -30, 40);
-		CGRect result = CGRectFloor(rect);
+		CGRect result = MEDRectFloor(rect);
 		expect(result).to.equal(rect);
 	});
 
@@ -181,7 +241,7 @@ describe(@"CGRectFloor", ^{
 		it(@"rounds down", ^{
 			CGRect rect = CGRectMake(10.1f, 1.1f, -3.4f, -4.7f);
 
-			CGRect result = CGRectFloor(rect);
+			CGRect result = MEDRectFloor(rect);
 			CGRect expectedResult = CGRectMake(10, 1, -4, -5);
 			expect(result).to.equal(expectedResult);
 		});
@@ -189,7 +249,7 @@ describe(@"CGRectFloor", ^{
 		it(@"rounds down, except in Y", ^{
 			CGRect rect = CGRectMake(10.1, 1.1, -3.4, -4.7);
 
-			CGRect result = CGRectFloor(rect);
+			CGRect result = MEDRectFloor(rect);
 			CGRect expectedResult = CGRectMake(10, 2, -4, -5);
 			expect(result).to.equal(expectedResult);
 		});
@@ -197,13 +257,13 @@ describe(@"CGRectFloor", ^{
 
 	it(@"leaves CGRectNull untouched", ^{
 		CGRect rect = CGRectNull;
-		CGRect result = CGRectFloor(rect);
+		CGRect result = MEDRectFloor(rect);
 		expect(result).to.equal(rect);
 	});
 
 	it(@"leaves CGRectInfinite untouched", ^{
 		CGRect rect = CGRectInfinite;
-		CGRect result = CGRectFloor(rect);
+		CGRect result = MEDRectFloor(rect);
 		expect(result).to.equal(rect);
 	});
 });
@@ -215,7 +275,7 @@ describe(@"inverted rectangles", ^{
 		// Bottom Left
 		CGRect expectedResult = CGRectMake(0, CGRectGetHeight(containingRect) - 20 - 50, 50, 50);
 
-		CGRect result = CGRectMakeInverted(containingRect, 0, 20, 50, 50);
+		CGRect result = MEDRectMakeInverted(containingRect, 0, 20, 50, 50);
 		expect(result).to.equal(expectedResult);
 	});
 
@@ -226,53 +286,53 @@ describe(@"inverted rectangles", ^{
 		// Bottom Left
 		CGRect expectedResult = CGRectMake(0, CGRectGetHeight(containingRect) - 20 - 50, 50, 50);
 
-		CGRect result = CGRectInvert(containingRect, rect);
+		CGRect result = MEDRectInvert(containingRect, rect);
 		expect(result).to.equal(expectedResult);
 	});
 });
 
-describe(@"CGRectWithSize", ^{
+describe(@"MEDRectWithSize", ^{
 	it(@"should return a rectangle with a valid size", ^{
-		CGRect rect = CGRectWithSize(CGSizeMake(20, 40));
+		CGRect rect = MEDRectWithSize(CGSizeMake(20, 40));
 		expect(rect).to.equal(CGRectMake(0, 0, 20, 40));
 	});
 
 	it(@"should return a rectangle with zero size", ^{
-		CGRect rect = CGRectWithSize(CGSizeZero);
+		CGRect rect = MEDRectWithSize(CGSizeZero);
 		expect(rect).to.equal(CGRectZero);
 	});
 });
 
-describe(@"CGRectConvertToUnitRect", ^{
+describe(@"MEDRectConvertToUnitRect", ^{
 	it(@"should return a rectangle with unit coordinates", ^{
-		CGRect rect = CGRectConvertToUnitRect(CGRectMake(0, 0, 100, 100));
+		CGRect rect = MEDRectConvertToUnitRect(CGRectMake(0, 0, 100, 100));
 		expect(rect).to.equal(CGRectMake(0, 0, 1, 1));
 	});
 });
 
-describe(@"CGRectConvertFromUnitRect", ^{
+describe(@"MEDRectConvertFromUnitRect", ^{
 	it(@"should return a rectangle with non-unit coordinates", ^{
 		CGRect viewRect = CGRectMake(0, 0, 100, 100);
 		CGRect unitRect = CGRectMake(0, 0, 0.5, 0.5);
-		CGRect rect = CGRectConvertFromUnitRect(unitRect, viewRect);
+		CGRect rect = MEDRectConvertFromUnitRect(unitRect, viewRect);
 		expect(rect).to.equal(CGRectMake(0, 0, 50, 50));
 	});
 });
 
-describe(@"CGPointFloor", ^{
+describe(@"MEDPointFloor", ^{
 	#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
 		it(@"rounds components up and left", ^{
 			CGPoint point = CGPointMake(0.5f, 0.49f);
 			CGPoint point2 = CGPointMake(-0.5f, -0.49f);
-			expect(CGPointEqualToPoint(CGPointFloor(point), CGPointMake(0, 0))).to.beTruthy();
-			expect(CGPointEqualToPoint(CGPointFloor(point2), CGPointMake(-1, -1))).to.beTruthy();
+			expect(CGPointEqualToPoint(MEDPointFloor(point), CGPointMake(0, 0))).to.beTruthy();
+			expect(CGPointEqualToPoint(MEDPointFloor(point2), CGPointMake(-1, -1))).to.beTruthy();
 		});
 	#elif TARGET_OS_MAC
 		it(@"rounds components up and left", ^{
 			CGPoint point = CGPointMake(0.5, 0.49);
 			CGPoint point2 = CGPointMake(-0.5, -0.49);
-			expect(CGPointEqualToPoint(CGPointFloor(point), CGPointMake(0, 1))).to.beTruthy();
-			expect(CGPointEqualToPoint(CGPointFloor(point2), CGPointMake(-1, 0))).to.beTruthy();
+			expect(CGPointEqualToPoint(MEDPointFloor(point), CGPointMake(0, 1))).to.beTruthy();
+			expect(CGPointEqualToPoint(MEDPointFloor(point2), CGPointMake(-1, 0))).to.beTruthy();
 		});
 	#endif
 });
@@ -285,36 +345,36 @@ describe(@"equality with accuracy", ^{
 	CGRect farRect = CGRectMake(1.5f, 11.5f, 20, 20);
 
 	it(@"compares two points that are close enough", ^{
-		expect(CGPointEqualToPointWithAccuracy(rect.origin, closeRect.origin, epsilon)).to.beTruthy();
+		expect(MEDPointEqualToPointWithAccuracy(rect.origin, closeRect.origin, epsilon)).to.beTruthy();
 	});
 
 	it(@"compares two points that are too far from each other", ^{
-		expect(CGPointEqualToPointWithAccuracy(rect.origin, farRect.origin, epsilon)).to.beFalsy();
+		expect(MEDPointEqualToPointWithAccuracy(rect.origin, farRect.origin, epsilon)).to.beFalsy();
 	});
 
 	it(@"compares two rectangles that are close enough", ^{
-		expect(CGRectEqualToRectWithAccuracy(rect, closeRect, epsilon)).to.beTruthy();
+		expect(MEDRectEqualToRectWithAccuracy(rect, closeRect, epsilon)).to.beTruthy();
 	});
 
 	it(@"compares two rectangles that are too far from each other", ^{
-		expect(CGRectEqualToRectWithAccuracy(rect, farRect, epsilon)).to.beFalsy();
+		expect(MEDRectEqualToRectWithAccuracy(rect, farRect, epsilon)).to.beFalsy();
 	});
 
 	it(@"compares two sizes that are close enough", ^{
-		expect(CGSizeEqualToSizeWithAccuracy(rect.size, closeRect.size, epsilon)).to.beTruthy();
+		expect(MEDSizeEqualToSizeWithAccuracy(rect.size, closeRect.size, epsilon)).to.beTruthy();
 	});
 
 	it(@"compares two sizes that are too far from each other", ^{
-		expect(CGSizeEqualToSizeWithAccuracy(rect.size, farRect.size, epsilon)).to.beFalsy();
+		expect(MEDSizeEqualToSizeWithAccuracy(rect.size, farRect.size, epsilon)).to.beFalsy();
 	});
 });
 
-describe(@"CGSizeScale", ^{
+describe(@"MEDSizeScale", ^{
 	it(@"should scale each component", ^{
 		CGSize original = CGSizeMake(-5, 3.4f);
 		CGFloat scale = -3.5f;
 
-		CGSize scaledSize = CGSizeScale(original, scale);
+		CGSize scaledSize = MEDSizeScale(original, scale);
 		CGSize expected = CGSizeMake(17.5f, -11.9f);
 
 		expect(scaledSize.width).to.beCloseTo(expected.width);
@@ -322,20 +382,20 @@ describe(@"CGSizeScale", ^{
 	});
 });
 
-describe(@"CGPointAdd", ^{
+describe(@"MEDPointAdd", ^{
 	it(@"adds two points together, element-wise", ^{
 		CGPoint point1 = CGPointMake(-1, 5);
 		CGPoint point2 = CGPointMake(10, 12);
-		CGPoint sum = CGPointAdd(point1, point2);
+		CGPoint sum = MEDPointAdd(point1, point2);
 		expect(sum).to.equal(CGPointMake(9, 17));
 	});
 });
 
-describe(@"CGPointSubtract", ^{
+describe(@"MEDPointSubtract", ^{
 	it(@"adds two points together, element-wise", ^{
 		CGPoint point1 = CGPointMake(-1, 5);
 		CGPoint point2 = CGPointMake(10, 12);
-		CGPoint diff = CGPointSubtract(point1, point2);
+		CGPoint diff = MEDPointSubtract(point1, point2);
 		expect(diff).to.equal(CGPointMake(-11, -7));
 	});
 });
