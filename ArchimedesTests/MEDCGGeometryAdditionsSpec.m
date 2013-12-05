@@ -383,27 +383,33 @@ describe(@"MEDSizeScale", ^{
 });
 
 describe(@"MEDSizeScaleAspectFit", ^{
-	it(@"should return a size which fits inside the given size", ^{
+	CGSize containingSize = CGSizeMake(75, 75);
+
+	it(@"should return a size which fits inside the given size when the width is bigger", ^{
 		CGSize sizeToScale = CGSizeMake(100, 75);
-		CGSize containingSize = CGSizeMake(75, 75);
 		CGSize size = MEDSizeScaleAspectFit(sizeToScale, containingSize);
 		expect(size).to.equal(CGSizeMake(75, 56.25));
+	});
 
-		sizeToScale = CGSizeMake(75, 100);
-		size = MEDSizeScaleAspectFit(sizeToScale, containingSize);
+	it(@"should return a size which fits inside the given size when the height is bigger", ^{
+		CGSize sizeToScale = CGSizeMake(75, 100);
+		CGSize size = MEDSizeScaleAspectFit(sizeToScale, containingSize);
 		expect(size).to.equal(CGSizeMake(56.25, 75));
 	});
 });
 
 describe(@"MEDSizeScaleAspectFill", ^{
-	it(@"should return a size which fills the given size", ^{
+	CGSize containingSize = CGSizeMake(75, 75);
+
+	it(@"should return a size which fills the given size when the width is bigger", ^{
 		CGSize sizeToScale = CGSizeMake(100, 75);
-		CGSize containingSize = CGSizeMake(75, 75);
 		CGSize size = MEDSizeScaleAspectFill(sizeToScale, containingSize);
 		expect(size).to.equal(CGSizeMake(100, 75));
+	});
 
-		sizeToScale = CGSizeMake(75, 100);
-		size = MEDSizeScaleAspectFill(sizeToScale, containingSize);
+	it(@"should return a size which fills the given size when the height is bigger", ^{
+		CGSize sizeToScale = CGSizeMake(75, 100);
+		CGSize size = MEDSizeScaleAspectFill(sizeToScale, containingSize);
 		expect(size).to.equal(CGSizeMake(75, 100));
 	});
 });
