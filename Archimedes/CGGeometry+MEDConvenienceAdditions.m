@@ -165,6 +165,9 @@ CGSize MEDSizeScaleAspectFit(CGSize size, CGSize maxSize) {
 	CGFloat originalAspectRatio = size.width / size.height;
 	CGFloat maxAspectRatio = maxSize.width / maxSize.height;
 	CGSize newSize = maxSize;
+	// The largest dimension will be the `maxSize`, and then we need to scale
+	// the other dimension down relative to it, while maintaining the aspect
+	// ratio.
 	if (originalAspectRatio > maxAspectRatio) {
 		newSize.height = maxSize.width / originalAspectRatio;
 	} else {
