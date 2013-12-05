@@ -202,13 +202,13 @@ CGSize MEDSizeScale(CGSize size, CGFloat scale);
 // is resized fit inside the maxSize.
 CGSize MEDSizeScaleAspectFit(CGSize size, CGSize maxSize);
 
-// Scales a size a size to fill a different size.
+// Scales a size a size to fill (and possibly exceed) a different size.
 //
 // size    - The size to scale.
 // minSize - The size to fill.
 //
 // Returns a new CGSize that has the same aspect ratio as the provided size, but
-// is resized fill the minSize.
+// is resized to fill (and possibly exceed) the minSize.
 CGSize MEDSizeScaleAspectFill(CGSize size, CGSize minSize);
 
 // Round a point to integral numbers.
