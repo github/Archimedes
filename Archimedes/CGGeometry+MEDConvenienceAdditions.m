@@ -161,6 +161,33 @@ CGSize MEDSizeScale(CGSize size, CGFloat scale) {
 	return CGSizeMake(size.width * scale, size.height * scale);
 }
 
+CGSize MEDSizeScaleAspectFit(CGSize size, CGSize maxSize) {
+	CGFloat originalAspectRatio = size.width / size.height;
+	CGFloat maxAspectRatio = maxSize.width / maxSize.height;
+	CGSize newSize = maxSize;
+	// The largest dimension will be the `maxSize`, and then we need to scale
+	// the other dimension down relative to it, while maintaining the aspect
+	// ratio.
+	if (originalAspectRatio > maxAspectRatio) {
+		newSize.height = maxSize.width / originalAspectRatio;
+	} else {
+		newSize.width = maxSize.height * originalAspectRatio;
+	}
+
+	return newSize;
+}
+
+CGSize MEDSizeScaleAspectFill(CGSize size, CGSize minSize) {
+	CGFloat scaleWidth = minSize.width / size.width;
+	CGFloat scaleHeight = minSize.height / size.height;
+
+	CGFloat scale = fmax(scaleWidth, scaleHeight);
+	CGFloat newWidth = size.width * scale;
+	CGFloat newHeight = size.height * scale;
+
+	return CGSizeMake(newWidth, newHeight);
+}
+
 CGPoint MEDPointFloor(CGPoint point) {
 	#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
 		return CGPointMake(floor(point.x), floor(point.y));

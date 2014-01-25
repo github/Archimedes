@@ -193,6 +193,24 @@ BOOL MEDSizeEqualToSizeWithAccuracy(CGSize size, CGSize size2, CGFloat epsilon);
 // Scales the components of `size` by `scale`.
 CGSize MEDSizeScale(CGSize size, CGFloat scale);
 
+// Scales a size a size to fit within a different size.
+//
+// size    - The size to scale.
+// maxSize - The size to fit original size within.
+//
+// Returns a new CGSize that has the same aspect ratio as the provided size, but
+// is resized fit inside the maxSize.
+CGSize MEDSizeScaleAspectFit(CGSize size, CGSize maxSize);
+
+// Scales a size a size to fill (and possibly exceed) a different size.
+//
+// size    - The size to scale.
+// minSize - The size to fill.
+//
+// Returns a new CGSize that has the same aspect ratio as the provided size, but
+// is resized to fill (and possibly exceed) the minSize.
+CGSize MEDSizeScaleAspectFill(CGSize size, CGSize minSize);
+
 // Round a point to integral numbers.
 //
 // The point will be moved up and left in native view coordinates (not
