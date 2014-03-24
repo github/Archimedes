@@ -4,4 +4,10 @@
    <FileRef
       location = "group:Archimedes.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:ArchimedesTests/expecta/Expecta.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ArchimedesTests/specta/Specta.xcodeproj">
+   </FileRef>
 </Workspace>
