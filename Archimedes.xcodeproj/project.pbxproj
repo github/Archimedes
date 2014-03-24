@@ -107,6 +107,7 @@
 		D0D628EB17790B29008EF295 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		D0D6290017790B2A008EF295 /* Archimedes Mac Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Archimedes Mac Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0D6292A17790C1E008EF295 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/ApplicationServices.framework; sourceTree = DEVELOPER_DIR; };
+		D499F0A218E0D50700AA91F9 /* Test.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Test.xcconfig; sourceTree = "<group>"; };
 		D4A5094D18E0968D0030A470 /* libExpecta.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libExpecta.a; path = ArchimedesTests/expecta/build/Debug/libExpecta.a; sourceTree = "<group>"; };
 		D4A5094F18E0968F0030A470 /* libSpecta.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSpecta.a; path = ArchimedesTests/specta/build/Debug/libSpecta.a; sourceTree = "<group>"; };
 		D4A5095118E096B10030A470 /* libExpecta-iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libExpecta-iOS.a"; path = "ArchimedesTests/expecta/build/Debug-iphoneos/libExpecta-iOS.a"; sourceTree = "<group>"; };
@@ -268,6 +269,7 @@
 				D02FAF0C1635DE46008D42D9 /* Debug.xcconfig */,
 				D02FAF0D1635DE46008D42D9 /* Profile.xcconfig */,
 				D02FAF0E1635DE46008D42D9 /* Release.xcconfig */,
+				D499F0A218E0D50700AA91F9 /* Test.xcconfig */,
 			);
 			path = Configurations;
 			sourceTree = "<group>";
@@ -761,6 +763,77 @@
 			};
 			name = Profile;
 		};
+		D499F09D18E0D4E600AA91F9 /* Test */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D499F0A218E0D50700AA91F9 /* Test.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = "-ObjC";
+			};
+			name = Test;
+		};
+		D499F09E18E0D4E600AA91F9 /* Test */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D02FAF1A1635DE46008D42D9 /* Mac-Framework.xcconfig */;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Archimedes/Archimedes-Prefix.pch";
+				INFOPLIST_FILE = "Archimedes/Archimedes-Info.plist";
+				PRODUCT_NAME = Archimedes;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Test;
+		};
+		D499F09F18E0D4E600AA91F9 /* Test */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D02FAF171635DE46008D42D9 /* Mac-Application.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PREFIX_HEADER = "ArchimedesTests/ArchimedesTests-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"ArchimedesTests/expecta/src/**",
+					ArchimedesTests/specta/src,
+				);
+				INFOPLIST_FILE = "ArchimedesTests/ArchimedesTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Test;
+		};
+		D499F0A018E0D4E600AA91F9 /* Test */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D02FAF151635DE46008D42D9 /* iOS-StaticLibrary.xcconfig */;
+			buildSettings = {
+				DSTROOT = /tmp/Archimedes.dst;
+				GCC_PREFIX_HEADER = "Archimedes/Archimedes-Prefix.pch";
+				PRODUCT_NAME = "Archimedes-iOS";
+				PUBLIC_HEADERS_FOLDER_PATH = include/Archimedes;
+			};
+			name = Test;
+		};
+		D499F0A118E0D4E600AA91F9 /* Test */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D02FAF131635DE46008D42D9 /* iOS-Application.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PREFIX_HEADER = "ArchimedesTests/ArchimedesTests-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"ArchimedesTests/expecta/src/**",
+					ArchimedesTests/specta/src,
+				);
+				INFOPLIST_FILE = "ArchimedesTests/ArchimedesTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Test;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -768,6 +841,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D02FAEFD1635DDC1008D42D9 /* Debug */,
+				D499F09D18E0D4E600AA91F9 /* Test */,
 				D02FAEFE1635DDC1008D42D9 /* Release */,
 				D02FAFCE1635E0C3008D42D9 /* Profile */,
 			);
@@ -778,6 +852,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D02FAFAF1635DFD9008D42D9 /* Debug */,
+				D499F0A018E0D4E600AA91F9 /* Test */,
 				D02FAFB01635DFD9008D42D9 /* Release */,
 				D02FAFD11635E0C3008D42D9 /* Profile */,
 			);
@@ -788,6 +863,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D02FAFB21635DFD9008D42D9 /* Debug */,
+				D499F0A118E0D4E600AA91F9 /* Test */,
 				D02FAFB31635DFD9008D42D9 /* Release */,
 				D02FAFD21635E0C3008D42D9 /* Profile */,
 			);
@@ -798,6 +874,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D0D6290F17790B2A008EF295 /* Debug */,
+				D499F09E18E0D4E600AA91F9 /* Test */,
 				D0D6291017790B2A008EF295 /* Release */,
 				D0D6291117790B2A008EF295 /* Profile */,
 			);
@@ -808,6 +885,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D0D6291217790B2A008EF295 /* Debug */,
+				D499F09F18E0D4E600AA91F9 /* Test */,
 				D0D6291317790B2A008EF295 /* Release */,
 				D0D6291417790B2A008EF295 /* Profile */,
 			);
