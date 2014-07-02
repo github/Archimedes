@@ -29,7 +29,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D0D628FF17790B2A008EF295"
-               BuildableName = "Archimedes Mac Tests.octest"
+               BuildableName = "Archimedes Mac Tests.xctest"
                BlueprintName = "Archimedes Mac Tests"
                ReferencedContainer = "container:Archimedes.xcodeproj">
             </BuildableReference>
@@ -40,14 +40,14 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
-      buildConfiguration = "Debug">
+      buildConfiguration = "Test">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D0D628FF17790B2A008EF295"
-               BuildableName = "Archimedes Mac Tests.octest"
+               BuildableName = "Archimedes Mac Tests.xctest"
                BlueprintName = "Archimedes Mac Tests"
                ReferencedContainer = "container:Archimedes.xcodeproj">
             </BuildableReference>
