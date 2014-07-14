@@ -26,6 +26,20 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 // type, so they compile without casting on both OS X and iOS.
 #import <tgmath.h>
 
+// tgmath functions aren't used on iOS when modules are enabled. Work around
+// this by redeclaring things here. http://www.openradar.me/16744288
+#undef fmax
+#define fmax(__x, __y) __tg_fmax(__tg_promote2((__x), (__y))(__x), \
+                                 __tg_promote2((__x), (__y))(__y))
+#undef floor
+#define floor(__x) __tg_floor(__tg_promote1((__x))(__x))
+
+#undef cos
+#define cos(__x) __tg_cos(__tg_promote1((__x))(__x))
+
+#undef sin
+#define sin(__x) __tg_sin(__tg_promote1((__x))(__x))
+
 // Hide our crazy macros within the implementation.
 #undef MEDRectDivide
 #undef MEDRectDivideWithPadding
