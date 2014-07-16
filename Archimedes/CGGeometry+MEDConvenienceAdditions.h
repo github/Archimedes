@@ -20,6 +20,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 */
 
+#import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 
 // Extends CGRectDivide() to accept the following additional types for the
