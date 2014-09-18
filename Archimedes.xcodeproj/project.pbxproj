@@ -13,7 +13,6 @@
 		0378ABAA17B16FA10056C690 /* MEDEdgeInsets.h in Headers */ = {isa = PBXBuildFile; fileRef = 0378ABA517B16F980056C690 /* MEDEdgeInsets.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0378ABC417B17A160056C690 /* MEDEdgeInsetsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0378ABC317B17A160056C690 /* MEDEdgeInsetsSpec.m */; };
 		0378ABC517B17A160056C690 /* MEDEdgeInsetsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0378ABC317B17A160056C690 /* MEDEdgeInsetsSpec.m */; };
-		BEB7DA6019648A9C00F69C4F /* libSpecta-OSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEB7DA5F19648A9C00F69C4F /* libSpecta-OSX.a */; };
 		BEB7DA6219648AA400F69C4F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEB7DA6119648AA400F69C4F /* XCTest.framework */; };
 		D005A1A9169A384400A9D2DB /* Archimedes.h in Headers */ = {isa = PBXBuildFile; fileRef = D02FAEE51635DDC0008D42D9 /* Archimedes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D005A1AB169A384C00A9D2DB /* CGGeometry+MEDConvenienceAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D02FAFDC1635E1E9008D42D9 /* CGGeometry+MEDConvenienceAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -42,9 +41,6 @@
 		D0D6292D17790C29008EF295 /* MEDCGGeometryAdditionsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D02FAFD31635E1A8008D42D9 /* MEDCGGeometryAdditionsSpec.m */; };
 		D0D6292E17790C2B008EF295 /* MEDNSValueAdditionsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D0626AA0167950D200E951A5 /* MEDNSValueAdditionsSpec.m */; };
 		D0D6292F17790C2C008EF295 /* MEDGeometryTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D02FAFD81635E1BF008D42D9 /* MEDGeometryTestObject.m */; };
-		D4A5094E18E0968D0030A470 /* libExpecta.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A5094D18E0968D0030A470 /* libExpecta.a */; };
-		D4A5095218E096B10030A470 /* libExpecta-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A5095118E096B10030A470 /* libExpecta-iOS.a */; };
-		D4A5095418E096B30030A470 /* libSpecta-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A5095318E096B30030A470 /* libSpecta-iOS.a */; };
 		D4C0BC9D19CB2D9D0012C6FB /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C0BC9B19CB2D9D0012C6FB /* Nimble.framework */; };
 		D4C0BC9E19CB2D9D0012C6FB /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C0BC9C19CB2D9D0012C6FB /* Quick.framework */; };
 		D4C0BC9F19CB2DA60012C6FB /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C0BC9C19CB2D9D0012C6FB /* Quick.framework */; };
@@ -141,8 +137,6 @@
 				D02FAFA11635DFD9008D42D9 /* Foundation.framework in Frameworks */,
 				D0626AAB167951DF00E951A5 /* CoreGraphics.framework in Frameworks */,
 				D02FAFA41635DFD9008D42D9 /* libArchimedes-iOS.a in Frameworks */,
-				D4A5095218E096B10030A470 /* libExpecta-iOS.a in Frameworks */,
-				D4A5095418E096B30030A470 /* libSpecta-iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,11 +156,9 @@
 				D4C0BC9D19CB2D9D0012C6FB /* Nimble.framework in Frameworks */,
 				D4C0BC9E19CB2D9D0012C6FB /* Quick.framework in Frameworks */,
 				BEB7DA6219648AA400F69C4F /* XCTest.framework in Frameworks */,
-				BEB7DA6019648A9C00F69C4F /* libSpecta-OSX.a in Frameworks */,
 				D0D6290217790B2A008EF295 /* Cocoa.framework in Frameworks */,
 				D0D6290517790B2A008EF295 /* Archimedes.framework in Frameworks */,
 				D0D6292C17790C25008EF295 /* ApplicationServices.framework in Frameworks */,
-				D4A5094E18E0968D0030A470 /* libExpecta.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
