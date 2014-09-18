@@ -434,7 +434,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastTestingUpgradeCheck = 0510;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = GitHub;
 			};
 			buildConfigurationList = D02FAED31635DDC0008D42D9 /* Build configuration list for PBXProject "Archimedes" */;
