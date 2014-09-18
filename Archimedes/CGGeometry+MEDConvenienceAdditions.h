@@ -182,10 +182,10 @@ CGRect MEDRectConvertToUnitRect(CGRect rect);
 CGRect MEDRectConvertFromUnitRect(CGRect rect, CGRect destRect);
 
 // Returns whether every side of `rect` is within `epsilon` distance of `rect2`.
-BOOL MEDRectEqualToRectWithAccuracy(CGRect rect, CGRect rect2, CGFloat epsilon);
+bool MEDRectEqualToRectWithAccuracy(CGRect rect, CGRect rect2, CGFloat epsilon);
 
 // Returns whether `size` is within `epsilon` points of `size2`.
-BOOL MEDSizeEqualToSizeWithAccuracy(CGSize size, CGSize size2, CGFloat epsilon);
+bool MEDSizeEqualToSizeWithAccuracy(CGSize size, CGSize size2, CGFloat epsilon);
 
 // Scales the components of `size` by `scale`.
 CGSize MEDSizeScale(CGSize size, CGFloat scale);
@@ -221,7 +221,7 @@ CGSize MEDSizeScaleAspectFill(CGSize size, CGSize minSize);
 CGPoint MEDPointFloor(CGPoint point);
 
 // Returns whether `point` is within `epsilon` distance of `point2`.
-BOOL MEDPointEqualToPointWithAccuracy(CGPoint point, CGPoint point2, CGFloat epsilon);
+bool MEDPointEqualToPointWithAccuracy(CGPoint point, CGPoint point2, CGFloat epsilon);
 
 // Returns the dot product of two points.
 CGFloat MEDPointDotProduct(CGPoint point, CGPoint point2);
