@@ -5,12 +5,6 @@
       location = "group:Archimedes.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:ArchimedesTests/expecta/Expecta.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:ArchimedesTests/specta/Specta.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:ArchimedesTests/Nimble/Nimble.xcodeproj">
    </FileRef>
    <FileRef
