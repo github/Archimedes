@@ -389,7 +389,7 @@
 			name = "Archimedes iOS Tests";
 			productName = ArchimedesTests;
 			productReference = D02FAF9D1635DFD9008D42D9 /* Archimedes iOS Tests.xctest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		D0D628E917790B29008EF295 /* Archimedes Mac */ = {
 			isa = PBXNativeTarget;
