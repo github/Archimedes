@@ -7,3 +7,9 @@
 [submodule "ArchimedesTests/specta"]
 	path = ArchimedesTests/specta
 	url = https://github.com/specta/specta.git
+[submodule "ArchimedesTests/Quick"]
+	path = ArchimedesTests/Quick
+	url = https://github.com/Quick/Quick.git
+[submodule "ArchimedesTests/Nimble"]
+	path = ArchimedesTests/Nimble
+	url = https://github.com/Quick/Nimble.git
