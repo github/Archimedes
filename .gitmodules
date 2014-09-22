@@ -1,9 +1,9 @@
 [submodule "Configuration"]
 	path = Configuration
 	url = https://github.com/jspahrsummers/xcconfigs.git
-[submodule "ArchimedesTests/Quick"]
-	path = ArchimedesTests/Quick
-	url = https://github.com/Quick/Quick.git
-[submodule "ArchimedesTests/Nimble"]
-	path = ArchimedesTests/Nimble
-	url = https://github.com/Quick/Nimble.git
+[submodule "ArchimedesTests/expecta"]
+	path = ArchimedesTests/expecta
+	url = https://github.com/specta/expecta.git
+[submodule "ArchimedesTests/specta"]
+	path = ArchimedesTests/specta
+	url = https://github.com/specta/specta.git
