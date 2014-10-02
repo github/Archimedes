@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 GitHub. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 
 //! Project version number for Archimedes.

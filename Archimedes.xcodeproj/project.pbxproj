@@ -29,6 +29,12 @@
 		D09C742619DDC9DD0067EB29 /* MEDNSValueAdditionsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D0626AA0167950D200E951A5 /* MEDNSValueAdditionsSpec.m */; };
 		D09C742719DDC9DD0067EB29 /* MEDEdgeInsetsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0378ABC317B17A160056C690 /* MEDEdgeInsetsSpec.m */; };
 		D09C742819DDC9DD0067EB29 /* MEDGeometryTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D02FAFD81635E1BF008D42D9 /* MEDGeometryTestObject.m */; };
+		D09C742C19DDCA8C0067EB29 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09C742A19DDCA8C0067EB29 /* Nimble.framework */; };
+		D09C742D19DDCA8C0067EB29 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09C742B19DDCA8C0067EB29 /* Quick.framework */; };
+		D09C742E19DDCA930067EB29 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09C742B19DDCA8C0067EB29 /* Quick.framework */; };
+		D09C743019DDCA940067EB29 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09C742F19DDCA940067EB29 /* Nimble.framework */; };
+		D09C743119DDCB800067EB29 /* Archimedes.h in Headers */ = {isa = PBXBuildFile; fileRef = D02FAEE51635DDC0008D42D9 /* Archimedes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D09C743219DDCB800067EB29 /* Archimedes.h in Headers */ = {isa = PBXBuildFile; fileRef = D02FAEE51635DDC0008D42D9 /* Archimedes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +58,6 @@
 		0378ABA517B16F980056C690 /* MEDEdgeInsets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDEdgeInsets.h; sourceTree = "<group>"; };
 		0378ABA617B16F980056C690 /* MEDEdgeInsets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDEdgeInsets.m; sourceTree = "<group>"; };
 		0378ABC317B17A160056C690 /* MEDEdgeInsetsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDEdgeInsetsSpec.m; sourceTree = "<group>"; };
-		BEB7DA5F19648A9C00F69C4F /* libSpecta-OSX.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libSpecta-OSX.a"; path = "ArchimedesTests/specta/build/Debug/libSpecta-OSX.a"; sourceTree = "<group>"; };
 		BEB7DA6119648AA400F69C4F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		D02FAEE11635DDC0008D42D9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D02FAEE51635DDC0008D42D9 /* Archimedes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Archimedes.h; sourceTree = "<group>"; };
@@ -90,12 +95,11 @@
 		D0626AA8167951BB00E951A5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		D09C73F319DDC8500067EB29 /* Archimedes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Archimedes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D09C73FD19DDC8510067EB29 /* Archimedes-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Archimedes-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D09C742A19DDCA8C0067EB29 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = External/Quick/Externals/Nimble/build/Debug/Nimble.framework; sourceTree = "<group>"; };
+		D09C742B19DDCA8C0067EB29 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = "../../../../../../../../Library/Developer/Xcode/DerivedData/Archimedes-hcwclbnsypykfwdnzebhcuozbylj/Build/Products/Debug/Quick.framework"; sourceTree = "<group>"; };
+		D09C742F19DDCA940067EB29 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = "External/Quick/Externals/Nimble/build/Debug-iphoneos/Nimble.framework"; sourceTree = "<group>"; };
 		D0D628EB17790B29008EF295 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		D0D6292A17790C1E008EF295 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/ApplicationServices.framework; sourceTree = DEVELOPER_DIR; };
-		D4A5094D18E0968D0030A470 /* libExpecta.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libExpecta.a; path = ArchimedesTests/expecta/build/Debug/libExpecta.a; sourceTree = "<group>"; };
-		D4A5094F18E0968F0030A470 /* libSpecta.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSpecta.a; path = ArchimedesTests/specta/build/Debug/libSpecta.a; sourceTree = "<group>"; };
-		D4A5095118E096B10030A470 /* libExpecta-iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libExpecta-iOS.a"; path = "ArchimedesTests/expecta/build/Debug-iphoneos/libExpecta-iOS.a"; sourceTree = "<group>"; };
-		D4A5095318E096B30030A470 /* libSpecta-iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libSpecta-iOS.a"; path = "ArchimedesTests/specta/build/Debug-iphoneos/libSpecta-iOS.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D09C742C19DDCA8C0067EB29 /* Nimble.framework in Frameworks */,
+				D09C742D19DDCA8C0067EB29 /* Quick.framework in Frameworks */,
 				D038E06619DDC7A300ABCE67 /* Archimedes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -125,6 +131,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D09C743019DDCA940067EB29 /* Nimble.framework in Frameworks */,
+				D09C742E19DDCA930067EB29 /* Quick.framework in Frameworks */,
 				D09C73FE19DDC8510067EB29 /* Archimedes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,12 +166,10 @@
 		D02FAEDB1635DDC0008D42D9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D09C742F19DDCA940067EB29 /* Nimble.framework */,
+				D09C742A19DDCA8C0067EB29 /* Nimble.framework */,
+				D09C742B19DDCA8C0067EB29 /* Quick.framework */,
 				BEB7DA6119648AA400F69C4F /* XCTest.framework */,
-				BEB7DA5F19648A9C00F69C4F /* libSpecta-OSX.a */,
-				D4A5094F18E0968F0030A470 /* libSpecta.a */,
-				D4A5095318E096B30030A470 /* libSpecta-iOS.a */,
-				D4A5094D18E0968D0030A470 /* libExpecta.a */,
-				D4A5095118E096B10030A470 /* libExpecta-iOS.a */,
 				D02FAEE11635DDC0008D42D9 /* Foundation.framework */,
 				D0626AA31679519600E951A5 /* UIKit.framework */,
 				D0626AA8167951BB00E951A5 /* CoreGraphics.framework */,
@@ -301,6 +307,7 @@
 				D09C741419DDC9CA0067EB29 /* MEDEdgeInsets.h in Headers */,
 				D09C741219DDC9CA0067EB29 /* NSValue+MEDGeometryAdditions.h in Headers */,
 				D09C741019DDC9CA0067EB29 /* CGGeometry+MEDConvenienceAdditions.h in Headers */,
+				D09C743119DDCB800067EB29 /* Archimedes.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +318,7 @@
 				D09C741A19DDC9CB0067EB29 /* MEDEdgeInsets.h in Headers */,
 				D09C741819DDC9CB0067EB29 /* NSValue+MEDGeometryAdditions.h in Headers */,
 				D09C741619DDC9CB0067EB29 /* CGGeometry+MEDConvenienceAdditions.h in Headers */,
+				D09C743219DDCB800067EB29 /* Archimedes.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -635,6 +643,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
+					"$(PROJECT_DIR)/External/Quick/Externals/Nimble/build/Debug",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Archimedes-hcwclbnsypykfwdnzebhcuozbylj/Build/Products/Debug",
 				);
 				INFOPLIST_FILE = ArchimedesTests/Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -648,6 +658,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
+					"$(PROJECT_DIR)/External/Quick/Externals/Nimble/build/Debug",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Archimedes-hcwclbnsypykfwdnzebhcuozbylj/Build/Products/Debug",
 				);
 				INFOPLIST_FILE = ArchimedesTests/Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -661,6 +673,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
+					"$(PROJECT_DIR)/External/Quick/Externals/Nimble/build/Debug",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Archimedes-hcwclbnsypykfwdnzebhcuozbylj/Build/Products/Debug",
 				);
 				INFOPLIST_FILE = ArchimedesTests/Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -674,6 +688,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
+					"$(PROJECT_DIR)/External/Quick/Externals/Nimble/build/Debug",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Archimedes-hcwclbnsypykfwdnzebhcuozbylj/Build/Products/Debug",
 				);
 				INFOPLIST_FILE = ArchimedesTests/Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -751,6 +767,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Archimedes-hcwclbnsypykfwdnzebhcuozbylj/Build/Products/Debug",
+					"$(PROJECT_DIR)/External/Quick/Externals/Nimble/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = ArchimedesTests/Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -764,6 +782,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Archimedes-hcwclbnsypykfwdnzebhcuozbylj/Build/Products/Debug",
+					"$(PROJECT_DIR)/External/Quick/Externals/Nimble/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = ArchimedesTests/Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -777,6 +797,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Archimedes-hcwclbnsypykfwdnzebhcuozbylj/Build/Products/Debug",
+					"$(PROJECT_DIR)/External/Quick/Externals/Nimble/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = ArchimedesTests/Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -790,6 +812,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Archimedes-hcwclbnsypykfwdnzebhcuozbylj/Build/Products/Debug",
+					"$(PROJECT_DIR)/External/Quick/Externals/Nimble/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = ArchimedesTests/Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
