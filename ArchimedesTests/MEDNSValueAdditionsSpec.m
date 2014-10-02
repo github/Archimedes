@@ -1,16 +1,16 @@
 //
-//  MEDNSValueAddqck_itionsSpec.m
+//  MEDNSValueAdditionsSpec.m
 //  Archimedes
 //
 //  Created by Justin Spahr-Summers on 2012-12-12.
-//  Copyright (c) 2012 Gqck_itHub. All rights reserved.
+//  Copyright (c) 2012 GitHub. All rights reserved.
 //
 
 #import <Archimedes/Archimedes.h>
 #import <Nimble/Nimble.h>
 #import <Quick/Quick.h>
 
-QuickSpecBegin(MEDNSValueAddqck_itions)
+QuickSpecBegin(NSValueAdditions)
 
 CGRect rect = CGRectMake(10, 20, 30, 40);
 CGPoint point = CGPointMake(100, 200);
@@ -73,7 +73,7 @@ qck_describe(@"MEDBox", ^{
 		expect(value).to(equal(insetsValue));
 	});
 
-	// Specifically used because we don't support qck_it directly.
+	// Specifically used because we don't support it directly.
 	qck_it(@"should wrap a CGAffineTransform", ^{
 		CGAffineTransform transform = CGAffineTransformMake(1, 2, 5, 8, 13, 21);
 

@@ -26,7 +26,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 #import "MEDGeometryTestObject.h"
 
-QuickSpecBegin(MEDCGGeometryAdditions)
+QuickSpecBegin(CGGeometryAdditions)
 
 qck_describe(@"MEDRectDivide macro", ^{
 	CGRect rect = CGRectMake(10, 20, 30, 40);
