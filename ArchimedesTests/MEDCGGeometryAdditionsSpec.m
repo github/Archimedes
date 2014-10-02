@@ -1,22 +1,22 @@
 //
-//  MEDCGGeometryAddqck_itionsSpec.m
+//  MEDCGGeometryAdditionsSpec.m
 //  Archimedes
 //
 //  Created by Justin Spahr-Summers on 18.01f.12.
-//  Copyright 2012 Gqck_itHub. All rights reserved.
+//  Copyright 2012 GitHub. All rights reserved.
 //
 
 /*
 
-Portions copyright (c) 2012, Bqck_itswift, Inc.
+Portions copyright (c) 2012, Bitswift, Inc.
 All rights reserved.
 
-Redistribution and use in source and binary forms, wqck_ith or wqck_ithout modification, are permqck_itted provided that the following condqck_itions are met:
+Redistribution and use in source and binary forms, With or Without modification, are permitted provided that the following conditions are met:
 
- * Redistributions of source code must retain the above copyright notice, this list of condqck_itions and the following disclaimer.
- * Neqck_ither the name of the Bqck_itswift, Inc. nor the names of qck_its contributors may be used to endorse or promote products derived from this software wqck_ithout specific prior wrqck_itten permission.
+ * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+ * Neither the name of the Bitswift, Inc. nor the names of qck_its contributors may be used to endorse or promote products derived from this software Without specific prior written permission.
 
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMqck_ITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILqck_ITY AND Fqck_ITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMqck_ITED TO, PROCUREMENT OF SUBSTqck_ITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFqck_ITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILqck_ITY, WHETHER IN CONTRACT, STRICT LIABILqck_ITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILqck_ITY OF SUCH DAMAGE.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 */
 
@@ -26,7 +26,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 #import "MEDGeometryTestObject.h"
 
-QuickSpecBegin(MEDCGGeometryAddqck_itions)
+QuickSpecBegin(MEDCGGeometryAdditions)
 
 qck_describe(@"MEDRectDivide macro", ^{
 	CGRect rect = CGRectMake(10, 20, 30, 40);
@@ -79,41 +79,41 @@ qck_describe(@"MEDRectCenterPoint", ^{
 	});
 });
 
-qck_describe(@"MEDRectDivideWqck_ithPadding", ^{
+qck_describe(@"MEDRectDivideWithPadding", ^{
 	CGRect rect = CGRectMake(50, 50, 100, 100);
 
 	__block CGRect slice, remainder;
-	before(^{
+	qck_beforeEach(^{
 		slice = CGRectZero;
 		remainder = CGRectZero;
 	});
 
-	qck_it(@"should divide wqck_ith padding", ^{
+	qck_it(@"should divide With padding", ^{
 		CGRect expectedSlice = CGRectMake(50, 50, 40, 100);
 		CGRect expectedRemainder = CGRectMake(90 + 10, 50, 50, 100);
 
-		MEDRectDivideWqck_ithPadding(rect, &slice, &remainder, 40, 10, CGRectMinXEdge);
+		MEDRectDivideWithPadding(rect, &slice, &remainder, 40, 10, CGRectMinXEdge);
 
 		expect(MEDBox(slice)).to(equal(MEDBox(expectedSlice)));
 		expect(MEDBox(remainder)).to(equal(MEDBox(expectedRemainder)));
 	});
 
-	qck_it(@"should divide wqck_ith a null slice", ^{
+	qck_it(@"should divide With a null slice", ^{
 		CGRect expectedRemainder = CGRectMake(90 + 10, 50, 50, 100);
 
-		MEDRectDivideWqck_ithPadding(rect, NULL, &remainder, 40, 10, CGRectMinXEdge);
+		MEDRectDivideWithPadding(rect, NULL, &remainder, 40, 10, CGRectMinXEdge);
 		expect(MEDBox(remainder)).to(equal(MEDBox(expectedRemainder)));
 	});
 
-	qck_it(@"should divide wqck_ith a null remainder", ^{
+	qck_it(@"should divide With a null remainder", ^{
 		CGRect expectedSlice = CGRectMake(50, 50, 40, 100);
-		MEDRectDivideWqck_ithPadding(rect, &slice, NULL, 40, 10, CGRectMinXEdge);
+		MEDRectDivideWithPadding(rect, &slice, NULL, 40, 10, CGRectMinXEdge);
 		expect(MEDBox(slice)).to(equal(MEDBox(expectedSlice)));
 	});
 
-	qck_it(@"should divide wqck_ith no space for remainder", ^{
+	qck_it(@"should divide With no space for remainder", ^{
 		CGRect expectedSlice = CGRectMake(50, 50, 95, 100);
-		MEDRectDivideWqck_ithPadding(rect, &slice, &remainder, 95, 10, CGRectMinXEdge);
+		MEDRectDivideWithPadding(rect, &slice, &remainder, 95, 10, CGRectMinXEdge);
 		expect(MEDBox(slice)).to(equal(MEDBox(expectedSlice)));
 		expect(CGRectIsEmpty(remainder)).to(beTruthy());
 	});
@@ -122,7 +122,7 @@ qck_describe(@"MEDRectDivideWqck_ithPadding", ^{
 		CGRect expectedSlice = CGRectMake(50, 50, 40, 100);
 		CGRect expectedRemainder = CGRectMake(90 + 10, 50, 50, 100);
 
-		MEDRectDivideWqck_ithPadding(rect, slice, remainder, 40, 10, CGRectMinXEdge);
+		MEDRectDivideWithPadding(rect, slice, remainder, 40, 10, CGRectMinXEdge);
 
 		expect(MEDBox(slice)).to(equal(MEDBox(expectedSlice)));
 		expect(MEDBox(remainder)).to(equal(MEDBox(expectedRemainder)));
@@ -135,14 +135,14 @@ qck_describe(@"MEDRectDivideWqck_ithPadding", ^{
 		CGRect expectedSlice = CGRectMake(50, 50, 40, 100);
 		CGRect expectedRemainder = CGRectMake(90 + 10, 50, 50, 100);
 
-		MEDRectDivideWqck_ithPadding(rect, obj.slice, obj.remainder, 40, 10, CGRectMinXEdge);
+		MEDRectDivideWithPadding(rect, obj.slice, obj.remainder, 40, 10, CGRectMinXEdge);
 
 		expect(obj.slice).to(equal(MEDBox(expectedSlice)));
 		expect(obj.remainder).to(equal(MEDBox(expectedRemainder)));
 	});
 });
 
-qck_describe(@"MEDRectAlignWqck_ithRect", ^{
+qck_describe(@"MEDRectAlignWithRect", ^{
 	CGRect rect = CGRectMake(0, 0, 10, 10);
 	CGRect referenceRect = CGRectMake(10, 20, 30, 40);
 
@@ -156,7 +156,7 @@ qck_describe(@"MEDRectAlignWqck_ithRect", ^{
 
 	qck_describe(@"when aligning on the min y edge", ^{
 		qck_it(@"should return an aligned rectangle", ^{
-			CGRect aligned = MEDRectAlignWqck_ithRect(rect, referenceRect, CGRectMinYEdge);
+			CGRect aligned = MEDRectAlignWithRect(rect, referenceRect, CGRectMinYEdge);
 
 			expect(MEDBox(aligned)).to(equal(MEDBox(CGRectMake(0, 20, 10, 10))));
 		});
@@ -164,7 +164,7 @@ qck_describe(@"MEDRectAlignWqck_ithRect", ^{
 
 	qck_describe(@"when aligning on the max x edge", ^{
 		qck_it(@"should return an aligned rectangle", ^{
-			CGRect aligned = MEDRectAlignWqck_ithRect(rect, referenceRect, CGRectMaxXEdge);
+			CGRect aligned = MEDRectAlignWithRect(rect, referenceRect, CGRectMaxXEdge);
 
 			expect(MEDBox(aligned)).to(equal(MEDBox(CGRectMake(30, 0, 10, 10))));
 		});
@@ -172,7 +172,7 @@ qck_describe(@"MEDRectAlignWqck_ithRect", ^{
 
 	qck_describe(@"when aligning on the max y edge", ^{
 		qck_it(@"should return an aligned rectangle", ^{
-			CGRect aligned = MEDRectAlignWqck_ithRect(rect, referenceRect, CGRectMaxYEdge);
+			CGRect aligned = MEDRectAlignWithRect(rect, referenceRect, CGRectMaxYEdge);
 
 			expect(MEDBox(aligned)).to(equal(MEDBox(CGRectMake(0, 50, 10, 10))));
 		});
@@ -265,15 +265,15 @@ qck_describe(@"MEDRectFloor", ^{
 		expect(MEDBox(result)).to(equal(MEDBox(rect)));
 	});
 
-	qck_it(@"leaves CGRectInfinqck_ite untouched", ^{
-		CGRect rect = CGRectInfinqck_ite;
+	qck_it(@"leaves CGRectInfinite untouched", ^{
+		CGRect rect = CGRectInfinite;
 		CGRect result = MEDRectFloor(rect);
 		expect(MEDBox(result)).to(equal(MEDBox(rect)));
 	});
 });
 
 qck_describe(@"inverted rectangles", ^{
-	qck_it(@"should create an inverted rectangle wqck_ithin a containing rectangle", ^{
+	qck_it(@"should create an inverted rectangle Within a containing rectangle", ^{
 		CGRect containingRect = CGRectMake(0, 0, 100, 100);
 
 		// Bottom Left
@@ -283,7 +283,7 @@ qck_describe(@"inverted rectangles", ^{
 		expect(MEDBox(result)).to(equal(MEDBox(expectedResult)));
 	});
 
-	qck_it(@"should invert a rectangle wqck_ithin a containing rectangle", ^{
+	qck_it(@"should invert a rectangle Within a containing rectangle", ^{
 		CGRect rect = CGRectMake(0, 20, 50, 50);
 		CGRect containingRect = CGRectMake(0, 0, 100, 100);
 
@@ -295,30 +295,30 @@ qck_describe(@"inverted rectangles", ^{
 	});
 });
 
-qck_describe(@"MEDRectWqck_ithSize", ^{
-	qck_it(@"should return a rectangle wqck_ith a valid size", ^{
-		CGRect rect = MEDRectWqck_ithSize(CGSizeMake(20, 40));
+qck_describe(@"MEDRectWithSize", ^{
+	qck_it(@"should return a rectangle With a valid size", ^{
+		CGRect rect = MEDRectWithSize(CGSizeMake(20, 40));
 		expect(MEDBox(rect)).to(equal(MEDBox(CGRectMake(0, 0, 20, 40))));
 	});
 
-	qck_it(@"should return a rectangle wqck_ith zero size", ^{
-		CGRect rect = MEDRectWqck_ithSize(CGSizeZero);
+	qck_it(@"should return a rectangle With zero size", ^{
+		CGRect rect = MEDRectWithSize(CGSizeZero);
 		expect(MEDBox(rect)).to(equal(MEDBox(CGRectZero)));
 	});
 });
 
-qck_describe(@"MEDRectConvertToUnqck_itRect", ^{
-	qck_it(@"should return a rectangle wqck_ith unqck_it coordinates", ^{
-		CGRect rect = MEDRectConvertToUnqck_itRect(CGRectMake(0, 0, 100, 100));
+qck_describe(@"MEDRectConvertToUnitRect", ^{
+	qck_it(@"should return a rectangle With unit coordinates", ^{
+		CGRect rect = MEDRectConvertToUnitRect(CGRectMake(0, 0, 100, 100));
 		expect(MEDBox(rect)).to(equal(MEDBox(CGRectMake(0, 0, 1, 1))));
 	});
 });
 
-qck_describe(@"MEDRectConvertFromUnqck_itRect", ^{
-	qck_it(@"should return a rectangle wqck_ith non-unqck_it coordinates", ^{
+qck_describe(@"MEDRectConvertFromUnitRect", ^{
+	qck_it(@"should return a rectangle With non-unit coordinates", ^{
 		CGRect viewRect = CGRectMake(0, 0, 100, 100);
-		CGRect unqck_itRect = CGRectMake(0, 0, 0.5, 0.5);
-		CGRect rect = MEDRectConvertFromUnqck_itRect(unqck_itRect, viewRect);
+		CGRect unitRect = CGRectMake(0, 0, 0.5, 0.5);
+		CGRect rect = MEDRectConvertFromUnitRect(unitRect, viewRect);
 		expect(MEDBox(rect)).to(equal(MEDBox(CGRectMake(0, 0, 50, 50))));
 	});
 });
@@ -341,7 +341,7 @@ qck_describe(@"MEDPointFloor", ^{
 	#endif
 });
 
-qck_describe(@"equalqck_ity wqck_ith accuracy", ^{
+qck_describe(@"equality With accuracy", ^{
 	CGRect rect = CGRectMake(0.5f, 1.5f, 15, 20);
 	CGFloat epsilon = 0.6f;
 
@@ -349,27 +349,27 @@ qck_describe(@"equalqck_ity wqck_ith accuracy", ^{
 	CGRect farRect = CGRectMake(1.5f, 11.5f, 20, 20);
 
 	qck_it(@"compares two points that are close enough", ^{
-		expect(MEDPointEqualToPointWqck_ithAccuracy(rect.origin, closeRect.origin, epsilon)).to(beTruthy());
+		expect(MEDPointEqualToPointWithAccuracy(rect.origin, closeRect.origin, epsilon)).to(beTruthy());
 	});
 
 	qck_it(@"compares two points that are too far from each other", ^{
-		expect(MEDPointEqualToPointWqck_ithAccuracy(rect.origin, farRect.origin, epsilon)).to(beFalsy());
+		expect(MEDPointEqualToPointWithAccuracy(rect.origin, farRect.origin, epsilon)).to(beFalsy());
 	});
 
 	qck_it(@"compares two rectangles that are close enough", ^{
-		expect(MEDRectEqualToRectWqck_ithAccuracy(rect, closeRect, epsilon)).to(beTruthy());
+		expect(MEDRectEqualToRectWithAccuracy(rect, closeRect, epsilon)).to(beTruthy());
 	});
 
 	qck_it(@"compares two rectangles that are too far from each other", ^{
-		expect(MEDRectEqualToRectWqck_ithAccuracy(rect, farRect, epsilon)).to(beFalsy());
+		expect(MEDRectEqualToRectWithAccuracy(rect, farRect, epsilon)).to(beFalsy());
 	});
 
 	qck_it(@"compares two sizes that are close enough", ^{
-		expect(MEDSizeEqualToSizeWqck_ithAccuracy(rect.size, closeRect.size, epsilon)).to(beTruthy());
+		expect(MEDSizeEqualToSizeWithAccuracy(rect.size, closeRect.size, epsilon)).to(beTruthy());
 	});
 
 	qck_it(@"compares two sizes that are too far from each other", ^{
-		expect(MEDSizeEqualToSizeWqck_ithAccuracy(rect.size, farRect.size, epsilon)).to(beFalsy());
+		expect(MEDSizeEqualToSizeWithAccuracy(rect.size, farRect.size, epsilon)).to(beFalsy());
 	});
 });
 
@@ -381,24 +381,24 @@ qck_describe(@"MEDSizeScale", ^{
 		CGSize scaledSize = MEDSizeScale(original, scale);
 		CGSize expected = CGSizeMake(17.5f, -11.9f);
 
-		expect(scaledSize.width).to(beCloseTo(expected.width));
-		expect(scaledSize.height).to(beCloseTo(expected.height));
+		expect(scaledSize.width).to(beCloseTo(@(expected.width)));
+		expect(scaledSize.height).to(beCloseTo(@(expected.height)));
 	});
 });
 
 qck_describe(@"MEDSizeScaleAspectFqck_it", ^{
 	CGSize containingSize = CGSizeMake(75, 75);
 
-	qck_it(@"should return a size which fqck_its inside the given size when the width is bigger", ^{
+	qck_it(@"should return a size which fits inside the given size when the width is bigger", ^{
 		CGSize sizeToScale = CGSizeMake(100, 75);
-		CGSize size = MEDSizeScaleAspectFqck_it(sizeToScale, containingSize);
-		expect(MEDBox(size)).to(equal(MEDBox(CGSizeMake(75, 56.25))));
+		CGSize size = MEDSizeScaleAspectFit(sizeToScale, containingSize);
+		expect(size).to(equal(MEDBox(CGSizeMake(75, 56.25))));
 	});
 
-	qck_it(@"should return a size which fqck_its inside the given size when the height is bigger", ^{
+	qck_it(@"should return a size which fits inside the given size when the height is bigger", ^{
 		CGSize sizeToScale = CGSizeMake(75, 100);
-		CGSize size = MEDSizeScaleAspectFqck_it(sizeToScale, containingSize);
-		expect(MEDBox(size)).to(equal(MEDBox(CGSizeMake(56.25, 75))));
+		CGSize size = MEDSizeScaleAspectFit(sizeToScale, containingSize);
+		expect(size).to(equal(MEDBox(CGSizeMake(56.25, 75))));
 	});
 });
 
