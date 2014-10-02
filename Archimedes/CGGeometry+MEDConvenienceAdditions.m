@@ -20,6 +20,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 */
 
+#import <Foundation/Foundation.h>
 #import "CGGeometry+MEDConvenienceAdditions.h"
 
 // Conditionalizes fmax() and similar floating-point functions based on argument
