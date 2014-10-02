@@ -57,25 +57,25 @@ qck_describe(@"MEDRectDivide macro", ^{
 
 		MEDRectDivide(rect, obj.slice, obj.remainder, 10, CGRectMinXEdge);
 
-		expect(obj.slice).to(equal(MEDBox(CGRectMake(10, 20, 10, 40))));
-		expect(obj.remainder).to(equal(MEDBox(CGRectMake(20, 20, 20, 40))));
+		expect(MEDBox(obj.slice)).to(equal(MEDBox(CGRectMake(10, 20, 10, 40))));
+		expect(MEDBox(obj.remainder)).to(equal(MEDBox(CGRectMake(20, 20, 20, 40))));
 	});
 });
 
 qck_describe(@"MEDRectCenterPoint", ^{
 	qck_it(@"should return the center of a valid rectangle", ^{
 		CGRect rect = CGRectMake(10, 20, 30, 40);
-		expect(MEDRectCenterPoint(rect)).to(equal(MEDBox(CGPointMake(25, 40))));
+		expect(MEDBox(MEDRectCenterPoint(rect))).to(equal(MEDBox(CGPointMake(25, 40))));
 	});
 
 	qck_it(@"should return the center of an empty rectangle", ^{
 		CGRect rect = CGRectMake(10, 20, 0, 0);
-		expect(MEDRectCenterPoint(rect)).to(equal(MEDBox(CGPointMake(10, 20))));
+		expect(MEDBox(MEDRectCenterPoint(rect))).to(equal(MEDBox(CGPointMake(10, 20))));
 	});
 
 	qck_it(@"should return non-integral center points", ^{
 		CGRect rect = CGRectMake(10, 20, 15, 7);
-		expect(MEDRectCenterPoint(rect)).to(equal(MEDBox(CGPointMake(17.5f, 23.5f))));
+		expect(MEDBox(MEDRectCenterPoint(rect))).to(equal(MEDBox(CGPointMake(17.5f, 23.5f))));
 	});
 });
 
@@ -115,7 +115,7 @@ qck_describe(@"MEDRectDivideWithPadding", ^{
 		CGRect expectedSlice = CGRectMake(50, 50, 95, 100);
 		MEDRectDivideWithPadding(rect, &slice, &remainder, 95, 10, CGRectMinXEdge);
 		expect(MEDBox(slice)).to(equal(MEDBox(expectedSlice)));
-		expect(CGRectIsEmpty(remainder)).to(beTruthy());
+		expect(@(CGRectIsEmpty(remainder))).to(beTruthy());
 	});
 
 	qck_it(@"should accept raw variables", ^{
@@ -137,8 +137,8 @@ qck_describe(@"MEDRectDivideWithPadding", ^{
 
 		MEDRectDivideWithPadding(rect, obj.slice, obj.remainder, 40, 10, CGRectMinXEdge);
 
-		expect(obj.slice).to(equal(MEDBox(expectedSlice)));
-		expect(obj.remainder).to(equal(MEDBox(expectedRemainder)));
+		expect(MEDBox(obj.slice)).to(equal(MEDBox(expectedSlice)));
+		expect(MEDBox(obj.remainder)).to(equal(MEDBox(expectedRemainder)));
 	});
 });
 
@@ -184,21 +184,21 @@ qck_describe(@"MEDRectCenterInRect", ^{
 		CGRect inner = CGRectMake(0, 0, 10, 10);
 		CGRect outer = CGRectMake(0, 0, 20, 20);
 
-		expect(MEDRectCenterInRect(inner, outer)).to(equal(MEDBox(CGRectMake(5, 5, 10, 10))));
+		expect(MEDBox(MEDRectCenterInRect(inner, outer))).to(equal(MEDBox(CGRectMake(5, 5, 10, 10))));
 	});
 
 	qck_it(@"should return a non-integral rectangle", ^{
 		CGRect inner = CGRectMake(0, 0, 10, 10);
 		CGRect outer = CGRectMake(0, 0, 19, 19);
 
-		expect(MEDRectCenterInRect(inner, outer)).to(equal(MEDBox(CGRectMake(4.5f, 4.5f, 10, 10))));
+		expect(MEDBox(MEDRectCenterInRect(inner, outer))).to(equal(MEDBox(CGRectMake(4.5f, 4.5f, 10, 10))));
 	});
 
 	qck_describe(@"qck_it should handle centering bigger rectanlges in smaller ones", ^{
 		CGRect inner = CGRectMake(0, 0, 10, 10);
 		CGRect outer = CGRectZero;
 
-		expect(MEDRectCenterInRect(inner, outer)).to(equal(MEDBox(CGRectMake(-5, -5, 10, 10))));
+		expect(MEDBox(MEDRectCenterInRect(inner, outer))).to(equal(MEDBox(CGRectMake(-5, -5, 10, 10))));
 	});
 });
 
@@ -328,15 +328,15 @@ qck_describe(@"MEDPointFloor", ^{
 		qck_it(@"rounds components up and left", ^{
 			CGPoint point = CGPointMake(0.5f, 0.49f);
 			CGPoint point2 = CGPointMake(-0.5f, -0.49f);
-			expect(CGPointEqualToPoint(MEDPointFloor(point), CGPointMake(0, 0))).to(beTruthy());
-			expect(CGPointEqualToPoint(MEDPointFloor(point2), CGPointMake(-1, -1))).to(beTruthy());
+			expect(@(CGPointEqualToPoint(MEDPointFloor(point), CGPointMake(0, 0)))).to(beTruthy());
+			expect(@(CGPointEqualToPoint(MEDPointFloor(point2), CGPointMake(-1, -1)))).to(beTruthy());
 		});
 	#elif TARGET_OS_MAC
 		qck_it(@"rounds components up and left", ^{
 			CGPoint point = CGPointMake(0.5, 0.49);
 			CGPoint point2 = CGPointMake(-0.5, -0.49);
-			expect(CGPointEqualToPoint(MEDPointFloor(point), CGPointMake(0, 1))).to(beTruthy());
-			expect(CGPointEqualToPoint(MEDPointFloor(point2), CGPointMake(-1, 0))).to(beTruthy());
+			expect(@(CGPointEqualToPoint(MEDPointFloor(point), CGPointMake(0, 1)))).to(beTruthy());
+			expect(@(CGPointEqualToPoint(MEDPointFloor(point2), CGPointMake(-1, 0)))).to(beTruthy());
 		});
 	#endif
 });
@@ -349,27 +349,27 @@ qck_describe(@"equality With accuracy", ^{
 	CGRect farRect = CGRectMake(1.5f, 11.5f, 20, 20);
 
 	qck_it(@"compares two points that are close enough", ^{
-		expect(MEDPointEqualToPointWithAccuracy(rect.origin, closeRect.origin, epsilon)).to(beTruthy());
+		expect(@(MEDPointEqualToPointWithAccuracy(rect.origin, closeRect.origin, epsilon))).to(beTruthy());
 	});
 
 	qck_it(@"compares two points that are too far from each other", ^{
-		expect(MEDPointEqualToPointWithAccuracy(rect.origin, farRect.origin, epsilon)).to(beFalsy());
+		expect(@(MEDPointEqualToPointWithAccuracy(rect.origin, farRect.origin, epsilon))).to(beFalsy());
 	});
 
 	qck_it(@"compares two rectangles that are close enough", ^{
-		expect(MEDRectEqualToRectWithAccuracy(rect, closeRect, epsilon)).to(beTruthy());
+		expect(@(MEDRectEqualToRectWithAccuracy(rect, closeRect, epsilon))).to(beTruthy());
 	});
 
 	qck_it(@"compares two rectangles that are too far from each other", ^{
-		expect(MEDRectEqualToRectWithAccuracy(rect, farRect, epsilon)).to(beFalsy());
+		expect(@(MEDRectEqualToRectWithAccuracy(rect, farRect, epsilon))).to(beFalsy());
 	});
 
 	qck_it(@"compares two sizes that are close enough", ^{
-		expect(MEDSizeEqualToSizeWithAccuracy(rect.size, closeRect.size, epsilon)).to(beTruthy());
+		expect(@(MEDSizeEqualToSizeWithAccuracy(rect.size, closeRect.size, epsilon))).to(beTruthy());
 	});
 
 	qck_it(@"compares two sizes that are too far from each other", ^{
-		expect(MEDSizeEqualToSizeWithAccuracy(rect.size, farRect.size, epsilon)).to(beFalsy());
+		expect(@(MEDSizeEqualToSizeWithAccuracy(rect.size, farRect.size, epsilon))).to(beFalsy());
 	});
 });
 
@@ -381,8 +381,8 @@ qck_describe(@"MEDSizeScale", ^{
 		CGSize scaledSize = MEDSizeScale(original, scale);
 		CGSize expected = CGSizeMake(17.5f, -11.9f);
 
-		expect(scaledSize.width).to(beCloseTo(@(expected.width)));
-		expect(scaledSize.height).to(beCloseTo(@(expected.height)));
+		expect(@(scaledSize.width)).to(beCloseTo(@(expected.width)));
+		expect(@(scaledSize.height)).to(beCloseTo(@(expected.height)));
 	});
 });
 
@@ -392,13 +392,13 @@ qck_describe(@"MEDSizeScaleAspectFqck_it", ^{
 	qck_it(@"should return a size which fits inside the given size when the width is bigger", ^{
 		CGSize sizeToScale = CGSizeMake(100, 75);
 		CGSize size = MEDSizeScaleAspectFit(sizeToScale, containingSize);
-		expect(size).to(equal(MEDBox(CGSizeMake(75, 56.25))));
+		expect(MEDBox(size)).to(equal(MEDBox(CGSizeMake(75, 56.25))));
 	});
 
 	qck_it(@"should return a size which fits inside the given size when the height is bigger", ^{
 		CGSize sizeToScale = CGSizeMake(75, 100);
 		CGSize size = MEDSizeScaleAspectFit(sizeToScale, containingSize);
-		expect(size).to(equal(MEDBox(CGSizeMake(56.25, 75))));
+		expect(MEDBox(size)).to(equal(MEDBox(CGSizeMake(56.25, 75))));
 	});
 });
 
