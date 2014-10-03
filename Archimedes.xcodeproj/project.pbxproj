@@ -778,10 +778,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D038E04B19DDC74A00ABCE67 /* iOS-Application.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_DIR)/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks";
 				INFOPLIST_FILE = ArchimedesTests/Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -791,10 +788,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D038E04B19DDC74A00ABCE67 /* iOS-Application.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_DIR)/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks";
 				INFOPLIST_FILE = ArchimedesTests/Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -804,10 +798,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D038E04B19DDC74A00ABCE67 /* iOS-Application.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_DIR)/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks";
 				INFOPLIST_FILE = ArchimedesTests/Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -817,10 +808,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D038E04B19DDC74A00ABCE67 /* iOS-Application.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_DIR)/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks";
 				INFOPLIST_FILE = ArchimedesTests/Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
