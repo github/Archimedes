@@ -38,6 +38,9 @@
 		D0BB439619DDD7B400A8243F /* SwiftSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BB439519DDD7B400A8243F /* SwiftSpec.swift */; };
 		D0BB439719DDD7B400A8243F /* SwiftSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BB439519DDD7B400A8243F /* SwiftSpec.swift */; };
 		D0BB439F19DDE84400A8243F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0BB439E19DDE84400A8243F /* UIKit.framework */; };
+		D4D8B7FF19DEF1060043808D /* Nimble.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = D09C742F19DDCA940067EB29 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D4D8B80019DEF1B90043808D /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09C742F19DDCA940067EB29 /* Nimble.framework */; };
+		D4D8B80119DEF1C20043808D /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09C742F19DDCA940067EB29 /* Nimble.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,9 +98,8 @@
 		D0626AA0167950D200E951A5 /* MEDNSValueAdditionsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDNSValueAdditionsSpec.m; sourceTree = "<group>"; };
 		D09C73F319DDC8500067EB29 /* Archimedes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Archimedes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D09C73FD19DDC8510067EB29 /* Archimedes-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Archimedes-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D09C742A19DDCA8C0067EB29 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = External/Quick/Externals/Nimble/build/Debug/Nimble.framework; sourceTree = "<group>"; };
 		D09C742B19DDCA8C0067EB29 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D09C742F19DDCA940067EB29 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = "External/Quick/Externals/Nimble/build/Debug-iphoneos/Nimble.framework"; sourceTree = "<group>"; };
+		D09C742F19DDCA940067EB29 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0BB439519DDD7B400A8243F /* SwiftSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftSpec.swift; sourceTree = "<group>"; };
 		D0BB439E19DDE84400A8243F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -114,7 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D09C742C19DDCA8C0067EB29 /* Nimble.framework in Frameworks */,
+				D4D8B80119DEF1C20043808D /* Nimble.framework in Frameworks */,
 				D09C742D19DDCA8C0067EB29 /* Quick.framework in Frameworks */,
 				D038E06619DDC7A300ABCE67 /* Archimedes.framework in Frameworks */,
 			);
@@ -132,7 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D09C743019DDCA940067EB29 /* Nimble.framework in Frameworks */,
+				D4D8B80019DEF1B90043808D /* Nimble.framework in Frameworks */,
 				D09C742E19DDCA930067EB29 /* Quick.framework in Frameworks */,
 				D09C73FE19DDC8510067EB29 /* Archimedes.framework in Frameworks */,
 			);
@@ -169,7 +171,6 @@
 			children = (
 				D0BB439E19DDE84400A8243F /* UIKit.framework */,
 				D09C742F19DDCA940067EB29 /* Nimble.framework */,
-				D09C742A19DDCA8C0067EB29 /* Nimble.framework */,
 				D09C742B19DDCA8C0067EB29 /* Quick.framework */,
 				D02FAEE11635DDC0008D42D9 /* Foundation.framework */,
 			);
