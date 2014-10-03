@@ -29,15 +29,18 @@
 		D09C742619DDC9DD0067EB29 /* MEDNSValueAdditionsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D0626AA0167950D200E951A5 /* MEDNSValueAdditionsSpec.m */; };
 		D09C742719DDC9DD0067EB29 /* MEDEdgeInsetsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0378ABC317B17A160056C690 /* MEDEdgeInsetsSpec.m */; };
 		D09C742819DDC9DD0067EB29 /* MEDGeometryTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D02FAFD81635E1BF008D42D9 /* MEDGeometryTestObject.m */; };
-		D09C742C19DDCA8C0067EB29 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09C742A19DDCA8C0067EB29 /* Nimble.framework */; };
-		D09C742D19DDCA8C0067EB29 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09C742B19DDCA8C0067EB29 /* Quick.framework */; };
-		D09C742E19DDCA930067EB29 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09C742B19DDCA8C0067EB29 /* Quick.framework */; };
-		D09C743019DDCA940067EB29 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09C742F19DDCA940067EB29 /* Nimble.framework */; };
 		D09C743119DDCB800067EB29 /* Archimedes.h in Headers */ = {isa = PBXBuildFile; fileRef = D02FAEE51635DDC0008D42D9 /* Archimedes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D09C743219DDCB800067EB29 /* Archimedes.h in Headers */ = {isa = PBXBuildFile; fileRef = D02FAEE51635DDC0008D42D9 /* Archimedes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0BB439619DDD7B400A8243F /* SwiftSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BB439519DDD7B400A8243F /* SwiftSpec.swift */; };
 		D0BB439719DDD7B400A8243F /* SwiftSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BB439519DDD7B400A8243F /* SwiftSpec.swift */; };
 		D0BB439F19DDE84400A8243F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0BB439E19DDE84400A8243F /* UIKit.framework */; };
+		D4D8B80119DEF1C20043808D /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09C742F19DDCA940067EB29 /* Nimble.framework */; };
+		D4D8B80719DF04E40043808D /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D8B80519DF04BE0043808D /* Nimble.framework */; };
+		D4D8B80819DF04E80043808D /* Nimble.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = D4D8B80519DF04BE0043808D /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D4D8B81819DF07C20043808D /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D8B81419DF07390043808D /* Quick.framework */; };
+		D4D8B81919DF07C60043808D /* Quick.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = D4D8B81419DF07390043808D /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D4D8B81C19DF07DC0043808D /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D8B81A19DF07D40043808D /* Quick.framework */; };
+		D4D8B81D19DF08300043808D /* Archimedes.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = D09C73F319DDC8500067EB29 /* Archimedes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,22 @@
 			remoteInfo = Archimedes;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D4D8B7FE19DEF0DB0043808D /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D4D8B80819DF04E80043808D /* Nimble.framework in Copy Frameworks */,
+				D4D8B81919DF07C60043808D /* Quick.framework in Copy Frameworks */,
+				D4D8B81D19DF08300043808D /* Archimedes.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0378ABA517B16F980056C690 /* MEDEdgeInsets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDEdgeInsets.h; sourceTree = "<group>"; };
@@ -95,11 +114,12 @@
 		D0626AA0167950D200E951A5 /* MEDNSValueAdditionsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDNSValueAdditionsSpec.m; sourceTree = "<group>"; };
 		D09C73F319DDC8500067EB29 /* Archimedes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Archimedes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D09C73FD19DDC8510067EB29 /* Archimedes-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Archimedes-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D09C742A19DDCA8C0067EB29 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = External/Quick/Externals/Nimble/build/Debug/Nimble.framework; sourceTree = "<group>"; };
-		D09C742B19DDCA8C0067EB29 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D09C742F19DDCA940067EB29 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = "External/Quick/Externals/Nimble/build/Debug-iphoneos/Nimble.framework"; sourceTree = "<group>"; };
+		D09C742F19DDCA940067EB29 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0BB439519DDD7B400A8243F /* SwiftSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftSpec.swift; sourceTree = "<group>"; };
-		D0BB439E19DDE84400A8243F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		D0BB439E19DDE84400A8243F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = ../../../../iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D4D8B80519DF04BE0043808D /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = "../Debug-iphonesimulator/Nimble.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4D8B81419DF07390043808D /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = "../Debug-iphonesimulator/Quick.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4D8B81A19DF07D40043808D /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,8 +134,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D09C742C19DDCA8C0067EB29 /* Nimble.framework in Frameworks */,
-				D09C742D19DDCA8C0067EB29 /* Quick.framework in Frameworks */,
+				D4D8B80119DEF1C20043808D /* Nimble.framework in Frameworks */,
+				D4D8B81C19DF07DC0043808D /* Quick.framework in Frameworks */,
 				D038E06619DDC7A300ABCE67 /* Archimedes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -132,9 +152,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D09C743019DDCA940067EB29 /* Nimble.framework in Frameworks */,
-				D09C742E19DDCA930067EB29 /* Quick.framework in Frameworks */,
+				D4D8B80719DF04E40043808D /* Nimble.framework in Frameworks */,
 				D09C73FE19DDC8510067EB29 /* Archimedes.framework in Frameworks */,
+				D4D8B81819DF07C20043808D /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,11 +187,9 @@
 		D02FAEDB1635DDC0008D42D9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D0BB439E19DDE84400A8243F /* UIKit.framework */,
-				D09C742F19DDCA940067EB29 /* Nimble.framework */,
-				D09C742A19DDCA8C0067EB29 /* Nimble.framework */,
-				D09C742B19DDCA8C0067EB29 /* Quick.framework */,
 				D02FAEE11635DDC0008D42D9 /* Foundation.framework */,
+				D4D8B80419DF04960043808D /* iOS */,
+				D4D8B80319DF048D0043808D /* Mac */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -295,6 +313,25 @@
 			path = "Mac OS X";
 			sourceTree = "<group>";
 		};
+		D4D8B80319DF048D0043808D /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				D4D8B81A19DF07D40043808D /* Quick.framework */,
+				D09C742F19DDCA940067EB29 /* Nimble.framework */,
+			);
+			name = Mac;
+			sourceTree = "<group>";
+		};
+		D4D8B80419DF04960043808D /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D4D8B80519DF04BE0043808D /* Nimble.framework */,
+				D4D8B81419DF07390043808D /* Quick.framework */,
+				D0BB439E19DDE84400A8243F /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -384,6 +421,7 @@
 				D09C73F919DDC8510067EB29 /* Sources */,
 				D09C73FA19DDC8510067EB29 /* Frameworks */,
 				D09C73FB19DDC8510067EB29 /* Resources */,
+				D4D8B7FE19DEF0DB0043808D /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -740,10 +778,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D038E04B19DDC74A00ABCE67 /* iOS-Application.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_DIR)/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks";
 				INFOPLIST_FILE = ArchimedesTests/Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -753,10 +788,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D038E04B19DDC74A00ABCE67 /* iOS-Application.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_DIR)/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks";
 				INFOPLIST_FILE = ArchimedesTests/Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -766,10 +798,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D038E04B19DDC74A00ABCE67 /* iOS-Application.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_DIR)/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks";
 				INFOPLIST_FILE = ArchimedesTests/Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -779,10 +808,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D038E04B19DDC74A00ABCE67 /* iOS-Application.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_DIR)/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks";
 				INFOPLIST_FILE = ArchimedesTests/Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
