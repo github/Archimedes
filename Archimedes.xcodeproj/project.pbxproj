@@ -36,8 +36,11 @@
 		D0BB439F19DDE84400A8243F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0BB439E19DDE84400A8243F /* UIKit.framework */; };
 		D4D8B80119DEF1C20043808D /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09C742F19DDCA940067EB29 /* Nimble.framework */; };
 		D4D8B80719DF04E40043808D /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D8B80519DF04BE0043808D /* Nimble.framework */; };
+		D4D8B80819DF04E80043808D /* Nimble.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = D4D8B80519DF04BE0043808D /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D4D8B81819DF07C20043808D /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D8B81419DF07390043808D /* Quick.framework */; };
+		D4D8B81919DF07C60043808D /* Quick.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = D4D8B81419DF07390043808D /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D4D8B81C19DF07DC0043808D /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D8B81A19DF07D40043808D /* Quick.framework */; };
+		D4D8B81D19DF08300043808D /* Archimedes.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = D09C73F319DDC8500067EB29 /* Archimedes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,22 @@
 			remoteInfo = Archimedes;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D4D8B7FE19DEF0DB0043808D /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D4D8B80819DF04E80043808D /* Nimble.framework in Copy Frameworks */,
+				D4D8B81919DF07C60043808D /* Quick.framework in Copy Frameworks */,
+				D4D8B81D19DF08300043808D /* Archimedes.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0378ABA517B16F980056C690 /* MEDEdgeInsets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDEdgeInsets.h; sourceTree = "<group>"; };
@@ -402,6 +421,7 @@
 				D09C73F919DDC8510067EB29 /* Sources */,
 				D09C73FA19DDC8510067EB29 /* Frameworks */,
 				D09C73FB19DDC8510067EB29 /* Resources */,
+				D4D8B7FE19DEF0DB0043808D /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
