@@ -585,7 +585,7 @@
 			baseConfigurationReference = D038E04219DDC74A00ABCE67 /* Debug.xcconfig */;
 			buildSettings = {
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -595,7 +595,7 @@
 			baseConfigurationReference = D038E04419DDC74A00ABCE67 /* Release.xcconfig */;
 			buildSettings = {
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -605,7 +605,7 @@
 			baseConfigurationReference = D038E04319DDC74A00ABCE67 /* Profile.xcconfig */;
 			buildSettings = {
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Profile;
@@ -675,6 +675,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = ArchimedesTests/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -688,6 +689,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = ArchimedesTests/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Test;
@@ -701,6 +703,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = ArchimedesTests/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -714,6 +717,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = ArchimedesTests/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Profile;
@@ -819,7 +823,7 @@
 			baseConfigurationReference = D038E04519DDC74A00ABCE67 /* Test.xcconfig */;
 			buildSettings = {
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Test;
