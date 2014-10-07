@@ -20,11 +20,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 */
 
-#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
-	#import <CoreGraphics/CoreGraphics.h>
-#elif TARGET_OS_MAC
-	#import <ApplicationServices/ApplicationServices.h>
-#endif
+#import <CoreGraphics/CoreGraphics.h>
 
 // Extends CGRectDivide() to accept the following additional types for the
 // `SLICE` and `REMAINDER` arguments:
@@ -185,10 +181,10 @@ CGRect MEDRectConvertToUnitRect(CGRect rect);
 CGRect MEDRectConvertFromUnitRect(CGRect rect, CGRect destRect);
 
 // Returns whether every side of `rect` is within `epsilon` distance of `rect2`.
-BOOL MEDRectEqualToRectWithAccuracy(CGRect rect, CGRect rect2, CGFloat epsilon);
+bool MEDRectEqualToRectWithAccuracy(CGRect rect, CGRect rect2, CGFloat epsilon);
 
 // Returns whether `size` is within `epsilon` points of `size2`.
-BOOL MEDSizeEqualToSizeWithAccuracy(CGSize size, CGSize size2, CGFloat epsilon);
+bool MEDSizeEqualToSizeWithAccuracy(CGSize size, CGSize size2, CGFloat epsilon);
 
 // Scales the components of `size` by `scale`.
 CGSize MEDSizeScale(CGSize size, CGFloat scale);
@@ -224,7 +220,7 @@ CGSize MEDSizeScaleAspectFill(CGSize size, CGSize minSize);
 CGPoint MEDPointFloor(CGPoint point);
 
 // Returns whether `point` is within `epsilon` distance of `point2`.
-BOOL MEDPointEqualToPointWithAccuracy(CGPoint point, CGPoint point2, CGFloat epsilon);
+bool MEDPointEqualToPointWithAccuracy(CGPoint point, CGPoint point2, CGFloat epsilon);
 
 // Returns the dot product of two points.
 CGFloat MEDPointDotProduct(CGPoint point, CGPoint point2);

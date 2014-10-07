@@ -20,6 +20,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 */
 
+#import <Foundation/Foundation.h>
 #import "CGGeometry+MEDConvenienceAdditions.h"
 
 // Conditionalizes fmax() and similar floating-point functions based on argument
@@ -149,7 +150,7 @@ CGRect MEDRectInvert(CGRect containingRect, CGRect rect) {
 	return CGRectMake(CGRectGetMinX(rect), CGRectGetHeight(containingRect) - CGRectGetMaxY(rect), CGRectGetWidth(rect), CGRectGetHeight(rect));
 }
 
-BOOL MEDRectEqualToRectWithAccuracy(CGRect rect, CGRect rect2, CGFloat epsilon) {
+bool MEDRectEqualToRectWithAccuracy(CGRect rect, CGRect rect2, CGFloat epsilon) {
 	return MEDPointEqualToPointWithAccuracy(rect.origin, rect2.origin, epsilon) && MEDSizeEqualToSizeWithAccuracy(rect.size, rect2.size, epsilon);
 }
 
@@ -167,7 +168,7 @@ CGRect MEDRectConvertFromUnitRect(CGRect rect, CGRect destinationRect) {
 	return CGRectApplyAffineTransform(destinationRect, unitTransform);
 }
 
-BOOL MEDSizeEqualToSizeWithAccuracy(CGSize size, CGSize size2, CGFloat epsilon) {
+bool MEDSizeEqualToSizeWithAccuracy(CGSize size, CGSize size2, CGFloat epsilon) {
 	return (fabs(size.width - size2.width) <= epsilon) && (fabs(size.height - size2.height) <= epsilon);
 }
 
@@ -210,7 +211,7 @@ CGPoint MEDPointFloor(CGPoint point) {
 	#endif
 }
 
-BOOL MEDPointEqualToPointWithAccuracy(CGPoint p, CGPoint q, CGFloat epsilon) {
+bool MEDPointEqualToPointWithAccuracy(CGPoint p, CGPoint q, CGFloat epsilon) {
 	return (fabs(p.x - q.x) <= epsilon) && (fabs(p.y - q.y) <= epsilon);
 }
 

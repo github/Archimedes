@@ -1,8 +1,0 @@
-//
-// Prefix header for all source files of the 'Archimedes' target in the 'Archimedes' project
-//
-
-#ifdef __OBJC__
-    #import <Foundation/Foundation.h>
-    #import <CoreGraphics/CoreGraphics.h>
-#endif
