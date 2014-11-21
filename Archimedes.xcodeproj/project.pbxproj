@@ -256,7 +256,7 @@
 				D038E05519DDC74A00ABCE67 /* README.md */,
 			);
 			name = Configuration;
-			path = External/xcconfigs;
+			path = Carthage.checkout/xcconfigs;
 			sourceTree = "<group>";
 		};
 		D038E03F19DDC74A00ABCE67 /* Base */ = {
